@@ -1,4 +1,5 @@
 import styles from './index.module.css'
+import classNames from 'classnames'
 
 import ContentCard from '../ContentCard'
 import { Grid } from '@material-ui/core'
@@ -6,9 +7,9 @@ import React from 'react'
 
 type ContentProps = {}
 
-const Content: React.FC<ContentProps> = (props: ContentProps) => (
-  <Grid className="main-container">
-    <Grid className="main" container direction="column">
+const Content: React.FC<ContentProps> = (_: ContentProps) => (
+  <Grid className={classNames(styles['main-container'])}>
+    <Grid container direction="column" className={classNames(styles['main'])}>
       <Grid
         container
         item
@@ -16,7 +17,7 @@ const Content: React.FC<ContentProps> = (props: ContentProps) => (
         md={6}
         justify="space-evenly"
         alignContent="center"
-        className="the-force light-side"
+        className={classNames(styles['the-force'], styles['light-side'])}
       >
         <ContentCard imgurl="" title="" description={``} xs={6} md={12} />
         <ContentCard imgurl="" title="" description={``} xs={6} md={12} />
@@ -30,7 +31,7 @@ const Content: React.FC<ContentProps> = (props: ContentProps) => (
         md={6}
         justify="space-evenly"
         alignContent="center"
-        className="the-force dark-side"
+        className={classNames(styles['the-force'], styles['dark-side'])}
       >
         <ContentCard imgurl="" title="" description={``} xs={6} md={12} />
         <ContentCard imgurl="" title="" description={``} xs={6} md={12} />
