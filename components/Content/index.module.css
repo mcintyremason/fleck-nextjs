@@ -1,0 +1,57 @@
+.main-container {
+  height: 100%;
+  background-color: var(--background-primary);
+  padding: var(--mobile-header-height) 0 0;
+  flex-flow: row nowrap;
+}
+
+.main {
+  padding: 0;
+}
+
+.main .the-force {
+  flex-basis: unset;
+}
+
+.light-side {
+  background: radial-gradient(#ffffff, #87ceeb 40%, #ffffff, #ffffff);
+}
+
+.dark-side {
+  background: linear-gradient(#ffffff, #ff1500, #ffffff);
+}
+
+/* 
+  Cannot use CSS variables in media queries.
+  CSS variables can only be used on CSS declarations.
+*/
+/* @media only screen and (min-width: var(--sm)) { */
+@media only screen and (min-width: 425px) {
+  .main {
+    padding: 20px 0;
+    flex-flow: row nowrap;
+    justify-content: center;
+  }
+}
+
+/* @media only screen and (min-width: var(--md)) { */
+@media only screen and (min-width: 769px) {
+  div.main-container {
+    height: initial;
+    padding: var(--header-height) 0 0;
+    flex-flow: column nowrap;
+  }
+
+  .main-container .main {
+    flex-flow: row nowrap;
+    padding: 0;
+  }
+
+  .the-force {
+    flex-flow: column nowrap;
+  }
+
+  .dark-side {
+    background: linear-gradient(90deg, #ffffff, #ff1500, #ffffff);
+  }
+}
