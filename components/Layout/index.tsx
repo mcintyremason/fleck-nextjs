@@ -16,7 +16,7 @@ const Layout = ({ children, title = 'Fleck Roofing & Construction' }: Props) => 
       <link rel="icon" type="image/png" href="/img/icons/favicon-1/favicon.ico" />
       <meta
         name="description"
-        content="Roofing & construction company providing excellence since 1980"
+        content="Roofing & construction company providing excellence since 1988"
       />
       <link type="text/css" rel="preload" as="style" href="/css/app.css" />
       <link type="text/css" rel="stylesheet" href="/css/app.css" />
