@@ -1,5 +1,5 @@
 .footer {
-  max-height: 50px;
+  height: var(--footer-height);
   padding: 20px 0;
   background-color: var(--background-secondary);
 }

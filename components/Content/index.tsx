@@ -9,7 +9,7 @@ type ContentProps = {}
 
 const Content: React.FC<ContentProps> = (_: ContentProps) => (
   <Grid className={classNames(styles['main-container'])}>
-    <Grid container direction="column" className={classNames(styles['main'])}>
+    <Grid container direction="column" className={classNames(styles['main'], 'height-full')}>
       <Grid
         container
         item
@@ -17,7 +17,7 @@ const Content: React.FC<ContentProps> = (_: ContentProps) => (
         md={6}
         justify="space-evenly"
         alignContent="center"
-        className={classNames(styles['the-force'], styles['light-side'])}
+        className={classNames(styles['content-cards-container'], styles['cards-left'])}
       >
         <ContentCard imgurl="" title="" description={``} xs={6} md={12} />
         <ContentCard imgurl="" title="" description={``} xs={6} md={12} />
@@ -31,7 +31,7 @@ const Content: React.FC<ContentProps> = (_: ContentProps) => (
         md={6}
         justify="space-evenly"
         alignContent="center"
-        className={classNames(styles['the-force'], styles['dark-side'])}
+        className={classNames(styles['content-cards-container'], styles['cards-right'])}
       >
         <ContentCard imgurl="" title="" description={``} xs={6} md={12} />
         <ContentCard imgurl="" title="" description={``} xs={6} md={12} />

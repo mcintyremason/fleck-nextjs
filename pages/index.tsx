@@ -25,6 +25,14 @@ const theme = responsiveFontSizes(
         main: '#ffd040',
       },
     },
+    overrides: {
+      MuiDrawer: {
+        paper: {
+          backgroundColor: 'var(--background-secondary)',
+          padding: '7px',
+        },
+      },
+    },
   }),
 )
 
@@ -38,7 +46,7 @@ theme.typography.h5 = {
 const IndexPage = () => (
   <ThemeProvider theme={theme}>
     <Layout title="Fleck Roofing & Construction">
-      <Grid className="app" itemScope itemType="http://schema.org/LocalBusiness">
+      <Grid className="app height-full" itemScope itemType="http://schema.org/LocalBusiness">
         <Header />
         <Content />
         <Footer />

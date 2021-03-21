@@ -7,7 +7,7 @@ type Props = {
   styles?: string
 }
 
-const Layout = ({ children, title = 'Fleck Roofing & Construction', styles = '' }: Props) => (
+const Layout = ({ children, title = 'Fleck Roofing & Construction' }: Props) => (
   <div>
     <Head>
       <title>{title}</title>
@@ -31,7 +31,6 @@ const Layout = ({ children, title = 'Fleck Roofing & Construction', styles = '' 
         rel="stylesheet"
         href="/css/fonts/font-awesome-4.7.0/css/font-awesome.min.css"
       />
-      {styles}
     </Head>
     {children}
   </div>

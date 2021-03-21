@@ -9,15 +9,15 @@
   padding: 0;
 }
 
-.main .the-force {
+.main .content-cards-container {
   flex-basis: unset;
 }
 
-.light-side {
+.cards-left {
   background: radial-gradient(#ffffff, #87ceeb 40%, #ffffff, #ffffff);
 }
 
-.dark-side {
+.cards-right {
   background: linear-gradient(#ffffff, #ff1500, #ffffff);
 }
 
@@ -37,8 +37,8 @@
 /* @media only screen and (min-width: var(--md)) { */
 @media only screen and (min-width: 769px) {
   div.main-container {
-    height: initial;
-    padding: var(--header-height) 0 0;
+    height: calc(100% - var(--desktop-header-height) - var(--footer-height));
+    padding: var(--desktop-header-height) 0 0;
     flex-flow: column nowrap;
   }
 
@@ -47,11 +47,11 @@
     padding: 0;
   }
 
-  .the-force {
+  .content-cards-container {
     flex-flow: column nowrap;
   }
 
-  .dark-side {
+  .cards-right {
     background: linear-gradient(90deg, #ffffff, #ff1500, #ffffff);
   }
 }

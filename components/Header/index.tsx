@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { AppBar, Grid, Link } from '@material-ui/core'
+import { AppBar, Drawer, Grid, Link } from '@material-ui/core'
 import HamburgerNav from '../HamburgerNav'
 import classNames from 'classnames'
 import styles from './index.module.css'
@@ -27,29 +27,83 @@ const Header: React.FC<HeaderProps> = (_: HeaderProps) => {
           <Grid item xs={2} sm={6} className={styles['hamburger-nav-container']}>
             <HamburgerNav active={hambugerActive} onClick={hamburgerOnClick} />
           </Grid>
+          <Grid>
+            <Drawer variant="persistent" anchor="right" open={hambugerActive}>
+              <Grid container className={styles['hamburger-nav-container']}>
+                <HamburgerNav active={hambugerActive} onClick={hamburgerOnClick} />
+              </Grid>
+              <Grid container justify="center" item xs={12}>
+                <Grid className={styles['menu']} container direction="column" wrap="nowrap">
+                  <Grid className={styles['menu-link-container']}>
+                    <Link className={styles['menu-link']} href="/">
+                      Our Services
+                    </Link>
+                  </Grid>
+                  <Grid className={styles['menu-link-container']}>
+                    <Link className={styles['menu-link']} href="/">
+                      Request a Free Quote
+                    </Link>
+                  </Grid>
+                  <Grid className={styles['menu-link-container']}>
+                    <Link className={styles['menu-link']} href="/">
+                      Reviews
+                    </Link>
+                  </Grid>
+                  <Grid className={styles['menu-link-container']}>
+                    <Link className={styles['menu-link']} href="/">
+                      About
+                    </Link>
+                  </Grid>
+                  <Grid className={styles['menu-link-container']}>
+                    <Link className={styles['menu-link']} href="/">
+                      Contact
+                    </Link>
+                  </Grid>
+                </Grid>
+              </Grid>
+            </Drawer>
+          </Grid>
           <Grid
             container
             justify="center"
             item
             xs={12}
-            className={classNames(styles['menu-container'], hambugerActive ? styles['active'] : '')}
+            className={classNames(styles['menu-container'])}
           >
             <Grid
               className={styles['menu']}
               container
-              justify="center"
+              justify="flex-end"
               direction="row"
               wrap="nowrap"
             >
               <Grid className={styles['menu-link-container']}>
-                <Link className={styles['menu-link']} href="/resume">
-                  Resume
+                <Link className={styles['menu-link']} href="/">
+                  Our Services
                 </Link>
               </Grid>
               <Grid className={styles['menu-link-divider']}>|</Grid>
               <Grid className={styles['menu-link-container']}>
-                <Link className={styles['menu-link']} href="/projects">
-                  Projects
+                <Link className={styles['menu-link']} href="/">
+                  Request a Free Quote
+                </Link>
+              </Grid>
+              <Grid className={styles['menu-link-divider']}>|</Grid>
+              <Grid className={styles['menu-link-container']}>
+                <Link className={styles['menu-link']} href="/">
+                  Reviews
+                </Link>
+              </Grid>
+              <Grid className={styles['menu-link-divider']}>|</Grid>
+              <Grid className={styles['menu-link-container']}>
+                <Link className={styles['menu-link']} href="/">
+                  About
+                </Link>
+              </Grid>
+              <Grid className={styles['menu-link-divider']}>|</Grid>
+              <Grid className={styles['menu-link-container']}>
+                <Link className={styles['menu-link']} href="/">
+                  Contact
                 </Link>
               </Grid>
             </Grid>

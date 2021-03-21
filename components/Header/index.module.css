@@ -1,6 +1,7 @@
 header.app-bar {
   min-height: var(--mobile-header-height);
-  padding: 2% 2%;
+  /* padding: 7px; */
+  padding: 2%;
   background-color: var(--background-secondary);
   color: var(--primary-color);
   transition: min-height 0.5s;
@@ -34,11 +35,6 @@ header.app-bar {
   font-size: 1.3em;
   line-height: 1.3em;
   overflow: hidden;
-}
-
-.header .menu-container.active {
-  opacity: 1;
-  padding: 20px 0 35px 0;
 }
 
 .header .menu {
