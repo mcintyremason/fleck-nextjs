@@ -1,0 +1,28 @@
+.cta-container {
+  padding: 5px;
+  /* max-width: var(--cta-width-mobile); */
+}
+
+.cta {
+  height: 100%;
+}
+
+.cta .title {
+  margin-bottom: 0;
+}
+
+.cta .description {
+  display: none;
+}
+
+@media only screen and (min-width: 769px) {
+  .cta-container {
+    padding: 15px;
+    /* max-width: var(--cta-width-desktop); */
+    flex-basis: unset;
+  }
+
+  .cta .description {
+    display: initial;
+  }
+}

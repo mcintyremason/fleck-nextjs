@@ -14,6 +14,9 @@
   --mobile-card-image-width: 300px;
   --mobilecard-image-max-height: 100px;
 
+  --cta-width-mobile: 300px;
+  --cta-width-desktop: 345px;
+
   /* 
     Cannot use CSS variables in media queries.
     CSS variables can only be used on CSS declarations.
