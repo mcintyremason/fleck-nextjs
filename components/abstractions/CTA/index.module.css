@@ -1,10 +1,22 @@
 .cta-container {
   padding: 5px;
-  /* max-width: var(--cta-width-mobile); */
 }
 
 .cta {
   height: 100%;
+  color: var(--text-color);
+}
+
+.cta.primary {
+  background-color: var(--primary-color);
+}
+
+.cta.secondary {
+  background-color: var(--secondary-color);
+}
+
+.cta.no-color {
+  background-color: var(--background-primary);
 }
 
 .cta .title {
@@ -18,7 +30,6 @@
 @media only screen and (min-width: 769px) {
   .cta-container {
     padding: 15px;
-    /* max-width: var(--cta-width-desktop); */
     flex-basis: unset;
   }
 

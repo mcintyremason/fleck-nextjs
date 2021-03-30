@@ -2,7 +2,8 @@
 :root {
   --primary-color: #e43d30;
   --secondary-color: #ffd040;
-  --border-primary: #000000;
+  --text-primary: #000000;
+  --text-secondary: #ffffff;
   --background-primary: #ffffff;
   --background-secondary: #0f0f0f;
 

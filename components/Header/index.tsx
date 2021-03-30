@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { AppBar, Drawer, Grid, Link } from '@material-ui/core'
-import HamburgerNav from '../HamburgerNav'
+import HamburgerNav from '../abstractions/HamburgerNav'
 import classNames from 'classnames'
 import styles from './index.module.css'
 
