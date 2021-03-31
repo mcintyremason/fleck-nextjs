@@ -21,7 +21,7 @@ const Content: React.FC<ContentProps> = (_: ContentProps) => (
         className={classNames(styles['content-cards-container'], styles['cards-left'])}
       >
         <Grid container justify="center">
-          <FleckCTA color="secondary" xs={12} />
+          <FleckCTA color="secondary" borderColor={'primary'} xs={8} md={6} />
         </Grid>
         {/* <ContentCard imgurl="" title="" description={``} xs={6} md={12} /> */}
         <ContentCard imgurl="" title="" description={``} xs={6} md={12} />

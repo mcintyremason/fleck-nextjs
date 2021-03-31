@@ -1,0 +1,8 @@
+.fleck-cta-container .fleck-cta-icon {
+  height: 60px;
+  width: 50px;
+}
+
+.fleck-cta-text.italic {
+  font-style: italic;
+}

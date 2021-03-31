@@ -4,6 +4,7 @@
 
 .cta {
   height: 100%;
+  padding: 10px;
   color: var(--text-color);
 }
 
@@ -17,6 +18,18 @@
 
 .cta.no-color {
   background-color: var(--background-primary);
+}
+
+.cta.primary-border {
+  border: 1px solid var(--primary-color);
+}
+
+.cta-container .cta.secondary-border {
+  border: 1px solid var(--secondary-color);
+}
+
+.cta.no-color-border {
+  border: none;
 }
 
 .cta .title {
