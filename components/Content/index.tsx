@@ -19,7 +19,7 @@ const Content: React.FC<ContentProps> = (_: ContentProps) => (
         alignContent="center"
         className={classNames(styles['content-cards-container'], styles['cards-left'])}
       >
-        <Hero />
+        <Hero primaryText={"We're the Guys That Keep You Dry"} />
         {/* <Grid container justify="center">
           <FleckCTA color="secondary" borderColor={'primary'} xs={8} md={6} />
         </Grid> */}
