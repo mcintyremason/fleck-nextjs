@@ -2,8 +2,14 @@ import styles from './index.module.css'
 import classNames from 'classnames'
 
 import ContentCard from '../ContentCard'
+<<<<<<< Updated upstream
 import { Grid } from '@material-ui/core'
 import React from 'react'
+=======
+import CTA from '../abstractions/CTA'
+import FleckCTA from '../FleckCTA'
+import Hero from '../abstractions/Hero'
+>>>>>>> Stashed changes
 
 type ContentProps = {}
 
@@ -14,6 +20,7 @@ const Content: React.FC<ContentProps> = (_: ContentProps) => (
         container
         item
         xs={12}
+<<<<<<< Updated upstream
         md={6}
         justify="space-evenly"
         alignContent="center"
@@ -37,6 +44,15 @@ const Content: React.FC<ContentProps> = (_: ContentProps) => (
         <ContentCard imgurl="" title="" description={``} xs={6} md={12} />
         <ContentCard imgurl="" title="" description={``} xs={6} md={12} />
         <ContentCard imgurl="" title="" description={``} xs={6} md={12} />
+=======
+        className={classNames(styles['content-cards-container'], styles['cards-left'])}
+      >
+        <Hero />
+        {/* <Grid container justify="center">
+          <FleckCTA color="secondary" borderColor={'primary'} xs={8} md={6} />
+        </Grid> */}
+        {/* <ContentCard imgurl="" title="" description={``} xs={6} md={12} /> */}
+>>>>>>> Stashed changes
       </Grid>
     </Grid>
   </Grid>

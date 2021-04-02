@@ -32,6 +32,20 @@ const theme = responsiveFontSizes(
           padding: '7px',
         },
       },
+      MuiTypography: {
+        colorTextPrimary: {
+          color: '#000000',
+        },
+        colorTextSecondary: {
+          color: '#ffffff',
+        },
+        h1: {
+          fontSize: '40px',
+          fontWeight: 700,
+          fontStyle: 'normal',
+          textDecoration: 'none',
+        },
+      },
     },
   }),
 )
