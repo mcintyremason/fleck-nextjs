@@ -12,19 +12,22 @@ const theme = responsiveFontSizes(
       values: {
         xs: 0,
         sm: 425,
-        md: 769,
+        md: 768,
         lg: 1280,
         xl: 1920,
       },
     },
     palette: {
       primary: {
-        main: '#e43d30',
+        main: '#e43d30;',
+        contrastText: '#000000',
       },
       secondary: {
         main: '#ffd040',
+        contrastText: '#000000',
       },
     },
+    // only overrides can use CSS variables
     overrides: {
       MuiDrawer: {
         paper: {

@@ -2,7 +2,8 @@
 :root {
   --primary-color: #e43d30;
   --secondary-color: #ffd040;
-  --border-primary: #000000;
+  --text-primary: #000000;
+  --text-secondary: #ffffff;
   --background-primary: #ffffff;
   --background-secondary: #0f0f0f;
 
@@ -13,6 +14,9 @@
   --card-image-max-height: 250px;
   --mobile-card-image-width: 300px;
   --mobilecard-image-max-height: 100px;
+
+  --cta-width-mobile: 300px;
+  --cta-width-desktop: 345px;
 
   /* 
     Cannot use CSS variables in media queries.

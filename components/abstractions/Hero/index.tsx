@@ -5,7 +5,7 @@ import { Grid, Typography } from '@material-ui/core'
 
 type HeroProps = {}
 
-const Hero: React.FC<HeroProps> = (props: HeroProps) => {
+const Hero: React.FC<HeroProps> = (_: HeroProps) => {
   return (
     <Grid container className={styles['hero']}>
       <Grid container direction="column" justify="center" className={styles['hero-overlay']}>
