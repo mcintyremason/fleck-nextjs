@@ -4,7 +4,6 @@ import React from 'react'
 import { Grid } from '@material-ui/core'
 
 import ContentCard from '../ContentCard'
-import CTA from '../abstractions/CTA'
 import FleckCTA from '../FleckCTA'
 
 type ContentProps = {}

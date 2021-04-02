@@ -3,7 +3,7 @@ import classNames from 'classnames'
 
 import React from 'react'
 import ChatOutlinedIcon from '@material-ui/icons/ChatOutlined'
-import { Box, Grid, GridSize, Typography } from '@material-ui/core'
+import { Grid, GridSize, Typography } from '@material-ui/core'
 import { Breakpoint } from '@material-ui/core/styles/createBreakpoints'
 
 import CTA, { Color } from '../abstractions/CTA'
