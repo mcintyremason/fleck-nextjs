@@ -5,6 +5,7 @@ import Layout from '../components/Layout'
 import Header from '../components/Header'
 import Content from '../components/Content'
 import Footer from '../components/Footer'
+import RatingBar from '../components/RatingBar'
 
 const theme = responsiveFontSizes(
   createMuiTheme({
@@ -31,7 +32,7 @@ const theme = responsiveFontSizes(
     overrides: {
       MuiDrawer: {
         paper: {
-          backgroundColor: 'var(--background-secondary)',
+          backgroundColor: 'var(--background-primary)',
           padding: '7px',
         },
       },
@@ -43,10 +44,13 @@ const theme = responsiveFontSizes(
           color: '#ffffff',
         },
         h1: {
-          fontSize: '40px',
+          fontFamily:
+            'Raleway, San Frediano, BloggerSans, Helvetica Neue, Helvetica, Arial, sans-serif',
+          fontSize: '54px',
           fontWeight: 700,
           fontStyle: 'normal',
           textDecoration: 'none',
+          letterSpacing: 'normal',
         },
       },
     },
@@ -60,16 +64,31 @@ theme.typography.h5 = {
   },
 }
 
-const IndexPage = () => (
-  <ThemeProvider theme={theme}>
-    <Layout title="Fleck Roofing & Construction">
-      <Grid className="app height-full" itemScope itemType="http://schema.org/LocalBusiness">
-        <Header />
-        <Content />
-        <Footer />
-      </Grid>
-    </Layout>
-  </ThemeProvider>
-)
+type IndexPageProps = {
+  testJson: any
+}
+
+const IndexPage = (props: IndexPageProps) => {
+  const { testJson } = props
+
+  return (
+    <ThemeProvider theme={theme}>
+      <Layout title="Fleck Roofing & Construction">
+        <Grid className="app height-full" itemScope itemType="http://schema.org/LocalBusiness">
+          <Header />
+          <Content />
+          <Footer />
+          {console.log(testJson)}
+        </Grid>
+      </Layout>
+    </ThemeProvider>
+  )
+}
+
+IndexPage.getInitialProps = async (ctx) => {
+  const res = await fetch('https://jsonplaceholder.typicode.com/todos/1')
+  const json = await res.json()
+  return { testJson: json }
+}
 
 export default IndexPage

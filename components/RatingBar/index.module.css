@@ -1,0 +1,4 @@
+.rating-bar-container {
+  height: 50px;
+  background-color: var(--primary-color);
+}

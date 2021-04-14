@@ -20,7 +20,11 @@ const Header: React.FC<HeaderProps> = (_: HeaderProps) => {
           <Grid container item xs={10} sm={6} direction="column" justify="center">
             <h1 className={styles['header-name']}>
               <Link itemProp="legalName" className={styles['name']} href="/">
-                Fleck Roofing
+                <img
+                  alt="Fleck Roofing & Construction"
+                  src="https://le-cdn.hibuwebsites.com/363b5d2c35cb48c89c762e9406551d1a/dms3rep/multi/opt/logo-orig-960w.png"
+                  className={styles['header-logo']}
+                />
               </Link>
             </h1>
           </Grid>

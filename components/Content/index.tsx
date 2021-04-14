@@ -1,9 +1,12 @@
 import styles from './index.module.css'
 import classNames from 'classnames'
 import React from 'react'
-import { Grid } from '@material-ui/core'
+import { Grid, Typography } from '@material-ui/core'
 
 import Hero from '../abstractions/Hero'
+import FleckCTA from '../FleckCTA'
+import FleckHero from '../FleckHero'
+import RatingBar from '../RatingBar'
 
 type ContentProps = {}
 
@@ -19,7 +22,8 @@ const Content: React.FC<ContentProps> = (_: ContentProps) => (
         alignContent="center"
         className={classNames(styles['content-cards-container'], styles['cards-left'])}
       >
-        <Hero primaryText={"We're the Guys That Keep You Dry"} />
+        <RatingBar />
+        <FleckHero />
         {/* <Grid container justify="center">
           <FleckCTA color="secondary" borderColor={'primary'} xs={8} md={6} />
         </Grid> */}
