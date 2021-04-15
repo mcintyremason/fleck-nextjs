@@ -1,0 +1,15 @@
+.text-shadow {
+  text-shadow: 2px 2px #000000f2;
+}
+
+.hours-container {
+  padding: 20px 0 0;
+}
+
+.open-text {
+  color: var(--green);
+}
+
+.closed-text {
+  color: var(--red);
+}

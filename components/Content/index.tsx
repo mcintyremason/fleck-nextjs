@@ -22,12 +22,12 @@ const Content: React.FC<ContentProps> = (_: ContentProps) => (
         alignContent="center"
         className={classNames(styles['content-cards-container'], styles['cards-left'])}
       >
-        <RatingBar />
         <FleckHero />
         {/* <Grid container justify="center">
           <FleckCTA color="secondary" borderColor={'primary'} xs={8} md={6} />
         </Grid> */}
         {/* <ContentCard imgurl="" title="" description={``} xs={6} md={12} /> */}
+        <RatingBar />
       </Grid>
     </Grid>
   </Grid>

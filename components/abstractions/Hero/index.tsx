@@ -19,7 +19,7 @@ const Hero: React.FC<HeroProps> = (props: HeroProps) => {
       <Grid
         container
         direction="column"
-        justify="center"
+        justify="flex-start"
         className={classNames(styles['hero-overlay'], gutters && styles['gutters'])}
       >
         <Typography variant="h1" color="textSecondary" align="center" gutterBottom>
