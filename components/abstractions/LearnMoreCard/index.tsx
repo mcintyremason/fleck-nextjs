@@ -13,7 +13,7 @@ type LearnMoreCardProps = {
 } & Partial<Record<Breakpoint, boolean | GridSize>>
 
 const LearnMoreCard: React.FC<LearnMoreCardProps> = (props: LearnMoreCardProps) => {
-  const { title, description, learnMoreUrl, imageUrl, xs, sm, md, lg, xl } = props
+  const { title, description, imageUrl, xs, sm, md, lg, xl } = props
 
   return (
     <Grid
