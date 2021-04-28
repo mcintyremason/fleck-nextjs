@@ -2,9 +2,9 @@ import React from 'react'
 import { Grid, ThemeProvider, createMuiTheme, responsiveFontSizes } from '@material-ui/core'
 
 import Layout from '../components/Layout'
-import Header from '../components/Header'
+import FleckHeader from '../components/FleckHeader'
 import Content from '../components/Content'
-import Footer from '../components/Footer'
+import Footer from '../components/abstractions/Footer'
 import { NextPageContext } from 'next'
 
 const theme = responsiveFontSizes(
@@ -114,7 +114,7 @@ const IndexPage = (props: IndexPageProps) => {
     <ThemeProvider theme={theme}>
       <Layout title="Fleck Roofing & Construction">
         <Grid className="app height-full" itemScope itemType="http://schema.org/LocalBusiness">
-          <Header />
+          <FleckHeader />
           <Content />
           <Footer />
           {console.log(testJson)}

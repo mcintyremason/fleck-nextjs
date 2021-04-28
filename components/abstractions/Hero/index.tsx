@@ -2,9 +2,10 @@ import styles from './index.module.css'
 import classNames from 'classnames'
 
 import React, { ReactNode } from 'react'
-import { Grid, GridJustification, Typography } from '@material-ui/core'
+import { Card, CardMedia, Grid, GridJustification, Typography } from '@material-ui/core'
 
 type HeroProps = {
+  imageUrl: string
   primaryText: string
   children?: ReactNode | Array<ReactNode>
   gutters?: boolean
@@ -13,22 +14,24 @@ type HeroProps = {
 }
 
 const Hero: React.FC<HeroProps> = (props: HeroProps) => {
-  const { children, gutters, justify, primaryText } = props
+  const { children, gutters, justify, primaryText, imageUrl } = props
 
   return (
-    <Grid container className={classNames(styles['hero'])}>
-      <Grid
-        container
-        direction="column"
-        justify={justify}
-        className={classNames(styles['hero-overlay'], gutters && styles['gutters'])}
-      >
-        <Typography variant="h1" color="textSecondary" align="center" gutterBottom>
-          {primaryText}
-        </Typography>
-        {children}
-      </Grid>
-    </Grid>
+    <Card className={classNames(styles['hero'])} square elevation={0}>
+      <CardMedia image={imageUrl} className={styles['media']}>
+        <Grid
+          container
+          direction="column"
+          justify={justify}
+          className={classNames(styles['hero-overlay'], gutters && styles['gutters'])}
+        >
+          <Typography variant="h1" color="textSecondary" align="center" gutterBottom>
+            {primaryText}
+          </Typography>
+          {children}
+        </Grid>
+      </CardMedia>
+    </Card>
   )
 }
 

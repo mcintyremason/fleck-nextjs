@@ -13,6 +13,14 @@
   flex-basis: unset;
 }
 
+.learn-more-container {
+  padding: 15px 8px;
+}
+
+.learn-more-container h2 {
+  padding: 10px 0;
+}
+
 /* 
   Cannot use CSS variables in media queries.
   CSS variables can only be used on CSS declarations.

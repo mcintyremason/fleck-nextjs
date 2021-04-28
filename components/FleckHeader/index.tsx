@@ -6,7 +6,7 @@ import styles from './index.module.css'
 
 type HeaderProps = {}
 
-const Header: React.FC<HeaderProps> = (_: HeaderProps) => {
+const FleckHeader: React.FC<HeaderProps> = (_: HeaderProps) => {
   const [hambugerActive, setHambugerActive] = useState(false)
 
   const hamburgerOnClick = () => {
@@ -131,4 +131,4 @@ const Header: React.FC<HeaderProps> = (_: HeaderProps) => {
   )
 }
 
-export default Header
+export default FleckHeader

@@ -89,7 +89,12 @@ const FleckHero: React.FC<FleckHero> = (_: FleckHero) => {
 
   return (
     <Grid container className={styles['fleck-hero-container']}>
-      <Hero primaryText="We're the Guys That Keep You Dry" gutters justify="center">
+      <Hero
+        primaryText="We're the Guys That Keep You Dry"
+        gutters
+        justify="center"
+        imageUrl="/img/components/hero-image.jpeg"
+      >
         <Grid container direction="column" className={styles['fleck-hero-secondary-container']}>
           <Typography color="textSecondary" align="center" className={styles['text-shadow']}>
             In Business Since 1988
