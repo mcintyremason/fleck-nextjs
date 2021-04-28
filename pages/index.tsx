@@ -123,7 +123,8 @@ const IndexPage = (props: IndexPageProps) => {
   )
 }
 
-IndexPage.getInitialProps = async (ctx) => {
+// IndexPage.getInitialProps = async (ctx: any) => {
+IndexPage.getInitialProps = async (_: any) => {
   const res = await fetch('https://jsonplaceholder.typicode.com/todos/1')
   const json = await res.json()
   return { testJson: json }
