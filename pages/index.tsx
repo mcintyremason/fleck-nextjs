@@ -5,7 +5,6 @@ import Layout from '../components/Layout'
 import Header from '../components/Header'
 import Content from '../components/Content'
 import Footer from '../components/Footer'
-import RatingBar from '../components/RatingBar'
 
 const theme = responsiveFontSizes(
   createMuiTheme({
@@ -30,10 +29,36 @@ const theme = responsiveFontSizes(
     },
     // only overrides can use CSS variables
     overrides: {
+      MuiLink: {
+        root: {
+          color: 'var(--primary-color)',
+          borderColor: 'var(--primary-color)',
+          textDecoration: 'none',
+        },
+        underlineHover: {
+          border: 'none',
+          borderColor: 'transparent',
+          '&:hover': {
+            color: 'var(--secondary-color)',
+            textDecoration: 'none',
+            borderBottom: '4px solid var(--secondary-color)',
+            transition: 'color 0.5s, border 0.5s;',
+          },
+          '&:focus': {
+            color: 'var(--secondary-color)',
+            textDecoration: 'none',
+            borderBottom: '4px solid var(--secondary-color)',
+            transition: 'color 0.5s, border 0.5s;',
+          },
+        },
+      },
       MuiDrawer: {
         paper: {
           backgroundColor: 'var(--background-primary)',
           padding: '7px',
+        },
+        paperAnchorDockedRight: {
+          borderLeft: '1px solid var(--background-secondary)',
         },
       },
       MuiTypography: {
@@ -44,13 +69,26 @@ const theme = responsiveFontSizes(
           color: '#ffffff',
         },
         h1: {
+          fontSize: '54px',
+          fontWeight: 600,
           fontFamily:
             'Raleway, San Frediano, BloggerSans, Helvetica Neue, Helvetica, Arial, sans-serif',
-          fontSize: '54px',
-          fontWeight: 700,
           fontStyle: 'normal',
           textDecoration: 'none',
           letterSpacing: 'normal',
+        },
+        h2: {
+          fontSize: '24px',
+          fontWeight: 700,
+          lineHeight: '36px',
+          fontFamily:
+            'Raleway, San Frediano, BloggerSans, Helvetica Neue, Helvetica, Arial, sans-serif',
+          fontStyle: 'normal',
+          textDecoration: 'none',
+          letterSpacing: 'normal',
+        },
+        h3: {
+          fontWeight: 700,
         },
       },
     },

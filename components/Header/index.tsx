@@ -17,7 +17,15 @@ const Header: React.FC<HeaderProps> = (_: HeaderProps) => {
     <AppBar position="fixed" className={styles['app-bar']}>
       <Grid container direction="column" justify="center">
         <Grid container className={styles['header']}>
-          <Grid container item xs={10} sm={6} direction="column" justify="center">
+          <Grid
+            container
+            item
+            xs={10}
+            sm={4}
+            direction="column"
+            justify="center"
+            className={styles['logo-nav-container']}
+          >
             <h1 className={styles['header-name']}>
               <Link itemProp="legalName" className={styles['name']} href="/">
                 <img
@@ -28,11 +36,16 @@ const Header: React.FC<HeaderProps> = (_: HeaderProps) => {
               </Link>
             </h1>
           </Grid>
-          <Grid item xs={2} sm={6} className={styles['hamburger-nav-container']}>
+          <Grid item xs={2} sm={8} className={styles['hamburger-nav-container']}>
             <HamburgerNav active={hambugerActive} onClick={hamburgerOnClick} />
           </Grid>
           <Grid>
-            <Drawer variant="persistent" anchor="right" open={hambugerActive}>
+            <Drawer
+              variant="persistent"
+              anchor="right"
+              open={hambugerActive}
+              className={styles['menu-drawer']}
+            >
               <Grid container className={styles['hamburger-nav-container']}>
                 <HamburgerNav active={hambugerActive} onClick={hamburgerOnClick} />
               </Grid>

@@ -12,9 +12,10 @@
 
   --mobile-card-image-width: 300px;
   --mobile-header-height: 146px;
+  --mobile-header-padding: 7px;
   --mobile-rating-bar-height: 50px;
 
-  --desktop-header-height: 86px;
+  --desktop-header-height: 146px;
 
   --footer-height: 65px;
   --card-width: 345px;
@@ -109,11 +110,11 @@ body {
   font-family: sans-serif;
 }
 
-a {
+/* a {
   color: var(--primary-color);
   border-color: var(--primary-color);
   border-bottom: 3px solid;
-  transition: all 0.5s;
+  transition: color 0.5s, border 0.5s;
   text-decoration: none;
 }
 a:hover {
@@ -123,7 +124,7 @@ a:hover {
 a:focus {
   color: var(--secondary-color);
   border-color: transparent;
-}
+} */
 h1,
 h2,
 h3,
@@ -140,9 +141,6 @@ h5,
 h6,
 p {
   margin: 0;
-}
-h2 {
-  font-size: 1.5em;
 }
 h3 {
   font-size: 1.25em;
