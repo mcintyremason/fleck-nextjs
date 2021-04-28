@@ -13,14 +13,6 @@
   flex-basis: unset;
 }
 
-.cards-left {
-  background: radial-gradient(#ffffff, #87ceeb 40%, #ffffff, #ffffff);
-}
-
-.cards-right {
-  background: linear-gradient(#ffffff, #ff1500, #ffffff);
-}
-
 /* 
   Cannot use CSS variables in media queries.
   CSS variables can only be used on CSS declarations.
@@ -28,7 +20,6 @@
 /* @media only screen and (min-width: var(--sm)) { */
 @media only screen and (min-width: 425px) {
   .main {
-    padding: 20px 0;
     flex-flow: row nowrap;
     justify-content: center;
   }

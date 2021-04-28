@@ -29,10 +29,66 @@ const theme = responsiveFontSizes(
     },
     // only overrides can use CSS variables
     overrides: {
+      MuiLink: {
+        root: {
+          color: 'var(--primary-color)',
+          borderColor: 'var(--primary-color)',
+          textDecoration: 'none',
+        },
+        underlineHover: {
+          border: 'none',
+          borderColor: 'transparent',
+          '&:hover': {
+            color: 'var(--secondary-color)',
+            textDecoration: 'none',
+            borderBottom: '4px solid var(--secondary-color)',
+            transition: 'color 0.5s, border 0.5s;',
+          },
+          '&:focus': {
+            color: 'var(--secondary-color)',
+            textDecoration: 'none',
+            borderBottom: '4px solid var(--secondary-color)',
+            transition: 'color 0.5s, border 0.5s;',
+          },
+        },
+      },
       MuiDrawer: {
         paper: {
-          backgroundColor: 'var(--background-secondary)',
+          backgroundColor: 'var(--background-primary)',
           padding: '7px',
+        },
+        paperAnchorDockedRight: {
+          borderLeft: '1px solid var(--background-secondary)',
+        },
+      },
+      MuiTypography: {
+        colorTextPrimary: {
+          color: '#000000',
+        },
+        colorTextSecondary: {
+          color: '#ffffff',
+        },
+        h1: {
+          fontSize: '54px',
+          fontWeight: 600,
+          fontFamily:
+            'Raleway, San Frediano, BloggerSans, Helvetica Neue, Helvetica, Arial, sans-serif',
+          fontStyle: 'normal',
+          textDecoration: 'none',
+          letterSpacing: 'normal',
+        },
+        h2: {
+          fontSize: '24px',
+          fontWeight: 700,
+          lineHeight: '36px',
+          fontFamily:
+            'Raleway, San Frediano, BloggerSans, Helvetica Neue, Helvetica, Arial, sans-serif',
+          fontStyle: 'normal',
+          textDecoration: 'none',
+          letterSpacing: 'normal',
+        },
+        h3: {
+          fontWeight: 700,
         },
       },
     },
@@ -40,22 +96,38 @@ const theme = responsiveFontSizes(
 )
 
 theme.typography.h5 = {
-  fontSize: '.7rem',
+  fontSize: '1em',
   [theme.breakpoints.up('md')]: {
     fontSize: '24px',
   },
 }
 
-const IndexPage = () => (
-  <ThemeProvider theme={theme}>
-    <Layout title="Fleck Roofing & Construction">
-      <Grid className="app height-full" itemScope itemType="http://schema.org/LocalBusiness">
-        <Header />
-        <Content />
-        <Footer />
-      </Grid>
-    </Layout>
-  </ThemeProvider>
-)
+type IndexPageProps = {
+  testJson: any
+}
+
+const IndexPage = (props: IndexPageProps) => {
+  const { testJson } = props
+
+  return (
+    <ThemeProvider theme={theme}>
+      <Layout title="Fleck Roofing & Construction">
+        <Grid className="app height-full" itemScope itemType="http://schema.org/LocalBusiness">
+          <Header />
+          <Content />
+          <Footer />
+          {console.log(testJson)}
+        </Grid>
+      </Layout>
+    </ThemeProvider>
+  )
+}
+
+// IndexPage.getInitialProps = async (ctx: any) => {
+IndexPage.getInitialProps = async (_: any) => {
+  const res = await fetch('https://jsonplaceholder.typicode.com/todos/1')
+  const json = await res.json()
+  return { testJson: json }
+}
 
 export default IndexPage

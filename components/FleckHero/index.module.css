@@ -1,0 +1,54 @@
+.fleck-hero-container {
+  color: var(--background-primary);
+}
+
+.text-shadow {
+  text-shadow: 1px 1px #000000;
+}
+
+.hours-container {
+  padding: 20px 0 0;
+}
+
+.open-text {
+  color: var(--green);
+}
+
+.closed-text {
+  color: var(--red);
+}
+
+.fleck-hero-container .desktop-divider {
+  display: none;
+}
+
+.fleck-hero-container .fleck-hero-phone {
+  display: none;
+}
+
+@media only screen and (min-width: 769px) {
+  .fleck-hero-container .fleck-hero-secondary-container {
+    flex-flow: row nowrap;
+    justify-content: center;
+  }
+
+  .fleck-hero-container .desktop-divider {
+    display: initial;
+    padding: 0 5px;
+    line-height: 24px;
+  }
+
+  .fleck-hero-container .fleck-hero-phone {
+    display: flex;
+    color: var(--background-primary);
+  }
+
+  .fleck-hero-container .fleck-hero-phone {
+    padding: 20px 0 0;
+    text-decoration: none;
+  }
+
+  .fleck-hero-container .fleck-hero-link {
+    color: var(--background-primary);
+  }
+}

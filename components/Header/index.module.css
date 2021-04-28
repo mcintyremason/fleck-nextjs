@@ -1,10 +1,8 @@
 header.app-bar {
-  min-height: var(--mobile-header-height);
-  /* padding: 7px; */
-  padding: 2%;
-  background-color: var(--background-secondary);
+  height: var(--mobile-header-height);
+  padding: 7px;
+  background-color: var(--background-primary);
   color: var(--primary-color);
-  transition: min-height 0.5s;
 }
 
 .header {
@@ -13,7 +11,6 @@ header.app-bar {
 
 .header .name {
   border-bottom: none;
-  padding: 0 0 0 15px;
 }
 
 .header .name:hover {
@@ -41,26 +38,44 @@ header.app-bar {
   padding: 0;
   margin: 0;
   font-size: 1em;
+  font-weight: 700;
 }
 
 .menu .menu-link-container {
-  padding: 0 10px 7px;
+  padding: 10px 10px;
 }
 
 .menu .menu-link {
   text-decoration: none;
-  transition: all 0.5s;
+  transition: color 0.5s, border 0.5s;
   border-color: transparent;
 }
 
 .menu .menu-link:hover {
-  border-bottom: 2px solid var(--background-primary);
+  color: var(--secondary-color);
+  border-bottom: 3px solid var(--secondary-color);
   text-decoration: none;
 }
+
 .menu .menu-link-divider {
   padding-top: 4px;
   line-height: 1.1em;
   font-size: 1em;
+}
+
+.header .logo-nav-container {
+  height: 100%;
+}
+
+.logo-nav-container .header-logo {
+  max-width: 100%;
+  max-height: calc(var(--mobile-header-height) - 14px);
+}
+
+@media only screen and (min-width: 425px) {
+  .logo-nav-container .header-logo {
+    max-width: initial;
+  }
 }
 
 @media only screen and (min-width: 769px) {
@@ -68,8 +83,9 @@ header.app-bar {
     padding: 0 2%;
   }
 
-  .header {
+  .app-bar .header {
     height: var(--desktop-header-height);
+    flex-flow: row nowrap;
   }
 
   .header .hamburger-nav-container {
@@ -78,7 +94,6 @@ header.app-bar {
 
   .header .menu-container {
     height: 100%;
-    max-width: 50%;
     flex-direction: column;
     justify-content: center;
     opacity: 1;
@@ -92,5 +107,9 @@ header.app-bar {
 
   .menu .menu-link-container {
     padding: 0 10px;
+  }
+
+  .menu-drawer {
+    display: none;
   }
 }
