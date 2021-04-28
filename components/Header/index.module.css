@@ -9,12 +9,13 @@ header.app-bar {
   height: 100%;
 }
 
-.header .name {
+.header .logo {
   border-bottom: none;
 }
 
-.header .name:hover {
+.header .logo:hover {
   text-decoration: none;
+  border: none;
 }
 
 .header .header-name .name span {

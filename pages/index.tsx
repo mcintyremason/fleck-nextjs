@@ -5,6 +5,7 @@ import Layout from '../components/Layout'
 import Header from '../components/Header'
 import Content from '../components/Content'
 import Footer from '../components/Footer'
+import { NextPageContext } from 'next'
 
 const theme = responsiveFontSizes(
   createMuiTheme({
@@ -123,8 +124,7 @@ const IndexPage = (props: IndexPageProps) => {
   )
 }
 
-// IndexPage.getInitialProps = async (ctx: any) => {
-IndexPage.getInitialProps = async (_: any) => {
+IndexPage.getInitialProps = async (_: NextPageContext) => {
   const res = await fetch('https://jsonplaceholder.typicode.com/todos/1')
   const json = await res.json()
   return { testJson: json }

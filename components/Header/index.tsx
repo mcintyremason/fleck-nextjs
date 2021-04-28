@@ -27,7 +27,7 @@ const Header: React.FC<HeaderProps> = (_: HeaderProps) => {
             className={styles['logo-nav-container']}
           >
             <h1 className={styles['header-name']}>
-              <Link itemProp="legalName" className={styles['name']} href="/">
+              <Link itemProp="legalName" className={styles['logo']} href="/">
                 <img
                   alt="Fleck Roofing & Construction"
                   src="https://le-cdn.hibuwebsites.com/363b5d2c35cb48c89c762e9406551d1a/dms3rep/multi/opt/logo-orig-960w.png"
