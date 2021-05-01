@@ -24,6 +24,7 @@ const Content: React.FC<ContentProps> = (_: ContentProps) => (
             Fleck Roofing & Construction - Getting It Right Since 1988
           </Typography>
           <LearnMoreCard
+            key="learn-more-emergency"
             title="Emergency Roofing"
             description={`A damaged roof requires immediate attention. 
               Know that you'll get a fast response and quality work
@@ -31,12 +32,14 @@ const Content: React.FC<ContentProps> = (_: ContentProps) => (
             imageUrl="/img/components/learn-more-card-1.webp"
           />
           <LearnMoreCard
+            key="learn-more-replacement"
             title="Roof Replacement"
             description={`If your roof is older than 20 years or needs major repairs, 
               it may be time for a replacement. Count on our experts to get the job done right.`}
             imageUrl="/img/components/learn-more-card-2.webp"
           />
           <LearnMoreCard
+            key="learn-more-siding"
             title="Siding, Soffit, and Fascia"
             description={`Do you need siding replacement for your home?
               Choose Fleck Roofing & Construction for reliable siding work in the Easton, PA area.`}
