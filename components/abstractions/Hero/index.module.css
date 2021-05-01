@@ -1,6 +1,7 @@
 .hero {
   position: relative;
   min-height: 450px;
+  width: 100%;
 }
 
 .hero-overlay {

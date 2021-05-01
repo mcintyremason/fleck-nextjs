@@ -3,7 +3,16 @@ import classNames from 'classnames'
 
 import React from 'react'
 import { Breakpoint } from '@material-ui/core/styles/createBreakpoints'
-import { Button, Card, CardContent, CardMedia, Grid, GridSize, Typography } from '@material-ui/core'
+import {
+  Button,
+  Card,
+  CardContent,
+  CardMedia,
+  Grid,
+  GridSize,
+  Link,
+  Typography,
+} from '@material-ui/core'
 
 type LearnMoreCardProps = {
   title: string
@@ -26,29 +35,46 @@ const LearnMoreCard: React.FC<LearnMoreCardProps> = (props: LearnMoreCardProps) 
       xl={xl}
     >
       <Card square elevation={0}>
-        <CardMedia image={imageUrl} className={styles['media']}>
-          <CardContent>
-            <Typography
-              variant="h5"
-              component="h5"
-              color="textSecondary"
-              className={classNames(styles['title'])}
+        <Link href="/">
+          <CardMedia image={imageUrl} className={styles['media']}>
+            <Grid
+              container
+              direction="column"
+              justify="center"
+              className={classNames(styles['hero-overlay'])}
             >
-              {title}
-            </Typography>
-            <Typography
-              variant="body2"
-              component="p"
-              color="textSecondary"
-              className={classNames(styles['description'])}
-            >
-              {description}
-            </Typography>
-            <Button variant="contained" color="secondary">
-              Learn More
-            </Button>
-          </CardContent>
-        </CardMedia>
+              <CardContent>
+                <Grid container justify="center">
+                  <Typography
+                    variant="h5"
+                    component="h5"
+                    color="textSecondary"
+                    align="center"
+                    className={classNames(styles['title'])}
+                  >
+                    {title}
+                  </Typography>
+                  <Typography
+                    variant="body2"
+                    component="p"
+                    color="textSecondary"
+                    align="center"
+                    className={classNames(styles['description'])}
+                  >
+                    {description}
+                  </Typography>
+                  <Button
+                    variant="contained"
+                    color="secondary"
+                    className={styles['learn-more-button']}
+                  >
+                    Learn More
+                  </Button>
+                </Grid>
+              </CardContent>
+            </Grid>
+          </CardMedia>
+        </Link>
       </Card>
     </Grid>
   )

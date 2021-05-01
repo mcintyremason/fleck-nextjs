@@ -71,9 +71,10 @@ const FleckHero: React.FC<FleckHero> = (_: FleckHero) => {
   const currDay = currDate.getDay()
   const currHour = currDate.getHours()
   const currOperationHours = WEEKLY_OPERATION_HOURS[currDay]
-  const nextOperationHours = WEEKLY_OPERATION_HOURS[currDay + 1].isWeeklyDayOff
-    ? WEEKLY_OPERATION_HOURS[currDay + 2]
-    : WEEKLY_OPERATION_HOURS[currDay + 1]
+  const nextOperationHours =
+    WEEKLY_OPERATION_HOURS[currDay + 1]?.isWeeklyDayOff ?? null
+      ? WEEKLY_OPERATION_HOURS[currDay + 2]
+      : WEEKLY_OPERATION_HOURS[currDay + 1]
 
   const isOpen = (): boolean => {
     if (currOperationHours.isWeeklyDayOff) {

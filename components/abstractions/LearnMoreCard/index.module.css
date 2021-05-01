@@ -2,3 +2,27 @@
   height: 300px;
   height: 300px;
 }
+
+.hero-overlay {
+  width: 100%;
+  height: 100%;
+  background-color: #00000095;
+}
+
+.learn-more-card-container .title {
+  font-size: 21px;
+  text-shadow: 1px 1px #000000;
+}
+
+.learn-more-card-container .description {
+  font-size: 15px;
+  padding: 0 0 15px;
+  text-shadow: 1px 1px #000000;
+}
+
+.learn-more-card-container .learn-more-button {
+  width: 100%;
+  border-radius: 0;
+  border: var(--background-primary) 1px solid;
+  text-transform: none;
+}
