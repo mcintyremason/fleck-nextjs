@@ -28,7 +28,19 @@ const Content: React.FC<ContentProps> = (_: ContentProps) => (
             description={`A damaged roof requires immediate attention. 
               Know that you'll get a fast response and quality work
               when you call our team to address is.`}
-            imageUrl="https://le-cdn.hibuwebsites.com/363b5d2c35cb48c89c762e9406551d1a/dms3rep/multi/opt/1-640w.jpg"
+            imageUrl="/img/components/learn-more-card-1.webp"
+          />
+          <LearnMoreCard
+            title="Roof Replacement"
+            description={`If your roof is older than 20 years or needs major repairs, 
+              it may be time for a replacement. Count on our experts to get the job done right.`}
+            imageUrl="/img/components/learn-more-card-2.webp"
+          />
+          <LearnMoreCard
+            title="Siding, Soffit, and Fascia"
+            description={`Do you need siding replacement for your home?
+              Choose Fleck Roofing & Construction for reliable siding work in the Easton, PA area.`}
+            imageUrl="/img/components/learn-more-card-3.webp"
           />
         </Grid>
         {/* <Grid container justify="center">

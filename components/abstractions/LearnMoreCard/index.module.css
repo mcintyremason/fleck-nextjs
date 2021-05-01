@@ -9,6 +9,10 @@
   background-color: #00000095;
 }
 
+.learn-more-card-container {
+  padding: 0 0 10px;
+}
+
 .learn-more-card-container .title {
   font-size: 21px;
   text-shadow: 1px 1px #000000;
