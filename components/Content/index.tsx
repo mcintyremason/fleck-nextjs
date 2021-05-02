@@ -10,19 +10,13 @@ type ContentProps = {}
 
 const Content: React.FC<ContentProps> = (_: ContentProps) => (
   <Grid className={classNames(styles['main-container'])}>
-    <Grid container direction="column" className={classNames(styles['main'], 'height-full')}>
-      <Grid
-        container
-        item
-        xs={12}
-        alignContent="center"
-        className={classNames(styles['content-cards-container'])}
-      >
-        <FleckHero />
-        <Grid container justify="center" className={styles['learn-more-container']}>
-          <Typography variant="h2" align="center">
-            Fleck Roofing & Construction - Getting It Right Since 1988
-          </Typography>
+    <Grid container direction="column" className={classNames(styles['main'])}>
+      <FleckHero />
+      <Grid container justify="center" className={styles['learn-more-container']}>
+        <Typography variant="h2" align="center" className={styles['learn-more-title']}>
+          Fleck Roofing & Construction - Getting It Right Since 1988
+        </Typography>
+        <Grid container direction="column" className={styles['learn-more-cards-container']}>
           <LearnMoreCard
             key="learn-more-emergency"
             title="Emergency Roofing"
@@ -30,6 +24,8 @@ const Content: React.FC<ContentProps> = (_: ContentProps) => (
               Know that you'll get a fast response and quality work
               when you call our team to address is.`}
             imageUrl="/img/components/learn-more-card-1.webp"
+            xs={12}
+            md={4}
           />
           <LearnMoreCard
             key="learn-more-replacement"
@@ -37,6 +33,8 @@ const Content: React.FC<ContentProps> = (_: ContentProps) => (
             description={`If your roof is older than 20 years or needs major repairs, 
               it may be time for a replacement. Count on our experts to get the job done right.`}
             imageUrl="/img/components/learn-more-card-2.webp"
+            xs={12}
+            md={4}
           />
           <LearnMoreCard
             key="learn-more-siding"
@@ -44,14 +42,24 @@ const Content: React.FC<ContentProps> = (_: ContentProps) => (
             description={`Do you need siding replacement for your home?
               Choose Fleck Roofing & Construction for reliable siding work in the Easton, PA area.`}
             imageUrl="/img/components/learn-more-card-3.webp"
+            xs={12}
+            md={4}
           />
         </Grid>
-        {/* <Grid container justify="center">
+      </Grid>
+      {/* <Grid
+        container
+        item
+        xs={12}
+        alignContent="center"
+        className={classNames(styles['content-cards-container'])}
+      >
+        <ContentCard imgurl="" title="" description={``} xs={6} md={12} />
+      </Grid> */}
+      {/* <Grid container justify="center">
           <FleckCTA color="secondary" borderColor={'primary'} xs={8} md={6} />
         </Grid> */}
-        {/* <ContentCard imgurl="" title="" description={``} xs={6} md={12} /> */}
-        {/* <RatingBar /> */}
-      </Grid>
+      {/* <RatingBar /> */}
     </Grid>
   </Grid>
 )

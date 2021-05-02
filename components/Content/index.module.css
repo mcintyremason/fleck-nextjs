@@ -1,5 +1,4 @@
 .main-container {
-  height: 100%;
   background-color: var(--background-primary);
   padding: var(--mobile-header-height) 0 0;
   flex-flow: row nowrap;
@@ -14,11 +13,16 @@
 }
 
 .learn-more-container {
-  padding: 25px 8px;
+  padding: 25px 0;
 }
 
 .learn-more-container h2 {
-  padding: 0 0 25px;
+  padding: 0 8px 25px;
+}
+
+.learn-more-container .learn-more-title {
+  max-width: 320px;
+  font-size: 24px;
 }
 
 /* 
@@ -36,13 +40,12 @@
 /* @media only screen and (min-width: var(--md)) { */
 @media only screen and (min-width: 769px) {
   div.main-container {
-    height: calc(100% - var(--desktop-header-height) - var(--footer-height));
     padding: var(--desktop-header-height) 0 0;
     flex-flow: column nowrap;
   }
 
   .main-container .main {
-    flex-flow: row nowrap;
+    /* flex-flow: row nowrap; */
     padding: 0;
   }
 
@@ -50,7 +53,12 @@
     flex-flow: column nowrap;
   }
 
-  .cards-right {
-    background: linear-gradient(90deg, #ffffff, #ff1500, #ffffff);
+  .learn-more-container .learn-more-title {
+    max-width: initial;
+    font-size: 32px;
+  }
+
+  .learn-more-container .learn-more-cards-container {
+    flex-flow: row nowrap;
   }
 }
