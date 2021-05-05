@@ -14,12 +14,13 @@ const HamburgerNav: React.FC<HamburgerNavProps> = (props: HamburgerNavProps) => 
   return (
     <Grid container justify="flex-end" onClick={onClick} className={styles['hamburger-container']}>
       <button
+        type="button"
+        aria-label="Hamburger Navigation"
         className={classNames(
           styles['hamburger'],
           styles['hamburger--collapse'],
           active ? styles['is-active'] : '',
         )}
-        type="button"
       >
         <span className={styles['hamburger-box']}>
           <span className={styles['hamburger-inner']}></span>

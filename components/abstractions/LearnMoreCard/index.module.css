@@ -1,6 +1,5 @@
 .media {
   height: 300px;
-  height: 300px;
 }
 
 .hero-overlay {
@@ -32,6 +31,10 @@
 }
 
 @media only screen and (min-width: 768px) {
+  .media {
+    height: 100%;
+  }
+
   .learn-more-card-container {
     padding: 0 5px 10px;
   }
