@@ -1,6 +1,8 @@
 import styles from './index.module.css'
 
 import React from 'react'
+import { Grid, Typography } from '@material-ui/core'
+import LearnMoreCard from '../abstractions/LearnMoreCard'
 
 type FleckLearnMoreProps = {}
 

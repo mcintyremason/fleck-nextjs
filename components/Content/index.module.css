@@ -12,19 +12,6 @@
   flex-basis: unset;
 }
 
-.learn-more-container {
-  padding: 25px 0;
-}
-
-.learn-more-container h2 {
-  padding: 0 8px 25px;
-}
-
-.learn-more-container .learn-more-title {
-  max-width: 320px;
-  font-size: 24px;
-}
-
 /* 
   Cannot use CSS variables in media queries.
   CSS variables can only be used on CSS declarations.
@@ -45,20 +32,10 @@
   }
 
   .main-container .main {
-    /* flex-flow: row nowrap; */
     padding: 0;
   }
 
   .content-cards-container {
     flex-flow: column nowrap;
-  }
-
-  .learn-more-container .learn-more-title {
-    max-width: initial;
-    font-size: 32px;
-  }
-
-  .learn-more-container .learn-more-cards-container {
-    flex-flow: row nowrap;
   }
 }
