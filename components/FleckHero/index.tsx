@@ -124,7 +124,6 @@ const FleckHero: React.FC<FleckHero> = (_: FleckHero) => {
           </Typography>
         </Grid>
         <Grid container justify="center" className={styles['hours-container']}>
-          {console.log(new Intl.DateTimeFormat('en-US').format(currDate))}
           <Typography variant="h5" color="textSecondary" className={styles['text-shadow']}>
             Hours:{' '}
             {isOpen() ? (
