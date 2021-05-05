@@ -1,5 +1,14 @@
 .media {
   height: 300px;
+  transition: all 0.5s;
+}
+
+.zoom:hover,
+.zoom:focus {
+  padding-left: 30px;
+  margin-left: -30px;
+  padding-right: 30px;
+  margin-right: -30px;
 }
 
 .hero-overlay {
@@ -31,10 +40,6 @@
 }
 
 @media only screen and (min-width: 768px) {
-  .media {
-    height: 100%;
-  }
-
   .learn-more-card-container {
     padding: 0 5px 10px;
   }

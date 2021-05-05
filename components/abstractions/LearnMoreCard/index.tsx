@@ -19,10 +19,11 @@ type LearnMoreCardProps = {
   description: string
   learnMoreUrl?: string
   imageUrl?: string
+  imageZoom?: boolean
 } & Partial<Record<Breakpoint, boolean | GridSize>>
 
 const LearnMoreCard: React.FC<LearnMoreCardProps> = (props: LearnMoreCardProps) => {
-  const { title, description, imageUrl, xs, sm, md, lg, xl } = props
+  const { title, description, imageUrl, imageZoom = true, xs, sm, md, lg, xl } = props
 
   return (
     <Grid
@@ -36,7 +37,10 @@ const LearnMoreCard: React.FC<LearnMoreCardProps> = (props: LearnMoreCardProps) 
     >
       <Card square elevation={0}>
         <Link href="/">
-          <CardMedia image={imageUrl} className={styles['media']}>
+          <CardMedia
+            image={imageUrl}
+            className={classNames(styles['media'], imageZoom ? styles['zoom'] : '')}
+          >
             <Grid
               container
               direction="column"
