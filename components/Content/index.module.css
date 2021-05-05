@@ -1,5 +1,4 @@
 .main-container {
-  height: 100%;
   background-color: var(--background-primary);
   padding: var(--mobile-header-height) 0 0;
   flex-flow: row nowrap;
@@ -26,23 +25,17 @@
 }
 
 /* @media only screen and (min-width: var(--md)) { */
-@media only screen and (min-width: 769px) {
+@media only screen and (min-width: 768px) {
   div.main-container {
-    height: calc(100% - var(--desktop-header-height) - var(--footer-height));
     padding: var(--desktop-header-height) 0 0;
     flex-flow: column nowrap;
   }
 
   .main-container .main {
-    flex-flow: row nowrap;
     padding: 0;
   }
 
   .content-cards-container {
     flex-flow: column nowrap;
-  }
-
-  .cards-right {
-    background: linear-gradient(90deg, #ffffff, #ff1500, #ffffff);
   }
 }

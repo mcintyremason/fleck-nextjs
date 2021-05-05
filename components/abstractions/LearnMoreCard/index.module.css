@@ -1,0 +1,66 @@
+.media {
+  height: 300px;
+  transition: padding 0.33s, margin 0.33s, height 1s;
+}
+
+.zoom:hover,
+.zoom:focus {
+  padding-left: 50px;
+  margin-left: -50px;
+  padding-right: 50px;
+  margin-right: -50px;
+}
+
+.hero-overlay {
+  width: 100%;
+  height: 100%;
+  background-color: #00000095;
+}
+
+.learn-more-card-container {
+  padding: 0 10px 10px;
+}
+
+.learn-more-card-container .title {
+  font-size: 21px;
+  text-shadow: 1px 1px #000000;
+}
+
+.learn-more-card-container .description {
+  font-size: 15px;
+  padding: 0 0 15px;
+  text-shadow: 1px 1px #000000;
+}
+
+.learn-more-card-container .learn-more-button {
+  width: 100%;
+  border-radius: 0;
+  border: var(--background-primary) 1px solid;
+  text-transform: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .learn-more-card-container {
+    padding: 0 5px 10px;
+  }
+
+  .learn-more-card-container:first-child {
+    padding: 0 5px 10px 10px;
+  }
+
+  .learn-more-card-container:last-child {
+    padding: 0 10px 10px 5px;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .media {
+    height: 400px;
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  .media {
+    height: 550px;
+  }
+}

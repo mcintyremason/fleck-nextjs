@@ -71,12 +71,15 @@ const FleckHero: React.FC<FleckHero> = (_: FleckHero) => {
   const currDay = currDate.getDay()
   const currHour = currDate.getHours()
   const currOperationHours = WEEKLY_OPERATION_HOURS[currDay]
-  const nextOperationHours = WEEKLY_OPERATION_HOURS[currDay + 1].isWeeklyDayOff
-    ? WEEKLY_OPERATION_HOURS[currDay + 2]
-    : WEEKLY_OPERATION_HOURS[currDay + 1]
+  const tomorrowDay = currDay != 6 ? currDay + 1 : 0
+  const dayAfterTomorrow = tomorrowDay + 1
+  const nextOperationHours =
+    WEEKLY_OPERATION_HOURS[currDay + 1]?.isWeeklyDayOff ?? null
+      ? WEEKLY_OPERATION_HOURS[dayAfterTomorrow]
+      : WEEKLY_OPERATION_HOURS[tomorrowDay]
 
   const isOpen = (): boolean => {
-    if (currOperationHours.isWeeklyDayOff) {
+    if (currOperationHours?.isWeeklyDayOff) {
       return false
     } else {
       if (currHour >= currOperationHours.openHour && currHour <= currOperationHours.closeHour) {
@@ -89,7 +92,12 @@ const FleckHero: React.FC<FleckHero> = (_: FleckHero) => {
 
   return (
     <Grid container className={styles['fleck-hero-container']}>
-      <Hero primaryText="We're the Guys That Keep You Dry" gutters justify="center">
+      <Hero
+        primaryText="We're the Guys That Keep You Dry"
+        gutters
+        justify="center"
+        imageUrl="/img/components/hero-image.jpeg"
+      >
         <Grid container direction="column" className={styles['fleck-hero-secondary-container']}>
           <Typography color="textSecondary" align="center" className={styles['text-shadow']}>
             In Business Since 1988
@@ -123,7 +131,7 @@ const FleckHero: React.FC<FleckHero> = (_: FleckHero) => {
                 <span className={styles['open-text']}>Open</span>
                 {` • Closes ${displayHours(currOperationHours.closeHour)}:00 pm`}
               </>
-            ) : nextOperationHours.isWeeklyDayOff ? (
+            ) : nextOperationHours?.isWeeklyDayOff ? (
               <>
                 <span className={styles['closed-text']}>Closed</span>
                 {` • Opens ${displayHours(nextOperationHours.openHour)}:00 am`}

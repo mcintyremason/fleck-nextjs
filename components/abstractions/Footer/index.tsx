@@ -1,20 +1,20 @@
 import { Grid } from '@material-ui/core'
-import React from 'react'
+import React, { ReactNode } from 'react'
 import styles from './index.module.css'
 import classNames from 'classnames'
 
 type FooterProps = {
+  children?: ReactNode
   isAbsolute?: boolean
 }
 
 const Footer: React.FC<FooterProps> = (props: FooterProps) => {
-  const { isAbsolute } = props
+  const { children, isAbsolute } = props
 
   return (
-    <Grid
-      container
-      className={classNames(styles['footer'], isAbsolute ? styles['absolute'] : '')}
-    ></Grid>
+    <Grid container className={classNames(styles['footer'], isAbsolute ? styles['absolute'] : '')}>
+      {children}
+    </Grid>
   )
 }
 

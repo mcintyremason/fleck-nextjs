@@ -1,10 +1,7 @@
 .hero {
   position: relative;
   min-height: 450px;
-  background-image: url('/img/components/hero-image.jpeg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  width: 100%;
 }
 
 .hero-overlay {
@@ -17,7 +14,11 @@
   padding: 20px 20px;
 }
 
-@media only screen and (min-width: 769px) {
+.hero .media {
+  height: 100%;
+}
+
+@media only screen and (min-width: 768px) {
   .hero h1 {
     font-size: 54px;
   }

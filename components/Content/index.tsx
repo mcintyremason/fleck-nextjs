@@ -4,31 +4,28 @@ import React from 'react'
 import { Grid } from '@material-ui/core'
 
 import FleckHero from '../FleckHero'
+import FleckLearnMore from '../FleckLearnMore'
 
 type ContentProps = {}
 
 const Content: React.FC<ContentProps> = (_: ContentProps) => (
   <Grid className={classNames(styles['main-container'])}>
-    <Grid container direction="column" className={classNames(styles['main'], 'height-full')}>
-      <Grid
+    <Grid container direction="column" className={classNames(styles['main'])}>
+      <FleckHero />
+      <FleckLearnMore />
+      {/* <Grid
         container
         item
         xs={12}
         alignContent="center"
         className={classNames(styles['content-cards-container'])}
       >
-        <FleckHero />
-        {/* <Grid container justify="center">
-          <Typography variant="h2" align="center">
-            Fleck Roofing & Construction - Getting It Right Since 1988
-          </Typography>
-        </Grid> */}
-        {/* <Grid container justify="center">
+        <ContentCard imgurl="" title="" description={``} xs={6} md={12} />
+      </Grid> */}
+      {/* <Grid container justify="center">
           <FleckCTA color="secondary" borderColor={'primary'} xs={8} md={6} />
         </Grid> */}
-        {/* <ContentCard imgurl="" title="" description={``} xs={6} md={12} /> */}
-        {/* <RatingBar /> */}
-      </Grid>
+      {/* <RatingBar /> */}
     </Grid>
   </Grid>
 )

@@ -6,7 +6,7 @@ import styles from './index.module.css'
 
 type HeaderProps = {}
 
-const Header: React.FC<HeaderProps> = (_: HeaderProps) => {
+const FleckHeader: React.FC<HeaderProps> = (_: HeaderProps) => {
   const [hambugerActive, setHambugerActive] = useState(false)
 
   const hamburgerOnClick = () => {
@@ -30,7 +30,7 @@ const Header: React.FC<HeaderProps> = (_: HeaderProps) => {
               <Link itemProp="legalName" className={styles['logo']} href="/">
                 <img
                   alt="Fleck Roofing & Construction"
-                  src="https://le-cdn.hibuwebsites.com/363b5d2c35cb48c89c762e9406551d1a/dms3rep/multi/opt/logo-orig-960w.png"
+                  src="/img/components/header-logo.png"
                   className={styles['header-logo']}
                 />
               </Link>
@@ -131,4 +131,4 @@ const Header: React.FC<HeaderProps> = (_: HeaderProps) => {
   )
 }
 
-export default Header
+export default FleckHeader
