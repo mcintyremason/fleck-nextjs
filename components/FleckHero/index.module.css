@@ -32,6 +32,10 @@
     justify-content: center;
   }
 
+  .fleck-hero-secondary-container p {
+    font-size: 18px;
+  }
+
   .fleck-hero-container .desktop-divider {
     display: initial;
     padding: 0 5px;

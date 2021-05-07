@@ -23,6 +23,7 @@ const Hero: React.FC<HeroProps> = (props: HeroProps) => {
           container
           direction="column"
           justify={justify}
+          alignItems="center"
           className={classNames(styles['hero-overlay'], gutters && styles['gutters'])}
         >
           <Typography variant="h1" color="textSecondary" align="center" gutterBottom>

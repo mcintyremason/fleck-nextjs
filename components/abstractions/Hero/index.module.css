@@ -18,8 +18,18 @@
   height: 100%;
 }
 
+.media h1 {
+  max-width: 730px;
+}
+
 @media only screen and (min-width: 768px) {
   .hero h1 {
     font-size: 54px;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .gutters {
+    padding: 180px 40px;
   }
 }

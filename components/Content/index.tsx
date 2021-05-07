@@ -36,7 +36,7 @@ const Content: React.FC<ContentProps> = (_: ContentProps) => (
             <Link href="/">read more</Link>
           </Typography>
           <Typography>3/30/2021</Typography>
-          <FleckButton color="secondary" />
+          <FleckButton text="Learn More" color="secondary" xs={12} md={4} lg={3} />
         </Grid>
       </Grid>
       {/* <Grid
