@@ -73,8 +73,9 @@ const FleckHero: React.FC<FleckHero> = (_: FleckHero) => {
   const currOperationHours = WEEKLY_OPERATION_HOURS[currDay]
   const tomorrowDay = currDay != 6 ? currDay + 1 : 0
   const dayAfterTomorrow = tomorrowDay + 1
+  // based on the business being off one day during the week
   const nextOperationHours =
-    WEEKLY_OPERATION_HOURS[currDay + 1]?.isWeeklyDayOff ?? null
+    WEEKLY_OPERATION_HOURS[tomorrowDay]?.isWeeklyDayOff ?? null
       ? WEEKLY_OPERATION_HOURS[dayAfterTomorrow]
       : WEEKLY_OPERATION_HOURS[tomorrowDay]
 
