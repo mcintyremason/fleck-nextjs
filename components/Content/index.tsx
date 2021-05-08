@@ -20,23 +20,49 @@ const Content: React.FC<ContentProps> = (_: ContentProps) => (
       <Grid container justify="center" className={styles['customer-says-container']}>
         <Grid container direction="column" item xs={12} md={4}>
           <Grid container justify="center">
-            <Grid container>
-              <ChatOutlinedIcon fontSize="large" />
+            <Grid
+              item
+              xs={3}
+              md={12}
+              container
+              alignItems="center"
+              justify="center"
+              className={styles['chat-icon-container']}
+            >
+              <ChatOutlinedIcon
+                fontSize="large"
+                className={classNames(styles['chat-icon'], styles['flip-horizontal'])}
+              />
             </Grid>
-            <Grid container>
-              <Typography>Here's what our satisfied customers are saying...</Typography>
+            <Grid item xs={9} md={12}>
+              <Typography variant="h2" color="secondary" className={styles['customer-says-title']}>
+                Here's what our satisfied customers are saying...
+              </Typography>
             </Grid>
           </Grid>
         </Grid>
         <Grid item xs={12} md={4} container direction="column">
-          <Typography>ALLEN W</Typography>
-          <Rating defaultValue={5} precision={0.1} readOnly />
-          <Typography>
-            A huge thank you! The guys at Fleck showed up early and knocked out my roof ...{' '}
-            <Link href="/">read more</Link>
-          </Typography>
-          <Typography>3/30/2021</Typography>
-          <FleckButton text="Learn More" color="secondary" xs={12} md={4} lg={3} />
+          <Grid container className={styles['customer-says-review']}>
+            <Typography>ALLEN W</Typography>
+            <Rating defaultValue={5} precision={0.1} readOnly />
+            <Typography>
+              A huge thank you! The guys at Fleck showed up early and knocked out my roof
+              replacement in no time! I couldn't be happi... <Link href="/">read more</Link>
+            </Typography>
+            <Typography>3/30/2021</Typography>
+          </Grid>
+          <Grid container className={styles['customer-says-review']}>
+            <Typography>Matt E</Typography>
+            <Rating defaultValue={5} precision={0.1} readOnly />
+            <Typography>
+              Great guys, very knowledgeable, helpful and timely.. Michael’s technical background
+              gave me great confidence in his final product.
+            </Typography>
+            <Typography>2/13/2021</Typography>
+          </Grid>
+          <Grid container>
+            <FleckButton text="Read More Reviews" color="secondary" xs={12} />
+          </Grid>
         </Grid>
       </Grid>
       {/* <Grid
