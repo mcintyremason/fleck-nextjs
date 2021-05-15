@@ -3,16 +3,8 @@ import classNames from 'classnames'
 
 import React from 'react'
 import { Breakpoint } from '@material-ui/core/styles/createBreakpoints'
-import {
-  Button,
-  Card,
-  CardContent,
-  CardMedia,
-  Grid,
-  GridSize,
-  Link,
-  Typography,
-} from '@material-ui/core'
+import { Card, CardContent, CardMedia, Grid, GridSize, Link, Typography } from '@material-ui/core'
+import FleckButton from '../../FleckButton'
 
 type LearnMoreCardProps = {
   title: string
@@ -67,13 +59,7 @@ const LearnMoreCard: React.FC<LearnMoreCardProps> = (props: LearnMoreCardProps) 
                   >
                     {description}
                   </Typography>
-                  <Button
-                    variant="contained"
-                    color="secondary"
-                    className={styles['learn-more-button']}
-                  >
-                    Learn More
-                  </Button>
+                  <FleckButton text="Learn More" color="secondary" xs={12} md={6} lg={4} xl={3} />
                 </Grid>
               </CardContent>
             </Grid>

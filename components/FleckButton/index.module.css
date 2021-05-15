@@ -1,0 +1,6 @@
+button.fleck-button {
+  width: 100%;
+  border-radius: 0;
+  border: var(--background-primary) 1px solid;
+  text-transform: none;
+}

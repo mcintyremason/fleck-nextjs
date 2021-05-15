@@ -1,7 +1,8 @@
 .footer {
   height: var(--footer-height);
   padding: 20px 0;
-  background-color: var(--background-secondary);
+  /* create type prop and add color classes based off type */
+  background-color: var(--secondary-color);
 }
 
 .footer.absolute {

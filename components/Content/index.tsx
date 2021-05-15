@@ -5,6 +5,7 @@ import { Grid } from '@material-ui/core'
 
 import FleckHero from '../FleckHero'
 import FleckLearnMore from '../FleckLearnMore'
+import FleckCustomerSays from '../FleckCustomerSays'
 
 type ContentProps = {}
 
@@ -13,6 +14,7 @@ const Content: React.FC<ContentProps> = (_: ContentProps) => (
     <Grid container direction="column" className={classNames(styles['main'])}>
       <FleckHero />
       <FleckLearnMore />
+      <FleckCustomerSays />
       {/* <Grid
         container
         item

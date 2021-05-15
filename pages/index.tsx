@@ -96,6 +96,13 @@ const theme = responsiveFontSizes(
             'Raleway, San Frediano, BloggerSans, Helvetica Neue, Helvetica, Arial, sans-serif',
         },
       },
+      MuiButton: {
+        root: {
+          padding: '7px 0',
+          fontSize: '15px',
+          fontWeight: 400,
+        },
+      },
     },
   }),
 )
