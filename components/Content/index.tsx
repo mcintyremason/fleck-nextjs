@@ -1,14 +1,10 @@
 import styles from './index.module.css'
 import classNames from 'classnames'
 import React from 'react'
-import { Divider, Grid, Link } from '@material-ui/core'
-import ChatOutlinedIcon from '@material-ui/icons/ChatOutlined'
+import { Grid } from '@material-ui/core'
 
 import FleckHero from '../FleckHero'
 import FleckLearnMore from '../FleckLearnMore'
-import { Typography } from '@material-ui/core'
-import { Rating } from '@material-ui/lab'
-import FleckButton from '../FleckButton'
 import FleckCustomerSays from '../FleckCustomerSays'
 
 type ContentProps = {}
