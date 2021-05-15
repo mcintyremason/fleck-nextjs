@@ -12,23 +12,6 @@
   flex-basis: unset;
 }
 
-.customer-says-container {
-  background-color: var(--background-secondary);
-  color: var(--secondary-color);
-  padding: 30px 10px;
-}
-
-.customer-says-container .chat-icon {
-  font-size: 3.5em;
-}
-
-.flip-horizontal {
-  -moz-transform: scaleX(-1);
-  -webkit-transform: scaleX(-1);
-  -o-transform: scaleX(-1);
-  transform: scaleX(-1);
-}
-
 /* 
   Cannot use CSS variables in media queries.
   CSS variables can only be used on CSS declarations.
@@ -38,10 +21,6 @@
   .main {
     flex-flow: row nowrap;
     justify-content: center;
-  }
-
-  .customer-says-container .chat-icon {
-    font-size: 5em;
   }
 }
 
@@ -58,23 +37,5 @@
 
   .content-cards-container {
     flex-flow: column nowrap;
-  }
-
-  .customer-says-container {
-    padding: 70px 0;
-  }
-
-  .customer-says-container .chat-icon-container {
-    justify-content: flex-start;
-  }
-
-  .customer-says-container .chat-icon {
-    padding: 0 0 25px;
-  }
-
-  .customer-says-container .customer-says-title {
-    padding: 0 7px;
-    font-size: 30px;
-    max-width: 300px;
   }
 }

@@ -1,7 +1,7 @@
 import styles from './index.module.css'
 import classNames from 'classnames'
 import React from 'react'
-import { Grid, Link } from '@material-ui/core'
+import { Divider, Grid, Link } from '@material-ui/core'
 import ChatOutlinedIcon from '@material-ui/icons/ChatOutlined'
 
 import FleckHero from '../FleckHero'
@@ -9,6 +9,7 @@ import FleckLearnMore from '../FleckLearnMore'
 import { Typography } from '@material-ui/core'
 import { Rating } from '@material-ui/lab'
 import FleckButton from '../FleckButton'
+import FleckCustomerSays from '../FleckCustomerSays'
 
 type ContentProps = {}
 
@@ -17,54 +18,7 @@ const Content: React.FC<ContentProps> = (_: ContentProps) => (
     <Grid container direction="column" className={classNames(styles['main'])}>
       <FleckHero />
       <FleckLearnMore />
-      <Grid container justify="center" className={styles['customer-says-container']}>
-        <Grid container direction="column" item xs={12} md={4}>
-          <Grid container justify="center">
-            <Grid
-              item
-              xs={3}
-              md={12}
-              container
-              alignItems="center"
-              justify="center"
-              className={styles['chat-icon-container']}
-            >
-              <ChatOutlinedIcon
-                fontSize="large"
-                className={classNames(styles['chat-icon'], styles['flip-horizontal'])}
-              />
-            </Grid>
-            <Grid item xs={9} md={12}>
-              <Typography variant="h2" color="secondary" className={styles['customer-says-title']}>
-                Here's what our satisfied customers are saying...
-              </Typography>
-            </Grid>
-          </Grid>
-        </Grid>
-        <Grid item xs={12} md={4} container direction="column">
-          <Grid container className={styles['customer-says-review']}>
-            <Typography>ALLEN W</Typography>
-            <Rating defaultValue={5} precision={0.1} readOnly />
-            <Typography>
-              A huge thank you! The guys at Fleck showed up early and knocked out my roof
-              replacement in no time! I couldn't be happi... <Link href="/">read more</Link>
-            </Typography>
-            <Typography>3/30/2021</Typography>
-          </Grid>
-          <Grid container className={styles['customer-says-review']}>
-            <Typography>Matt E</Typography>
-            <Rating defaultValue={5} precision={0.1} readOnly />
-            <Typography>
-              Great guys, very knowledgeable, helpful and timely.. Michael’s technical background
-              gave me great confidence in his final product.
-            </Typography>
-            <Typography>2/13/2021</Typography>
-          </Grid>
-          <Grid container>
-            <FleckButton text="Read More Reviews" color="secondary" xs={12} />
-          </Grid>
-        </Grid>
-      </Grid>
+      <FleckCustomerSays />
       {/* <Grid
         container
         item
