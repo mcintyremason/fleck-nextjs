@@ -3,16 +3,7 @@ import classNames from 'classnames'
 
 import React from 'react'
 import { Breakpoint } from '@material-ui/core/styles/createBreakpoints'
-import {
-  Button,
-  Card,
-  CardContent,
-  CardMedia,
-  Grid,
-  GridSize,
-  Link,
-  Typography,
-} from '@material-ui/core'
+import { Card, CardContent, CardMedia, Grid, GridSize, Link, Typography } from '@material-ui/core'
 import FleckButton from '../../FleckButton'
 
 type LearnMoreCardProps = {
