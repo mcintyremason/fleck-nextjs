@@ -27,7 +27,7 @@ const FleckCustomerSays: React.FC<FleckCustomerSaysProps> = (_: FleckCustomerSay
           md={12}
           container
           alignItems="center"
-          justify="center"
+          justify="flex-start"
           className={styles['chat-icon-container']}
         >
           <ChatOutlinedIcon
