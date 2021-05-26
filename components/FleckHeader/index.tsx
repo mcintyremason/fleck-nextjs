@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { AppBar, Drawer, Grid, Link } from '@material-ui/core'
+import { AppBar, Grid, Link, SwipeableDrawer } from '@material-ui/core'
 import HamburgerNav from '../abstractions/HamburgerNav'
 import classNames from 'classnames'
 import styles from './index.module.css'
@@ -40,11 +40,13 @@ const FleckHeader: React.FC<HeaderProps> = (_: HeaderProps) => {
             <HamburgerNav active={hambugerActive} onClick={hamburgerOnClick} />
           </Grid>
           <Grid>
-            <Drawer
-              variant="persistent"
+            <SwipeableDrawer
               anchor="right"
               open={hambugerActive}
               className={styles['menu-drawer']}
+              onClose={hamburgerOnClick}
+              onOpen={hamburgerOnClick}
+              keepMounted={true}
             >
               <Grid container className={styles['hamburger-nav-container']}>
                 <HamburgerNav active={hambugerActive} onClick={hamburgerOnClick} />
@@ -78,7 +80,7 @@ const FleckHeader: React.FC<HeaderProps> = (_: HeaderProps) => {
                   </Grid>
                 </Grid>
               </Grid>
-            </Drawer>
+            </SwipeableDrawer>
           </Grid>
           <Grid
             container
