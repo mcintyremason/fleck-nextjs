@@ -1,11 +1,11 @@
 import React from 'react'
 import { Grid, ThemeProvider, createMuiTheme, responsiveFontSizes } from '@material-ui/core'
+import { NextPageContext } from 'next'
 
 import Layout from '../components/Layout'
 import FleckHeader from '../components/FleckHeader'
 import Content from '../components/Content'
-import Footer from '../components/abstractions/Footer'
-import { NextPageContext } from 'next'
+import FleckFooter from '../components/FleckFooter'
 
 const theme = responsiveFontSizes(
   createMuiTheme({
@@ -127,7 +127,7 @@ const IndexPage = (props: IndexPageProps) => {
         <Grid className="app height-full" itemScope itemType="http://schema.org/LocalBusiness">
           <FleckHeader />
           <Content />
-          <Footer />
+          <FleckFooter />
           {console.log(testJson)}
         </Grid>
       </Layout>
