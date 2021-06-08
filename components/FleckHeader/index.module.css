@@ -47,6 +47,8 @@ header.app-bar {
 }
 
 .menu .menu-link {
+  font-size: 1.1em;
+  font-weight: 700;
   text-decoration: none;
   transition: color 0.5s, border 0.5s;
   border-color: transparent;
@@ -76,6 +78,12 @@ header.app-bar {
 @media only screen and (min-width: 425px) {
   .logo-nav-container .header-logo {
     max-width: initial;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .menu .menu-link {
+    font-size: 1.2em;
   }
 }
 
