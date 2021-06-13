@@ -1,10 +1,77 @@
-import React, { useState } from 'react'
-import { AppBar, Grid, Link, SwipeableDrawer } from '@material-ui/core'
-import HamburgerNav from '../abstractions/HamburgerNav'
-import classNames from 'classnames'
 import styles from './index.module.css'
+import classNames from 'classnames'
+
+import React, { useState } from 'react'
+import { AppBar, Grid, Link } from '@material-ui/core'
+import HouseIcon from '@material-ui/icons/House'
+import BusinessIcon from '@material-ui/icons/Business'
+import ReportProblemIcon from '@material-ui/icons/ReportProblem'
+import { Info, Stars } from '@material-ui/icons'
+
+import HamburgerNav from '../abstractions/HamburgerNav'
+import MenuDrawer from '../abstractions/MenuDrawer'
+import ConstructionIcon from '../icons/ConstructionIcon'
+import SidingIcon from '../icons/SidingIcon'
+import ContactUsIcon from '../icons/ContactUsIcon'
+import RequestQuoteIcon from '../icons/RequestQuoteIcon'
+import OurServicesIcon from '../icons/OurServicesIcon'
 
 type HeaderProps = {}
+
+const menuLinks = [
+  {
+    text: 'Our Services',
+    href: '/',
+    icon: <OurServicesIcon color="primary" />,
+    subLinks: [
+      {
+        text: 'Residential Roofing',
+        href: '/',
+        icon: <HouseIcon color="primary" />,
+      },
+      {
+        text: 'Commercial Roofing',
+        href: '/',
+        icon: <BusinessIcon color="primary" />,
+      },
+      {
+        text: 'Siding, Soffit, & Fascia',
+        href: '/',
+        icon: <SidingIcon color="primary" />,
+      },
+      {
+        text: 'Emergency Roofing',
+        href: '/',
+        icon: <ReportProblemIcon color="primary" />,
+      },
+      {
+        text: 'General Contracting',
+        href: '/',
+        icon: <ConstructionIcon color="primary" />,
+      },
+    ],
+  },
+  {
+    text: 'Request a Free Quote',
+    href: '/',
+    icon: <RequestQuoteIcon color="primary" />,
+  },
+  {
+    text: 'Reviews',
+    href: '/',
+    icon: <Stars color="primary" />,
+  },
+  {
+    text: 'About',
+    href: '/',
+    icon: <Info color="primary" />,
+  },
+  {
+    text: 'Contact',
+    href: '/',
+    icon: <ContactUsIcon color="primary" />,
+  },
+]
 
 const FleckHeader: React.FC<HeaderProps> = (_: HeaderProps) => {
   const [hambugerActive, setHambugerActive] = useState(false)
@@ -40,47 +107,13 @@ const FleckHeader: React.FC<HeaderProps> = (_: HeaderProps) => {
             <HamburgerNav active={hambugerActive} onClick={hamburgerOnClick} />
           </Grid>
           <Grid>
-            <SwipeableDrawer
-              anchor="right"
+            <MenuDrawer
+              links={menuLinks}
               open={hambugerActive}
-              className={styles['menu-drawer']}
+              hamburgerOnClick={hamburgerOnClick}
               onClose={hamburgerOnClick}
               onOpen={hamburgerOnClick}
-              keepMounted={true}
-            >
-              <Grid container className={styles['hamburger-nav-container']}>
-                <HamburgerNav active={hambugerActive} onClick={hamburgerOnClick} />
-              </Grid>
-              <Grid container justify="center" item xs={12}>
-                <Grid className={styles['menu']} container direction="column" wrap="nowrap">
-                  <Grid className={styles['menu-link-container']}>
-                    <Link className={styles['menu-link']} href="/">
-                      Our Services
-                    </Link>
-                  </Grid>
-                  <Grid className={styles['menu-link-container']}>
-                    <Link className={styles['menu-link']} href="/">
-                      Request a Free Quote
-                    </Link>
-                  </Grid>
-                  <Grid className={styles['menu-link-container']}>
-                    <Link className={styles['menu-link']} href="/">
-                      Reviews
-                    </Link>
-                  </Grid>
-                  <Grid className={styles['menu-link-container']}>
-                    <Link className={styles['menu-link']} href="/">
-                      About
-                    </Link>
-                  </Grid>
-                  <Grid className={styles['menu-link-container']}>
-                    <Link className={styles['menu-link']} href="/">
-                      Contact
-                    </Link>
-                  </Grid>
-                </Grid>
-              </Grid>
-            </SwipeableDrawer>
+            />
           </Grid>
           <Grid
             container

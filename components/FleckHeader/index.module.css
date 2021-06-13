@@ -109,8 +109,4 @@ header.app-bar {
   .menu .menu-link-container {
     padding: 0 10px;
   }
-
-  .menu-drawer {
-    display: none;
-  }
 }

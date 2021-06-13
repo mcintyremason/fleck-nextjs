@@ -103,6 +103,33 @@ const theme = responsiveFontSizes(
           fontWeight: 400,
         },
       },
+      MuiList: {
+        padding: {
+          paddingTop: 0,
+          paddingBottom: 0,
+        },
+      },
+      MuiListItem: {
+        root: {
+          paddingTop: '10px',
+          paddingBottom: '10px',
+          color: 'var(--primary-color)',
+          fontWeight: 700,
+          fontSize: '1em',
+        },
+      },
+      MuiListItemText: {
+        root: {
+          marginTop: 0,
+          marginBottom: 0,
+        },
+      },
+      MuiSvgIcon: {
+        root: {
+          fontSize: '2rem',
+          fontWeight: 700,
+        },
+      },
     },
   }),
 )
