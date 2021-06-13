@@ -1,19 +1,8 @@
 import styles from './index.module.css'
-import classNames from 'classnames'
 
-import React, { useState } from 'react'
-import {
-  Collapse,
-  Grid,
-  Link,
-  List,
-  ListItem,
-  ListItemIcon,
-  ListItemText,
-  SwipeableDrawer,
-} from '@material-ui/core'
+import React from 'react'
+import { Grid, SwipeableDrawer } from '@material-ui/core'
 import HamburgerNav from '../HamburgerNav'
-import { ExpandLess, ExpandMore } from '@material-ui/icons'
 import ListMenu, { ListMenuLink } from '../ListMenu'
 
 type MenuDrawerProps = {
