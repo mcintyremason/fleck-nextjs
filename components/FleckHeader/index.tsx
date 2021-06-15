@@ -11,11 +11,11 @@ import GradeRoundedIcon from '@material-ui/icons/GradeRounded'
 
 import HamburgerNav from '../abstractions/HamburgerNav'
 import MenuDrawer from '../abstractions/MenuDrawer'
-import ConstructionIcon from '../icons/ConstructionIcon'
 import SidingIcon from '../icons/SidingIcon'
 import ContactUsIcon from '../icons/ContactUsIcon'
 import RequestQuoteIcon from '../icons/RequestQuoteIcon'
 import EngineeringOutlinedIcon from '../icons/EngineeringOutlinedIcon'
+import HandymanOutlinedIcon from '../icons/HandymanOutlinedIcon'
 
 type HeaderProps = {}
 
@@ -48,7 +48,7 @@ const menuLinks = [
       {
         text: 'General Contracting',
         href: '/',
-        icon: <ConstructionIcon color="primary" />,
+        icon: <HandymanOutlinedIcon color="primary" />,
       },
     ],
   },
