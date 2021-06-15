@@ -1,9 +1,9 @@
 import { SvgIcon, SvgIconProps } from '@material-ui/core'
 import React from 'react'
 
-type RequestQuoteIconProps = {} & SvgIconProps
+type EngineeringIconProps = {} & SvgIconProps
 
-const RequestQuoteIcon: React.FC<RequestQuoteIconProps> = (props: RequestQuoteIconProps) => {
+const EngineeringIcon: React.FC<EngineeringIconProps> = (props: EngineeringIconProps) => {
   return (
     <SvgIcon {...props}>
       <g>
@@ -22,4 +22,4 @@ const RequestQuoteIcon: React.FC<RequestQuoteIconProps> = (props: RequestQuoteIc
   )
 }
 
-export default RequestQuoteIcon
+export default EngineeringIcon

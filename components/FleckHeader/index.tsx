@@ -3,10 +3,11 @@ import classNames from 'classnames'
 
 import React, { useState } from 'react'
 import { AppBar, Grid, Link } from '@material-ui/core'
-import HouseIcon from '@material-ui/icons/House'
+import HouseOutlinedIcon from '@material-ui/icons/HouseOutlined'
 import BusinessIcon from '@material-ui/icons/Business'
-import ReportProblemIcon from '@material-ui/icons/ReportProblem'
-import { Info, Stars } from '@material-ui/icons'
+import ReportProblemOutlinedIcon from '@material-ui/icons/ReportProblemOutlined'
+import InfoOutlinedIcon from '@material-ui/icons/InfoOutlined'
+import GradeRoundedIcon from '@material-ui/icons/GradeRounded'
 
 import HamburgerNav from '../abstractions/HamburgerNav'
 import MenuDrawer from '../abstractions/MenuDrawer'
@@ -14,7 +15,7 @@ import ConstructionIcon from '../icons/ConstructionIcon'
 import SidingIcon from '../icons/SidingIcon'
 import ContactUsIcon from '../icons/ContactUsIcon'
 import RequestQuoteIcon from '../icons/RequestQuoteIcon'
-import OurServicesIcon from '../icons/OurServicesIcon'
+import EngineeringOutlinedIcon from '../icons/EngineeringOutlinedIcon'
 
 type HeaderProps = {}
 
@@ -22,12 +23,12 @@ const menuLinks = [
   {
     text: 'Our Services',
     href: '/',
-    icon: <OurServicesIcon color="primary" />,
+    icon: <EngineeringOutlinedIcon color="primary" />,
     subLinks: [
       {
         text: 'Residential Roofing',
         href: '/',
-        icon: <HouseIcon color="primary" />,
+        icon: <HouseOutlinedIcon color="primary" />,
       },
       {
         text: 'Commercial Roofing',
@@ -42,7 +43,7 @@ const menuLinks = [
       {
         text: 'Emergency Roofing',
         href: '/',
-        icon: <ReportProblemIcon color="primary" />,
+        icon: <ReportProblemOutlinedIcon color="primary" />,
       },
       {
         text: 'General Contracting',
@@ -59,12 +60,12 @@ const menuLinks = [
   {
     text: 'Reviews',
     href: '/',
-    icon: <Stars color="primary" />,
+    icon: <GradeRoundedIcon color="primary" />,
   },
   {
     text: 'About',
     href: '/',
-    icon: <Info color="primary" />,
+    icon: <InfoOutlinedIcon color="primary" />,
   },
   {
     text: 'Contact',
