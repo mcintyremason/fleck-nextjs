@@ -1,7 +1,7 @@
 import styles from './index.module.css'
 
 import React, { useState } from 'react'
-import { Collapse, Grid, Link, List, ListItem, ListItemIcon, ListItemText } from '@material-ui/core'
+import { Collapse, Grid, Link, List, ListItem, ListItemIcon } from '@material-ui/core'
 import { ExpandLess, ExpandMore } from '@material-ui/icons'
 
 export type ListMenuLink = {
