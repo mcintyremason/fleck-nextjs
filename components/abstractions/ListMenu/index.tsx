@@ -1,5 +1,4 @@
 import styles from './index.module.css'
-import classNames from 'classnames'
 
 import React, { useState } from 'react'
 import { Collapse, Grid, Link, List, ListItem, ListItemIcon, ListItemText } from '@material-ui/core'
@@ -7,7 +6,7 @@ import { ExpandLess, ExpandMore } from '@material-ui/icons'
 
 export type ListMenuLink = {
   text: string
-  href: string
+  href?: string
   icon?: any
   isExpanded?: boolean
   subLinks?: Array<ListMenuLink>
@@ -40,27 +39,29 @@ const ListMenu: React.FC<ListMenuProps> = (props: ListMenuProps) => {
           {link?.subLinks?.length ? (
             <List component="nav" aria-labelledby="our-services-menu-item">
               <ListItem button disableGutters onClick={() => expandLinkHandler(link)}>
-                {link.icon ? <ListItemIcon>{link.icon}</ListItemIcon> : null}
-                {
-                  // TODO: ADD COLOR CHANGE TEXT AND UNDERLINE ON CLICK
-                }
-                <ListItemText
-                  disableTypography
-                  primary="Our Services"
-                  id="our-services-menu-item"
-                />
+                <Grid container justify="space-between" className={styles['list-menu-link']}>
+                  <Grid item xs={2} container direction="column" justify="center">
+                    {link.icon ? <ListItemIcon>{link.icon}</ListItemIcon> : null}
+                  </Grid>
+                  <Grid item xs={10} container direction="column" justify="center">
+                    {link.text}
+                  </Grid>
+                </Grid>
                 {link.isExpanded ? <ExpandLess /> : <ExpandMore />}
               </ListItem>
               <Collapse in={link.isExpanded} timeout="auto" unmountOnExit>
                 {link?.subLinks.map((subLink) => (
                   <List key={`${subLink.text}-sublink`} component="div" disablePadding>
                     <ListItem button>
-                      {subLink.icon ? <ListItemIcon>{subLink.icon}</ListItemIcon> : null}
-                      <Link
-                        className={classNames(styles['list-menu-sub-link'])}
-                        href={subLink.href}
-                      >
-                        {subLink.text}
+                      <Link className={styles['list-menu-link']} href={link.href}>
+                        <Grid container justify="space-between">
+                          <Grid item xs={2} container direction="column" justify="center">
+                            {subLink.icon ? <ListItemIcon>{subLink.icon}</ListItemIcon> : null}
+                          </Grid>
+                          <Grid item xs={10} container direction="column" justify="center">
+                            {subLink.text}
+                          </Grid>
+                        </Grid>
                       </Link>
                     </ListItem>
                   </List>
@@ -71,9 +72,15 @@ const ListMenu: React.FC<ListMenuProps> = (props: ListMenuProps) => {
             <Grid key={`${link.text}-link`} className={styles['list-menu-link-container']}>
               <List component="nav" aria-labelledby="our-services-menu-item">
                 <ListItem button disableGutters onClick={() => expandLinkHandler(link)}>
-                  {link.icon ? <ListItemIcon>{link.icon}</ListItemIcon> : null}
                   <Link className={styles['list-menu-link']} href={link.href}>
-                    {link.text}
+                    <Grid container justify="space-between">
+                      <Grid item xs={2} container direction="column" justify="center">
+                        {link.icon ? <ListItemIcon>{link.icon}</ListItemIcon> : null}
+                      </Grid>
+                      <Grid item xs={10} container direction="column" justify="center">
+                        {link.text}
+                      </Grid>
+                    </Grid>
                   </Link>
                 </ListItem>
               </List>

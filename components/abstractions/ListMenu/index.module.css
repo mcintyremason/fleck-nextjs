@@ -11,7 +11,9 @@
 }
 
 .list-menu .list-menu-link {
+  width: 100%;
   text-decoration: none;
+  transition: color 0.5s;
 }
 
 .list-menu .list-menu-sub-link {
