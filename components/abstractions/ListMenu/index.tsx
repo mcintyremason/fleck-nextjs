@@ -37,7 +37,7 @@ const ListMenu: React.FC<ListMenuProps> = (props: ListMenuProps) => {
       {menuLinks.map((link: ListMenuLink) => (
         <Grid key={`${link.text}-link`}>
           {link?.subLinks?.length ? (
-            <List component="nav" aria-labelledby="our-services-menu-item">
+            <List component="nav" aria-labelledby={`${link.text}-menu-item`}>
               <ListItem button disableGutters onClick={() => expandLinkHandler(link)}>
                 <Grid container justify="space-between" className={styles['list-menu-link']}>
                   <Grid item xs={2} container direction="column" justify="center">
