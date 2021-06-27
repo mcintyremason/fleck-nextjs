@@ -29,7 +29,7 @@ header.app-bar {
 .header .menu-container {
   opacity: 0;
   height: 0;
-  transition: all 0.5s;
+  /* transition: all 0.5s; */
   font-size: 1.3em;
   line-height: 1.3em;
   overflow: hidden;
@@ -45,16 +45,17 @@ header.app-bar {
 .menu .menu-link-container {
   padding: 10px 10px;
   cursor: pointer;
+  /* transition: color 0.5s; */
 }
 
 .menu .menu-link {
   vertical-align: top;
+  /* transition: color 0.5s; */
 }
 
 .menu .menu-link:focus {
   color: var(--secondary-color);
   border-bottom: none;
-  /* border-bottom: 3px solid var(--secondary-color); */
   text-decoration: none;
 }
 
@@ -130,5 +131,13 @@ div.menu-popper {
 
   .menu .menu-link-container {
     padding: 0 10px;
+  }
+
+  .menu .menu-link-container.active {
+    color: var(--secondary-color);
+  }
+
+  .menu .menu-link-container:hover {
+    color: var(--secondary-color);
   }
 }

@@ -20,7 +20,7 @@
   width: 100%;
   vertical-align: top;
   text-decoration: none;
-  transition: color 0.5s;
+  /* transition: color 0.5s; */
 }
 
 .list-menu .list-menu-sub-link {
