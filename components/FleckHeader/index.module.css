@@ -58,6 +58,17 @@ header.app-bar {
   text-decoration: none;
 }
 
+.menu .menu-link.active {
+  color: var(--secondary-color);
+  border-bottom: none;
+  text-decoration: none;
+}
+
+.menu .menu-link.active:hover {
+  color: var(--secondary-color);
+  border-bottom: none;
+}
+
 .menu .menu-link-divider {
   padding-top: 4px;
   line-height: 1.1em;
@@ -71,6 +82,11 @@ header.app-bar {
 .logo-nav-container .header-logo {
   max-width: 100%;
   max-height: calc(var(--mobile-header-height) - 14px);
+}
+
+div.menu-popper {
+  z-index: 1300;
+  /* min-width: 250px; */
 }
 
 @media only screen and (min-width: 425px) {

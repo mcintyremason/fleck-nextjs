@@ -2,13 +2,14 @@ import styles from './index.module.css'
 import classNames from 'classnames'
 
 import React, { useState } from 'react'
-import { AppBar, Grid, Link } from '@material-ui/core'
+import { AppBar, Box, Fade, Grid, Link, Paper, Popper } from '@material-ui/core'
 import HouseOutlinedIcon from '@material-ui/icons/HouseOutlined'
 import BusinessIcon from '@material-ui/icons/Business'
 import ReportProblemOutlinedIcon from '@material-ui/icons/ReportProblemOutlined'
 import InfoOutlinedIcon from '@material-ui/icons/InfoOutlined'
 import GradeRoundedIcon from '@material-ui/icons/GradeRounded'
 
+import { ExpandLess, ExpandMore } from '@material-ui/icons'
 import HamburgerNav from '../abstractions/HamburgerNav'
 import MenuDrawer from '../abstractions/MenuDrawer'
 import SidingIcon from '../icons/SidingIcon'
@@ -16,14 +17,16 @@ import ContactUsIcon from '../icons/ContactUsIcon'
 import RequestQuoteIcon from '../icons/RequestQuoteIcon'
 import EngineeringOutlinedIcon from '../icons/EngineeringOutlinedIcon'
 import HandymanOutlinedIcon from '../icons/HandymanOutlinedIcon'
+import ListMenu, { ListMenuLink } from '../abstractions/ListMenu'
 
 type HeaderProps = {}
 
-const menuLinks = [
+const menuLinksInit: Array<ListMenuLink> = [
   {
     text: 'Our Services',
     href: '/',
     icon: <EngineeringOutlinedIcon color="primary" />,
+    isExpanded: false,
     subLinks: [
       {
         text: 'Residential Roofing',
@@ -76,9 +79,35 @@ const menuLinks = [
 
 const FleckHeader: React.FC<HeaderProps> = (_: HeaderProps) => {
   const [hambugerActive, setHambugerActive] = useState(false)
+  const [anchorEl, setAnchorEl] = useState(null)
+  const [menuLinks, setMenuLinks] = useState<Array<ListMenuLink>>(menuLinksInit)
+
+  const open = Boolean(anchorEl)
+  const divRef = React.useRef()
+  const ourServicesLinks = menuLinks[0]?.subLinks
 
   const hamburgerOnClick = () => {
     setHambugerActive(!hambugerActive)
+  }
+
+  const handlePopoverOpen = () => {
+    setAnchorEl(divRef.current)
+    console.log(divRef.current)
+  }
+
+  const handlePopoverClose = () => {
+    setAnchorEl(null)
+  }
+
+  const expandLinkHandler = (link: ListMenuLink) => {
+    const updatedListMenuLinks = menuLinks.map((_link) => {
+      if (link === _link) {
+        _link.isExpanded = !_link.isExpanded
+      }
+      return _link
+    })
+
+    setMenuLinks(updatedListMenuLinks)
   }
 
   return (
@@ -130,35 +159,58 @@ const FleckHeader: React.FC<HeaderProps> = (_: HeaderProps) => {
               direction="row"
               wrap="nowrap"
             >
-              <Grid className={styles['menu-link-container']}>
-                <Link className={styles['menu-link']} href="/">
-                  Our Services
-                </Link>
-              </Grid>
-              <Grid className={styles['menu-link-divider']}>|</Grid>
-              <Grid className={styles['menu-link-container']}>
-                <Link className={styles['menu-link']} href="/">
-                  Request a Free Quote
-                </Link>
-              </Grid>
-              <Grid className={styles['menu-link-divider']}>|</Grid>
-              <Grid className={styles['menu-link-container']}>
-                <Link className={styles['menu-link']} href="/">
-                  Reviews
-                </Link>
-              </Grid>
-              <Grid className={styles['menu-link-divider']}>|</Grid>
-              <Grid className={styles['menu-link-container']}>
-                <Link className={styles['menu-link']} href="/">
-                  About
-                </Link>
-              </Grid>
-              <Grid className={styles['menu-link-divider']}>|</Grid>
-              <Grid className={styles['menu-link-container']}>
-                <Link className={styles['menu-link']} href="/">
-                  Contact
-                </Link>
-              </Grid>
+              {menuLinks.map((link: ListMenuLink) => {
+                return link.subLinks ? (
+                  <Grid
+                    key={`${link.text}-link`}
+                    ref={divRef}
+                    onMouseEnter={() => {
+                      expandLinkHandler(link)
+                      handlePopoverOpen()
+                    }}
+                    onMouseLeave={() => {
+                      expandLinkHandler(link)
+                      handlePopoverClose()
+                    }}
+                    className={styles['menu-link-container']}
+                  >
+                    <Link
+                      className={classNames(
+                        styles['menu-link'],
+                        link.isExpanded ? styles['active'] : '',
+                      )}
+                      href="/"
+                    >
+                      {link.text}
+                    </Link>
+                    {open ? <ExpandLess /> : <ExpandMore />}
+                    <Popper
+                      className={styles['menu-popper']}
+                      open={link.isExpanded ? link.isExpanded : false}
+                      anchorEl={anchorEl}
+                      placement="bottom-end"
+                      transition
+                    >
+                      {({ TransitionProps }) => (
+                        <Fade {...TransitionProps} timeout={350}>
+                          <Paper>
+                            <ListMenu links={ourServicesLinks} justifyText="center" />
+                          </Paper>
+                        </Fade>
+                      )}
+                    </Popper>
+                  </Grid>
+                ) : (
+                  <Box display="flex" key={`${link.text}-link`}>
+                    <Grid className={styles['menu-link-divider']}>|</Grid>
+                    <Grid className={styles['menu-link-container']}>
+                      <Link className={styles['menu-link']} href="/">
+                        {link.text}
+                      </Link>
+                    </Grid>
+                  </Box>
+                )
+              })}
             </Grid>
           </Grid>
         </Grid>

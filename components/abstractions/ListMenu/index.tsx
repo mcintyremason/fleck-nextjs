@@ -1,7 +1,15 @@
 import styles from './index.module.css'
 
 import React, { useState } from 'react'
-import { Collapse, Grid, Link, List, ListItem, ListItemIcon } from '@material-ui/core'
+import {
+  Collapse,
+  Grid,
+  GridJustification,
+  Link,
+  List,
+  ListItem,
+  ListItemIcon,
+} from '@material-ui/core'
 import { ExpandLess, ExpandMore } from '@material-ui/icons'
 
 export type ListMenuLink = {
@@ -13,11 +21,12 @@ export type ListMenuLink = {
 }
 
 type ListMenuProps = {
+  justifyText?: GridJustification
   links: Array<ListMenuLink>
 }
 
 const ListMenu: React.FC<ListMenuProps> = (props: ListMenuProps) => {
-  const { links } = props
+  const { links, justifyText = 'flex-start' } = props
 
   const [menuLinks, setListMenuLinks] = useState<Array<ListMenuLink>>(links)
 
@@ -35,16 +44,18 @@ const ListMenu: React.FC<ListMenuProps> = (props: ListMenuProps) => {
   return (
     <Grid className={styles['list-menu']} container direction="column" wrap="nowrap">
       {menuLinks.map((link: ListMenuLink) => (
-        <Grid key={`${link.text}-link`}>
+        <Grid key={`${link.text}-link`} container>
           {link?.subLinks?.length ? (
-            <List component="nav" aria-labelledby={`${link.text}-menu-item`}>
+            <List aria-labelledby={`${link.text}-menu-item`}>
               <ListItem button disableGutters onClick={() => expandLinkHandler(link)}>
                 <Grid container justify="space-between" className={styles['list-menu-link']}>
                   <Grid item xs={2} container direction="column" justify="center">
                     {link.icon ? <ListItemIcon>{link.icon}</ListItemIcon> : null}
                   </Grid>
                   <Grid item xs={10} container direction="column" justify="center">
-                    {link.text}
+                    <Grid container justify={justifyText}>
+                      {link.text}
+                    </Grid>
                   </Grid>
                 </Grid>
                 {link.isExpanded ? <ExpandLess /> : <ExpandMore />}
@@ -59,7 +70,9 @@ const ListMenu: React.FC<ListMenuProps> = (props: ListMenuProps) => {
                             {subLink.icon ? <ListItemIcon>{subLink.icon}</ListItemIcon> : null}
                           </Grid>
                           <Grid item xs={10} container direction="column" justify="center">
-                            {subLink.text}
+                            <Grid container justify={justifyText}>
+                              {subLink.text}
+                            </Grid>
                           </Grid>
                         </Grid>
                       </Link>
@@ -69,16 +82,27 @@ const ListMenu: React.FC<ListMenuProps> = (props: ListMenuProps) => {
               </Collapse>
             </List>
           ) : (
-            <Grid key={`${link.text}-link`} className={styles['list-menu-link-container']}>
-              <List component="nav" aria-labelledby="our-services-menu-item">
-                <ListItem button disableGutters onClick={() => expandLinkHandler(link)}>
+            <Grid
+              key={`${link.text}-link`}
+              container
+              className={styles['list-menu-link-container']}
+            >
+              <List aria-labelledby={`${link.text}-menu-item`}>
+                <ListItem
+                  button
+                  disableGutters
+                  onClick={() => expandLinkHandler(link)}
+                  className={styles['list-menu-item']}
+                >
                   <Link className={styles['list-menu-link']} href={link.href}>
                     <Grid container justify="space-between">
                       <Grid item xs={2} container direction="column" justify="center">
                         {link.icon ? <ListItemIcon>{link.icon}</ListItemIcon> : null}
                       </Grid>
                       <Grid item xs={10} container direction="column" justify="center">
-                        {link.text}
+                        <Grid container justify={justifyText}>
+                          {link.text}
+                        </Grid>
                       </Grid>
                     </Grid>
                   </Link>

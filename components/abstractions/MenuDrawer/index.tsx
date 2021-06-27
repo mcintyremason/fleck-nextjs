@@ -29,7 +29,7 @@ const MenuDrawer: React.FC<MenuDrawerProps> = (props: MenuDrawerProps) => {
         <HamburgerNav active={open} onClick={hamburgerOnClick} />
       </Grid>
       <Grid className={styles['menu-container']} container justify="center" item xs={12}>
-        <ListMenu links={links} />
+        <ListMenu links={links} justifyText={'flex-start'} />
       </Grid>
     </SwipeableDrawer>
   )
