@@ -41,8 +41,7 @@ export const customTheme = responsiveFontSizes(
           '&:focus': {
             color: 'var(--secondary-color)',
             textDecoration: 'none',
-            borderBottom: '4px solid var(--secondary-color)',
-            transition: 'color 0.5s, border 0.5s;',
+            borderBottom: 'none',
           },
         },
       },

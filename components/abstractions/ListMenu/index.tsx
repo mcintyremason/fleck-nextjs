@@ -1,4 +1,5 @@
 import styles from './index.module.css'
+import classNames from 'classnames'
 
 import React, { useState } from 'react'
 import {
@@ -48,17 +49,33 @@ const ListMenu: React.FC<ListMenuProps> = (props: ListMenuProps) => {
           {link?.subLinks?.length ? (
             <List aria-labelledby={`${link.text}-menu-item`}>
               <ListItem button disableGutters onClick={() => expandLinkHandler(link)}>
-                <Grid container justify="space-between" className={styles['list-menu-link']}>
+                <Grid
+                  container
+                  justify="space-between"
+                  className={classNames(
+                    styles['list-menu-link'],
+                    link.isExpanded ? styles['active'] : '',
+                  )}
+                >
                   <Grid item xs={2} container direction="column" justify="center">
                     {link.icon ? <ListItemIcon>{link.icon}</ListItemIcon> : null}
                   </Grid>
-                  <Grid item xs={10} container direction="column" justify="center">
-                    <Grid container justify={justifyText}>
+                  <Grid item xs={10} container justify={justifyText}>
+                    <Grid
+                      item
+                      xs={10}
+                      container
+                      direction="column"
+                      justify="center"
+                      className={styles['list-menu-link-text']}
+                    >
                       {link.text}
+                    </Grid>
+                    <Grid item xs={2} container direction="column" justify="center">
+                      {link.isExpanded ? <ExpandLess /> : <ExpandMore />}
                     </Grid>
                   </Grid>
                 </Grid>
-                {link.isExpanded ? <ExpandLess /> : <ExpandMore />}
               </ListItem>
               <Collapse in={link.isExpanded} timeout="auto" unmountOnExit>
                 {link?.subLinks.map((subLink) => (

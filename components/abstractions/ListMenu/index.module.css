@@ -16,7 +16,9 @@
 }
 
 .list-menu .list-menu-link {
+  color: var(--primary-color);
   width: 100%;
+  vertical-align: top;
   text-decoration: none;
   transition: color 0.5s;
 }
@@ -29,12 +31,12 @@
   border: none;
 }
 
-.list-menu .list-menu-sub-link:focus {
+.list-menu .list-menu-link.active {
+  color: var(--secondary-color);
   border: none;
 }
 
-.list-menu .list-menu-link:hover {
-  color: var(--secondary-color);
+.list-menu .list-menu-sub-link:focus {
   border: none;
 }
 
@@ -48,5 +50,10 @@
   .list-menu .list-menu-item {
     padding-right: 2px;
     padding-left: 5px;
+  }
+
+  .list-menu .list-menu-link:hover {
+    color: var(--secondary-color);
+    border: none;
   }
 }

@@ -91,7 +91,6 @@ const FleckHeader: React.FC<HeaderProps> = (_: HeaderProps) => {
 
   const handlePopoverOpen = () => {
     setAnchorEl(divRef.current)
-    console.log(divRef.current)
   }
 
   const handlePopoverClose = () => {
@@ -200,13 +199,15 @@ const FleckHeader: React.FC<HeaderProps> = (_: HeaderProps) => {
                     </Popper>
                   </Grid>
                 ) : (
-                  <Box display="flex" key={`${link.text}-link`}>
-                    <Grid className={styles['menu-link-divider']}>|</Grid>
-                    <Grid className={styles['menu-link-container']}>
-                      <Link className={styles['menu-link']} href="/">
-                        {link.text}
-                      </Link>
-                    </Grid>
+                  <Box display="flex" key={`${link.text}-link`} clone>
+                    <>
+                      <Grid className={styles['menu-link-divider']}>|</Grid>
+                      <Grid className={styles['menu-link-container']}>
+                        <Link className={styles['menu-link']} href="/">
+                          {link.text}
+                        </Link>
+                      </Grid>
+                    </>
                   </Box>
                 )
               })}

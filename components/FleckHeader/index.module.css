@@ -44,17 +44,17 @@ header.app-bar {
 
 .menu .menu-link-container {
   padding: 10px 10px;
+  cursor: pointer;
 }
 
 .menu .menu-link {
-  text-decoration: none;
-  transition: color 0.5s, border 0.5s;
-  border-color: transparent;
+  vertical-align: top;
 }
 
-.menu .menu-link:hover {
+.menu .menu-link:focus {
   color: var(--secondary-color);
-  border-bottom: 3px solid var(--secondary-color);
+  border-bottom: none;
+  /* border-bottom: 3px solid var(--secondary-color); */
   text-decoration: none;
 }
 
@@ -120,6 +120,12 @@ div.menu-popper {
     justify-content: flex-end;
     font-size: 1.2em;
     line-height: 1.3em;
+  }
+
+  .menu .menu-link:hover {
+    color: var(--secondary-color);
+    border-bottom: 3px solid var(--secondary-color);
+    text-decoration: none;
   }
 
   .menu .menu-link-container {
