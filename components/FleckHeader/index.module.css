@@ -29,7 +29,7 @@ header.app-bar {
 .header .menu-container {
   opacity: 0;
   height: 0;
-  transition: all 0.5s;
+  /* transition: all 0.5s; */
   font-size: 1.3em;
   line-height: 1.3em;
   overflow: hidden;
@@ -44,18 +44,30 @@ header.app-bar {
 
 .menu .menu-link-container {
   padding: 10px 10px;
+  cursor: pointer;
+  /* transition: color 0.5s; */
 }
 
 .menu .menu-link {
-  text-decoration: none;
-  transition: color 0.5s, border 0.5s;
-  border-color: transparent;
+  vertical-align: top;
+  /* transition: color 0.5s; */
 }
 
-.menu .menu-link:hover {
+.menu .menu-link:focus {
   color: var(--secondary-color);
-  border-bottom: 3px solid var(--secondary-color);
+  border-bottom: none;
   text-decoration: none;
+}
+
+.menu .menu-link.active {
+  color: var(--secondary-color);
+  border-bottom: none;
+  text-decoration: none;
+}
+
+.menu .menu-link.active:hover {
+  color: var(--secondary-color);
+  border-bottom: none;
 }
 
 .menu .menu-link-divider {
@@ -71,6 +83,11 @@ header.app-bar {
 .logo-nav-container .header-logo {
   max-width: 100%;
   max-height: calc(var(--mobile-header-height) - 14px);
+}
+
+div.menu-popper {
+  z-index: 1300;
+  /* min-width: 250px; */
 }
 
 @media only screen and (min-width: 425px) {
@@ -106,11 +123,21 @@ header.app-bar {
     line-height: 1.3em;
   }
 
+  .menu .menu-link:hover {
+    color: var(--secondary-color);
+    border-bottom: 3px solid var(--secondary-color);
+    text-decoration: none;
+  }
+
   .menu .menu-link-container {
     padding: 0 10px;
   }
 
-  .menu-drawer {
-    display: none;
+  .menu .menu-link-container.active {
+    color: var(--secondary-color);
+  }
+
+  .menu .menu-link-container:hover {
+    color: var(--secondary-color);
   }
 }

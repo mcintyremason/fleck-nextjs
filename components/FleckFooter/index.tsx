@@ -68,28 +68,28 @@ const FleckFooter: React.FC<FleckFooterProps> = (props: FleckFooterProps) => {
               </Grid>
               <Grid className={styles['footer-content-text']}>
                 <Grid container item xs={12}>
-                  <Grid item xs={4} sm={5} md={4}>
+                  <Grid item xs={4} sm={5} md={4} lg={5}>
                     <Typography align="right">Mon-Fri</Typography>
                   </Grid>
-                  <Grid item xs={2} sm={1} md={2}></Grid>
+                  <Grid item xs={2} sm={1} md={2} lg={1}></Grid>
                   <Grid item xs={6}>
                     <Typography>7:00am - 5:00pm</Typography>
                   </Grid>
                 </Grid>
                 <Grid container item xs={12}>
-                  <Grid item xs={4} sm={5} md={4}>
+                  <Grid item xs={4} sm={5} md={4} lg={5}>
                     <Typography align="right">Sat</Typography>
                   </Grid>
-                  <Grid item xs={2} sm={1} md={2}></Grid>
+                  <Grid item xs={2} sm={1} md={2} lg={1}></Grid>
                   <Grid item xs={6}>
                     <Typography>7:00am - 12:00pm</Typography>
                   </Grid>
                 </Grid>
                 <Grid container item xs={12}>
-                  <Grid item xs={4} sm={5} md={4}>
+                  <Grid item xs={4} sm={5} md={4} lg={5}>
                     <Typography align="right">Sun</Typography>
                   </Grid>
-                  <Grid item xs={2} sm={1} md={2}></Grid>
+                  <Grid item xs={2} sm={1} md={2} lg={1}></Grid>
                   <Grid item xs={6}>
                     <Typography>Closed</Typography>
                   </Grid>
@@ -127,20 +127,6 @@ const FleckFooter: React.FC<FleckFooterProps> = (props: FleckFooterProps) => {
             </Grid>
           </Grid>
         </Grid>
-        {/* <Grid
-          container
-          justify="center"
-          item
-          xs={12}
-          className={classNames(styles['social-media-icons'])}
-        >
-          <Link href="https://www.facebook.com/105650658205550">
-            <FacebookIcon />
-          </Link>
-          <Link>
-            <InstagramIcon href="https://www.instagram.com/roofwithfleck" />
-          </Link>
-        </Grid> */}
       </Grid>
     </Footer>
   )

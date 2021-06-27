@@ -16,7 +16,7 @@
 .instagram {
   color: var(--text-secondary);
   border-radius: 8px;
-  transition: color 0.33s;
+  transition: color 0.25s;
   background: #f09433;
   background: -moz-linear-gradient(
     45deg,

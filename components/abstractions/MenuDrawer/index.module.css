@@ -1,0 +1,13 @@
+.menu-drawer > div {
+  min-width: 285px;
+}
+
+.menu-container {
+  padding: 0 10px;
+}
+
+@media only screen and (min-width: 1280px) {
+  .menu-drawer {
+    display: none;
+  }
+}
