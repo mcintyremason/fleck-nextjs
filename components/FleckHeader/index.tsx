@@ -82,7 +82,6 @@ const FleckHeader: React.FC<HeaderProps> = (_: HeaderProps) => {
   const [anchorEl, setAnchorEl] = useState(null)
   const [menuLinks, setMenuLinks] = useState<Array<ListMenuLink>>(menuLinksInit)
 
-  const open = Boolean(anchorEl)
   const divRef = React.useRef()
   const ourServicesLinks = menuLinks[0]?.subLinks
 
@@ -183,7 +182,7 @@ const FleckHeader: React.FC<HeaderProps> = (_: HeaderProps) => {
                     >
                       {link.text}
                     </Link>
-                    {open ? <ExpandLess /> : <ExpandMore />}
+                    {link.isExpanded ? <ExpandLess /> : <ExpandMore />}
                     <Popper
                       className={styles['menu-popper']}
                       open={link.isExpanded ? link.isExpanded : false}
