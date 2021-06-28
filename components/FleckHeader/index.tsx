@@ -30,49 +30,49 @@ const initialMenuLinks: Array<ListMenuLink> = [
     subLinks: [
       {
         text: 'Residential Roofing',
-        href: '/',
+        href: '/services/residential',
         icon: <HouseOutlinedIcon color="primary" />,
       },
       {
         text: 'Commercial Roofing',
-        href: '/',
+        href: '/services/commercial',
         icon: <BusinessIcon color="primary" />,
       },
       {
         text: 'Siding, Soffit, & Fascia',
-        href: '/',
+        href: '/services/siding-soffit-fascia',
         icon: <SidingIcon color="primary" />,
       },
       {
         text: 'Emergency Roofing',
-        href: '/',
+        href: '/services/emergency',
         icon: <ReportProblemOutlinedIcon color="primary" />,
       },
       {
         text: 'General Contracting',
-        href: '/',
+        href: '/services/general-contracting',
         icon: <HandymanOutlinedIcon color="primary" />,
       },
     ],
   },
   {
     text: 'Request a Free Quote',
-    href: '/',
+    href: '/request-quote',
     icon: <RequestQuoteIcon color="primary" />,
   },
   {
     text: 'Reviews',
-    href: '/',
+    href: '/reviews',
     icon: <GradeRoundedIcon color="primary" />,
   },
   {
     text: 'About',
-    href: '/',
+    href: '/about',
     icon: <InfoOutlinedIcon color="primary" />,
   },
   {
     text: 'Contact',
-    href: '/',
+    href: '/contact',
     icon: <ContactUsIcon color="primary" />,
   },
 ]
