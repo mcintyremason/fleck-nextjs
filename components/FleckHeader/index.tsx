@@ -21,7 +21,7 @@ import ListMenu, { ListMenuLink } from '../abstractions/ListMenu'
 
 type HeaderProps = {}
 
-const menuLinksInit: Array<ListMenuLink> = [
+const initialMenuLinks: Array<ListMenuLink> = [
   {
     text: 'Our Services',
     href: '/',
@@ -80,7 +80,7 @@ const menuLinksInit: Array<ListMenuLink> = [
 const FleckHeader: React.FC<HeaderProps> = (_: HeaderProps) => {
   const [hambugerActive, setHambugerActive] = useState(false)
   const [anchorEl, setAnchorEl] = useState(null)
-  const [menuLinks, setMenuLinks] = useState<Array<ListMenuLink>>(menuLinksInit)
+  const [menuLinks, setMenuLinks] = useState<Array<ListMenuLink>>([...initialMenuLinks])
 
   const divRef = React.useRef()
   const ourServicesLinks = menuLinks[0]?.subLinks
@@ -95,6 +95,15 @@ const FleckHeader: React.FC<HeaderProps> = (_: HeaderProps) => {
 
   const handlePopoverClose = () => {
     setAnchorEl(null)
+  }
+
+  const resetMenuLinks = () => {
+    const updatedListMenuLinks = menuLinks.map((_link) => {
+      _link.isExpanded = false
+      return _link
+    })
+
+    setMenuLinks(updatedListMenuLinks)
   }
 
   const expandLinkHandler = (link: ListMenuLink) => {
@@ -139,7 +148,10 @@ const FleckHeader: React.FC<HeaderProps> = (_: HeaderProps) => {
               links={menuLinks}
               open={hambugerActive}
               hamburgerOnClick={hamburgerOnClick}
-              onClose={hamburgerOnClick}
+              onClose={() => {
+                hamburgerOnClick()
+                resetMenuLinks()
+              }}
               onOpen={hamburgerOnClick}
             />
           </Grid>
