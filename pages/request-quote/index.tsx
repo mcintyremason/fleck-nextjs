@@ -1,13 +1,13 @@
 import React from 'react'
 import { Grid, ThemeProvider } from '@material-ui/core'
-import { customTheme } from '../../utils/customTheme'
+import fleckTheme from '../../themes/fleckTheme'
 import Layout from '../../components/Layout'
 import FleckHeader from '../../components/FleckHeader'
 import FleckFooter from '../../components/FleckFooter'
 
 const RequestQuotePage = () => {
   return (
-    <ThemeProvider theme={customTheme}>
+    <ThemeProvider theme={fleckTheme}>
       <Layout title="Fleck Roofing & Construction">
         <Grid className="app height-full" itemScope itemType="http://schema.org/LocalBusiness">
           <FleckHeader />

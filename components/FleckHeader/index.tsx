@@ -24,7 +24,7 @@ type HeaderProps = {}
 const initialMenuLinks: Array<ListMenuLink> = [
   {
     text: 'Our Services',
-    href: '/',
+    href: '#',
     icon: <EngineeringOutlinedIcon color="primary" />,
     isExpanded: false,
     subLinks: [
@@ -192,7 +192,7 @@ const FleckHeader: React.FC<HeaderProps> = (_: HeaderProps) => {
                         styles['menu-link'],
                         link.isExpanded ? styles['active'] : '',
                       )}
-                      href="/"
+                      href={link.href}
                     >
                       {link.text}
                     </Link>
@@ -218,7 +218,7 @@ const FleckHeader: React.FC<HeaderProps> = (_: HeaderProps) => {
                     <>
                       <Grid className={styles['menu-link-divider']}>|</Grid>
                       <Grid className={styles['menu-link-container']}>
-                        <Link className={styles['menu-link']} href="/">
+                        <Link className={styles['menu-link']} href={link.href}>
                           {link.text}
                         </Link>
                       </Grid>

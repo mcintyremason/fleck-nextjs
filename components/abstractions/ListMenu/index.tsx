@@ -105,13 +105,13 @@ const ListMenu: React.FC<ListMenuProps> = (props: ListMenuProps) => {
               className={styles['list-menu-link-container']}
             >
               <List aria-labelledby={`${link.text}-menu-item`}>
-                <ListItem
-                  button
-                  disableGutters
-                  onClick={() => expandLinkHandler(link)}
-                  className={styles['list-menu-item']}
-                >
-                  <Link className={styles['list-menu-link']} href={link.href}>
+                <Link className={styles['list-menu-link']} href={link.href}>
+                  <ListItem
+                    button
+                    disableGutters
+                    onClick={() => expandLinkHandler(link)}
+                    className={classNames(styles['list-menu-item'], styles['list-menu-link'])}
+                  >
                     <Grid container justify="space-between">
                       <Grid item xs={2} container direction="column" justify="center">
                         {link.icon ? <ListItemIcon>{link.icon}</ListItemIcon> : null}
@@ -122,8 +122,8 @@ const ListMenu: React.FC<ListMenuProps> = (props: ListMenuProps) => {
                         </Grid>
                       </Grid>
                     </Grid>
-                  </Link>
-                </ListItem>
+                  </ListItem>
+                </Link>
               </List>
             </Grid>
           )}

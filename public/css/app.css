@@ -110,21 +110,6 @@ body {
   font-family: sans-serif;
 }
 
-/* a {
-  color: var(--primary-color);
-  border-color: var(--primary-color);
-  border-bottom: 3px solid;
-  transition: color 0.5s, border 0.5s;
-  text-decoration: none;
-}
-a:hover {
-  color: var(--secondary-color);
-  border-color: transparent;
-}
-a:focus {
-  color: var(--secondary-color);
-  border-color: transparent;
-} */
 h1,
 h2,
 h3,

@@ -1,0 +1,40 @@
+.home-container {
+  background-color: var(--background-primary);
+  padding: var(--mobile-header-height) 0 0;
+}
+
+.home {
+  padding: 0;
+}
+
+.home .content-cards-container {
+  flex-basis: unset;
+}
+
+/* 
+  Cannot use CSS variables in media queries.
+  CSS variables can only be used on CSS declarations.
+*/
+/* @media only screen and (min-width: var(--sm)) { */
+@media only screen and (min-width: 425px) {
+  .home {
+    flex-flow: row nowrap;
+    justify-content: center;
+  }
+}
+
+/* @media only screen and (min-width: var(--md)) { */
+@media only screen and (min-width: 768px) {
+  div.home-container {
+    padding: var(--desktop-header-height) 0 0;
+    flex-flow: column nowrap;
+  }
+
+  .home-container .home {
+    padding: 0;
+  }
+
+  .content-cards-container {
+    flex-flow: column nowrap;
+  }
+}

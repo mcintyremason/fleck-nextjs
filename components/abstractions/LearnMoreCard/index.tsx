@@ -9,13 +9,14 @@ import FleckButton from '../../FleckButton'
 type LearnMoreCardProps = {
   title: string
   description: string
+  href?: string
   learnMoreUrl?: string
   imageUrl?: string
   imageZoom?: boolean
 } & Partial<Record<Breakpoint, boolean | GridSize>>
 
 const LearnMoreCard: React.FC<LearnMoreCardProps> = (props: LearnMoreCardProps) => {
-  const { title, description, imageUrl, imageZoom = true, xs, sm, md, lg, xl } = props
+  const { title, description, href, imageUrl, imageZoom = true, xs, sm, md, lg, xl } = props
 
   return (
     <Grid
@@ -28,7 +29,7 @@ const LearnMoreCard: React.FC<LearnMoreCardProps> = (props: LearnMoreCardProps) 
       xl={xl}
     >
       <Card square elevation={0}>
-        <Link href="/">
+        <Link href={href}>
           <CardMedia
             image={imageUrl}
             className={classNames(styles['media'], imageZoom ? styles['zoom'] : '')}

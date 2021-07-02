@@ -1,0 +1,32 @@
+.siding-container {
+  background-color: var(--background-primary);
+  padding: var(--mobile-header-height) 0 0;
+}
+
+.siding {
+  padding: 0;
+}
+
+/* 
+  Cannot use CSS variables in media queries.
+  CSS variables can only be used on CSS declarations.
+*/
+/* @media only screen and (min-width: var(--sm)) { */
+@media only screen and (min-width: 425px) {
+  .siding {
+    flex-flow: row nowrap;
+    justify-content: center;
+  }
+}
+
+/* @media only screen and (min-width: var(--md)) { */
+@media only screen and (min-width: 768px) {
+  div.siding-container {
+    padding: var(--desktop-header-height) 0 0;
+    flex-flow: column nowrap;
+  }
+
+  .siding-container .siding {
+    padding: 0;
+  }
+}

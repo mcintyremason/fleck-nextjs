@@ -9,18 +9,17 @@ import FleckHeader from '../../../components/FleckHeader'
 import FleckFooter from '../../../components/FleckFooter'
 import FleckHero from '../../../components/FleckHero'
 
-const CommercialRoofingPage = () => {
+const RoofReplacementPage = () => {
   return (
     <ThemeProvider theme={fleckTheme}>
       <Layout title="Fleck Roofing & Construction">
         <Grid className="app height-full" itemScope itemType="http://schema.org/LocalBusiness">
           <FleckHeader />
-          <Grid className={classNames(styles['commercial-container'])}>
-            <Grid container direction="column" className={classNames(styles['commercial'])}>
-              {/* <Hero primaryText="We're the Guys That Keep You Dry" gutters justify="center"></Hero> */}
+          <Grid className={classNames(styles['roof-replacement-container'])}>
+            <Grid container direction="column" className={classNames(styles['roof-replacement'])}>
               <FleckHero
-                primaryText="Commercial Roofing Services"
-                imageUrl="/img/services/commercial-hero.webp"
+                primaryText="Roof Replacement Services"
+                imageUrl="/img/services/roof-replacement-hero.webp"
               />
 
               {/*
@@ -35,4 +34,4 @@ const CommercialRoofingPage = () => {
   )
 }
 
-export default CommercialRoofingPage
+export default RoofReplacementPage

@@ -4,9 +4,10 @@
   width: 100%;
 }
 
-.hero-overlay {
+.hero .overlay {
   width: 100%;
   height: 100%;
+  min-height: 450px;
   background-color: #0000007f;
 }
 
@@ -31,5 +32,9 @@
 @media only screen and (min-width: 1280px) {
   .gutters {
     padding: 180px 40px;
+  }
+
+  .media h1 {
+    max-width: 1000px;
   }
 }
