@@ -19,6 +19,7 @@ const FleckLearnMore: React.FC<FleckLearnMoreProps> = (_: FleckLearnMoreProps) =
           description={`A damaged roof requires immediate attention. 
         Know that you'll get a fast response and quality work
         when you call our team to address is.`}
+          href={'/services/emergency'}
           imageUrl="/img/components/learn-more-card-1.webp"
           xs={12}
           md={4}
@@ -28,6 +29,7 @@ const FleckLearnMore: React.FC<FleckLearnMoreProps> = (_: FleckLearnMoreProps) =
           title="Roof Replacement"
           description={`If your roof is older than 20 years or needs major repairs, 
         it may be time for a replacement. Count on our experts to get the job done right.`}
+          href={'/services/roof-replacement'}
           imageUrl="/img/components/learn-more-card-2.webp"
           xs={12}
           md={4}
@@ -37,6 +39,7 @@ const FleckLearnMore: React.FC<FleckLearnMoreProps> = (_: FleckLearnMoreProps) =
           title="Siding, Soffit, and Fascia"
           description={`Do you need siding replacement for your home?
         Choose Fleck Roofing & Construction for reliable siding work in the Easton, PA area.`}
+          href={'/services/siding-soffit-fascia'}
           imageUrl="/img/components/learn-more-card-3.webp"
           xs={12}
           md={4}

@@ -1,6 +1,6 @@
 import { createMuiTheme, responsiveFontSizes } from '@material-ui/core'
 
-export const customTheme = responsiveFontSizes(
+const fleckTheme = responsiveFontSizes(
   createMuiTheme({
     breakpoints: {
       values: {
@@ -129,9 +129,11 @@ export const customTheme = responsiveFontSizes(
   }),
 )
 
-customTheme.typography.h5 = {
+fleckTheme.typography.h5 = {
   fontSize: '1em',
-  [customTheme.breakpoints.up('md')]: {
+  [fleckTheme.breakpoints.up('md')]: {
     fontSize: '24px',
   },
 }
+
+export default fleckTheme

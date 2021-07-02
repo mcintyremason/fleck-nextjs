@@ -11,11 +11,11 @@ type FleckButtonProps = {
 } & Partial<Record<Breakpoint, boolean | GridSize>>
 
 const FleckButton: React.FC<FleckButtonProps> = (props: FleckButtonProps) => {
-  const { color = 'primary', text, xs, sm, md, lg, xl } = props
+  const { color = 'primary', href, text, xs, sm, md, lg, xl } = props
 
   return (
     <Grid item xs={xs} sm={sm} md={md} lg={lg} xl={xl}>
-      <Button variant="contained" color={color} className={styles['fleck-button']}>
+      <Button variant="contained" color={color} href={href} className={styles['fleck-button']}>
         {text}
       </Button>
     </Grid>

@@ -4,7 +4,10 @@ import { Grid, Link, Typography } from '@material-ui/core'
 import React from 'react'
 import Hero from '../abstractions/Hero'
 
-type FleckHero = {}
+type FleckHero = {
+  primaryText: string
+  imageUrl?: string
+}
 
 type OperationHours = {
   closeHour: number
@@ -66,7 +69,8 @@ const displayHours = (hours: number) => {
   return hours
 }
 
-const FleckHero: React.FC<FleckHero> = (_: FleckHero) => {
+const FleckHero: React.FC<FleckHero> = (props: FleckHero) => {
+  const { primaryText, imageUrl } = props
   const currDate = new Date()
   const currDay = currDate.getDay()
   const currHour = currDate.getHours()
@@ -94,10 +98,11 @@ const FleckHero: React.FC<FleckHero> = (_: FleckHero) => {
   return (
     <Grid container className={styles['fleck-hero-container']}>
       <Hero
-        primaryText="We're the Guys That Keep You Dry"
+        primaryText={primaryText}
         gutters
+        overlay
         justify="center"
-        imageUrl="/img/components/hero-image.jpeg"
+        imageUrl={imageUrl ? imageUrl : '/img/components/hero-image.jpeg'}
       >
         <Grid container direction="column" className={styles['fleck-hero-secondary-container']}>
           <Typography color="textSecondary" align="center" className={styles['text-shadow']}>

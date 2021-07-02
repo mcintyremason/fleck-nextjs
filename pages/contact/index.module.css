@@ -1,15 +1,10 @@
-.main-container {
+.contact-container {
   background-color: var(--background-primary);
   padding: var(--mobile-header-height) 0 0;
-  flex-flow: row nowrap;
 }
 
-.main {
+.contact {
   padding: 0;
-}
-
-.main .content-cards-container {
-  flex-basis: unset;
 }
 
 /* 
@@ -18,7 +13,7 @@
 */
 /* @media only screen and (min-width: var(--sm)) { */
 @media only screen and (min-width: 425px) {
-  .main {
+  .contact {
     flex-flow: row nowrap;
     justify-content: center;
   }
@@ -26,16 +21,12 @@
 
 /* @media only screen and (min-width: var(--md)) { */
 @media only screen and (min-width: 768px) {
-  div.main-container {
+  div.contact-container {
     padding: var(--desktop-header-height) 0 0;
     flex-flow: column nowrap;
   }
 
-  .main-container .main {
+  .contact-container .contact {
     padding: 0;
-  }
-
-  .content-cards-container {
-    flex-flow: column nowrap;
   }
 }
