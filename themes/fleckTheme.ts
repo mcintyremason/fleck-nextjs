@@ -48,7 +48,6 @@ const fleckTheme = responsiveFontSizes(
       MuiDrawer: {
         paper: {
           backgroundColor: 'var(--background-primary)',
-          padding: '7px',
         },
         paperAnchorDockedRight: {
           borderLeft: '1px solid var(--background-secondary)',

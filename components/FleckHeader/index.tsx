@@ -2,6 +2,7 @@ import styles from './index.module.css'
 import classNames from 'classnames'
 
 import React, { useState } from 'react'
+import { useRouter } from 'next/router'
 import { AppBar, Box, Fade, Grid, Link, Paper, Popper } from '@material-ui/core'
 import HouseOutlinedIcon from '@material-ui/icons/HouseOutlined'
 import BusinessIcon from '@material-ui/icons/Business'
@@ -17,7 +18,7 @@ import ContactUsIcon from '../icons/ContactUsIcon'
 import RequestQuoteIcon from '../icons/RequestQuoteIcon'
 import EngineeringOutlinedIcon from '../icons/EngineeringOutlinedIcon'
 import HandymanOutlinedIcon from '../icons/HandymanOutlinedIcon'
-import ListMenu, { ListMenuLink } from '../abstractions/ListMenu'
+import ListMenu, { ListMenuLink, subLinksActive } from '../abstractions/ListMenu'
 
 type HeaderProps = {}
 
@@ -78,6 +79,7 @@ const initialMenuLinks: Array<ListMenuLink> = [
 ]
 
 const FleckHeader: React.FC<HeaderProps> = (_: HeaderProps) => {
+  const router = useRouter()
   const [hambugerActive, setHambugerActive] = useState(false)
   const [anchorEl, setAnchorEl] = useState(null)
   const [menuLinks, setMenuLinks] = useState<Array<ListMenuLink>>([...initialMenuLinks])
@@ -184,33 +186,32 @@ const FleckHeader: React.FC<HeaderProps> = (_: HeaderProps) => {
                     }}
                     className={classNames(
                       styles['menu-link-container'],
-                      link.isExpanded ? styles['active'] : '',
+                      link.isExpanded && styles['active'],
+                      subLinksActive(link, router) && styles['active'],
                     )}
                   >
                     <Link
                       className={classNames(
                         styles['menu-link'],
-                        link.isExpanded ? styles['active'] : '',
+                        link.isExpanded && styles['active'],
+                        subLinksActive(link, router) && styles['active'],
                       )}
                       href={link.href}
                     >
+                      {console.log(router.pathname)}
                       {link.text}
                     </Link>
+                    {/* TODO: Add transition */}
                     {link.isExpanded ? <ExpandLess /> : <ExpandMore />}
                     <Popper
                       className={styles['menu-popper']}
                       open={link.isExpanded ? link.isExpanded : false}
                       anchorEl={anchorEl}
                       placement="bottom-end"
-                      transition
                     >
-                      {({ TransitionProps }) => (
-                        <Fade {...TransitionProps} timeout={350}>
-                          <Paper>
-                            <ListMenu links={ourServicesLinks} justifyText="center" />
-                          </Paper>
-                        </Fade>
-                      )}
+                      <Paper>
+                        <ListMenu links={ourServicesLinks} justifyText="center" />
+                      </Paper>
                     </Popper>
                   </Grid>
                 ) : (
@@ -218,7 +219,13 @@ const FleckHeader: React.FC<HeaderProps> = (_: HeaderProps) => {
                     <>
                       <Grid className={styles['menu-link-divider']}>|</Grid>
                       <Grid className={styles['menu-link-container']}>
-                        <Link className={styles['menu-link']} href={link.href}>
+                        <Link
+                          className={classNames(
+                            styles['menu-link'],
+                            link.href === router.pathname && styles['active'],
+                          )}
+                          href={link.href}
+                        >
                           {link.text}
                         </Link>
                       </Grid>

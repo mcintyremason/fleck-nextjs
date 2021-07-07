@@ -10,6 +10,7 @@ type FleckHero = {
 }
 
 type OperationHours = {
+  id: number
   closeHour: number
   isWeeklyDayOff: boolean
   name: string
@@ -18,42 +19,49 @@ type OperationHours = {
 
 const WEEKLY_OPERATION_HOURS: Array<OperationHours> = [
   {
+    id: 0,
     name: 'Sunday',
     isWeeklyDayOff: true,
     openHour: 0,
     closeHour: 0,
   },
   {
+    id: 1,
     name: 'Monday',
     isWeeklyDayOff: false,
     openHour: 7,
     closeHour: 17,
   },
   {
+    id: 2,
     name: 'Tuesday',
     isWeeklyDayOff: false,
     openHour: 7,
     closeHour: 17,
   },
   {
+    id: 3,
     name: 'Wednesday',
     isWeeklyDayOff: false,
     openHour: 7,
     closeHour: 17,
   },
   {
+    id: 4,
     name: 'Thursday',
     isWeeklyDayOff: false,
     openHour: 7,
     closeHour: 17,
   },
   {
+    id: 5,
     name: 'Friday',
     isWeeklyDayOff: false,
     openHour: 7,
     closeHour: 17,
   },
   {
+    id: 6,
     name: 'Saturday',
     isWeeklyDayOff: false,
     openHour: 7,
@@ -77,9 +85,13 @@ const FleckHero: React.FC<FleckHero> = (props: FleckHero) => {
   const currOperationHours = WEEKLY_OPERATION_HOURS[currDay]
   const tomorrowDay = currDay != 6 ? currDay + 1 : 0
   const dayAfterTomorrow = tomorrowDay + 1
-  // based on the business being off one day during the week
+  // accounts for the business being off one day during the week
+  // if today is not the day off, and the time is before open,
+  //   then set nextOperationHours to the same day (not tomorrow or day after).
   const nextOperationHours =
-    WEEKLY_OPERATION_HOURS[tomorrowDay]?.isWeeklyDayOff ?? null
+    !currOperationHours.isWeeklyDayOff && currHour < currOperationHours.openHour
+      ? currOperationHours
+      : WEEKLY_OPERATION_HOURS[tomorrowDay]?.isWeeklyDayOff ?? null
       ? WEEKLY_OPERATION_HOURS[dayAfterTomorrow]
       : WEEKLY_OPERATION_HOURS[tomorrowDay]
 

@@ -7,8 +7,7 @@
 }
 
 .list-menu .list-menu-item {
-  padding-right: 0;
-  padding-left: 0;
+  padding: 10px;
 }
 
 .list-menu .list-menu-link-container {
@@ -20,7 +19,6 @@
   width: 100%;
   vertical-align: top;
   text-decoration: none;
-  /* transition: color 0.5s; */
 }
 
 .list-menu .list-menu-sub-link {
@@ -34,6 +32,10 @@
 .list-menu .list-menu-link.active {
   color: var(--secondary-color);
   border: none;
+}
+
+.list-menu .list-menu-link.focus {
+  color: var(--secondary-color);
 }
 
 .list-menu .list-menu-sub-link:focus {

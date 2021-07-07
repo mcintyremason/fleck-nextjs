@@ -2,8 +2,8 @@
   min-width: 285px;
 }
 
-.menu-container {
-  padding: 0 10px;
+.menu-drawer .hamburger-nav-container {
+  padding: 7px;
 }
 
 @media only screen and (min-width: 1280px) {
