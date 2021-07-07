@@ -3,7 +3,7 @@ import classNames from 'classnames'
 
 import React, { useState } from 'react'
 import { useRouter } from 'next/router'
-import { AppBar, Box, Fade, Grid, Link, Paper, Popper } from '@material-ui/core'
+import { AppBar, Box, Grid, Link, Paper, Popper } from '@material-ui/core'
 import HouseOutlinedIcon from '@material-ui/icons/HouseOutlined'
 import BusinessIcon from '@material-ui/icons/Business'
 import ReportProblemOutlinedIcon from '@material-ui/icons/ReportProblemOutlined'
