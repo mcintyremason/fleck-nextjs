@@ -29,7 +29,6 @@ header.app-bar {
 .header .menu-container {
   opacity: 0;
   height: 0;
-  /* transition: all 0.5s; */
   font-size: 1.3em;
   line-height: 1.3em;
   overflow: hidden;
@@ -45,12 +44,10 @@ header.app-bar {
 .menu .menu-link-container {
   padding: 10px 10px;
   cursor: pointer;
-  /* transition: color 0.5s; */
 }
 
 .menu .menu-link {
   vertical-align: top;
-  /* transition: color 0.5s; */
 }
 
 .menu .menu-link:focus {
@@ -87,7 +84,6 @@ header.app-bar {
 
 div.menu-popper {
   z-index: 1300;
-  /* min-width: 250px; */
 }
 
 @media only screen and (min-width: 425px) {

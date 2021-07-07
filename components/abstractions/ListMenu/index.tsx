@@ -2,6 +2,7 @@ import styles from './index.module.css'
 import classNames from 'classnames'
 
 import React, { useState } from 'react'
+import { NextRouter, useRouter } from 'next/router'
 import {
   Collapse,
   Grid,
@@ -26,8 +27,15 @@ type ListMenuProps = {
   links: Array<ListMenuLink>
 }
 
+export const subLinksActive = (link: ListMenuLink, router: NextRouter): boolean => {
+  const activeLink = link?.subLinks.find((subLink) => subLink.href === router.pathname)
+
+  return activeLink ? true : false
+}
+
 const ListMenu: React.FC<ListMenuProps> = (props: ListMenuProps) => {
   const { links, justifyText = 'flex-start' } = props
+  const router = useRouter()
 
   const [menuLinks, setListMenuLinks] = useState<Array<ListMenuLink>>(links)
 
@@ -48,13 +56,19 @@ const ListMenu: React.FC<ListMenuProps> = (props: ListMenuProps) => {
         <Grid key={`${link.text}-link`} container>
           {link?.subLinks?.length ? (
             <List aria-labelledby={`${link.text}-menu-item`}>
-              <ListItem button disableGutters onClick={() => expandLinkHandler(link)}>
+              <ListItem
+                button
+                disableGutters
+                onClick={() => expandLinkHandler(link)}
+                className={styles['list-menu-item']}
+              >
                 <Grid
                   container
                   justify="space-between"
                   className={classNames(
                     styles['list-menu-link'],
                     link.isExpanded ? styles['active'] : '',
+                    subLinksActive(link, router) && styles['active'],
                   )}
                 >
                   <Grid item xs={2} container direction="column" justify="center">
@@ -81,7 +95,13 @@ const ListMenu: React.FC<ListMenuProps> = (props: ListMenuProps) => {
                 {link?.subLinks.map((subLink) => (
                   <List key={`${subLink.text}-sublink`} component="div" disablePadding>
                     <ListItem button>
-                      <Link className={styles['list-menu-link']} href={subLink.href}>
+                      <Link
+                        className={classNames(
+                          styles['list-menu-link'],
+                          subLink.href === router.pathname ? styles['active'] : '',
+                        )}
+                        href={subLink.href}
+                      >
                         <Grid container justify="space-between">
                           <Grid item xs={2} container direction="column" justify="center">
                             {subLink.icon ? <ListItemIcon>{subLink.icon}</ListItemIcon> : null}
@@ -105,12 +125,18 @@ const ListMenu: React.FC<ListMenuProps> = (props: ListMenuProps) => {
               className={styles['list-menu-link-container']}
             >
               <List aria-labelledby={`${link.text}-menu-item`}>
-                <Link className={styles['list-menu-link']} href={link.href}>
-                  <ListItem
-                    button
-                    disableGutters
-                    onClick={() => expandLinkHandler(link)}
-                    className={classNames(styles['list-menu-item'], styles['list-menu-link'])}
+                <ListItem
+                  button
+                  disableGutters
+                  onClick={() => expandLinkHandler(link)}
+                  className={classNames(styles['list-menu-item'], styles['list-menu-link'])}
+                >
+                  <Link
+                    className={classNames(
+                      styles['list-menu-link'],
+                      link.href === router.pathname ? styles['active'] : '',
+                    )}
+                    href={link.href}
                   >
                     <Grid container justify="space-between">
                       <Grid item xs={2} container direction="column" justify="center">
@@ -122,8 +148,8 @@ const ListMenu: React.FC<ListMenuProps> = (props: ListMenuProps) => {
                         </Grid>
                       </Grid>
                     </Grid>
-                  </ListItem>
-                </Link>
+                  </Link>
+                </ListItem>
               </List>
             </Grid>
           )}
