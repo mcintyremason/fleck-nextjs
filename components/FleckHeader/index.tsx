@@ -198,7 +198,6 @@ const FleckHeader: React.FC<HeaderProps> = (_: HeaderProps) => {
                       )}
                       href={link.href}
                     >
-                      {console.log(router.pathname)}
                       {link.text}
                     </Link>
                     {/* TODO: Add transition */}
