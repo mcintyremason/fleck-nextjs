@@ -7,6 +7,22 @@
   padding: 0;
 }
 
+.residential-text-container {
+  padding: 40px 25px 10px;
+}
+
+.residential-text-group {
+  padding: 0 0 40px;
+}
+
+.residential-text-group ul {
+  margin: 0;
+}
+
+.residential-text {
+  padding: 15px 0 0 10px;
+}
+
 /* 
   Cannot use CSS variables in media queries.
   CSS variables can only be used on CSS declarations.
