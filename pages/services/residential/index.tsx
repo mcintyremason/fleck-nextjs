@@ -2,14 +2,13 @@ import styles from './index.module.css'
 import classNames from 'classnames'
 
 import React from 'react'
-import { Grid, List, ListItem, ThemeProvider, Typography } from '@material-ui/core'
+import { Grid, ThemeProvider, Typography } from '@material-ui/core'
 
 import fleckTheme from '../../../themes/fleckTheme'
 import Layout from '../../../components/Layout'
 import FleckHeader from '../../../components/FleckHeader'
 import FleckFooter from '../../../components/FleckFooter'
 import FleckHero from '../../../components/FleckHero'
-import FleckLearnMore from '../../../components/FleckLearnMore'
 import FleckCTA from '../../../components/FleckCTA'
 
 const ResidentialRoofingPage = () => {
@@ -27,11 +26,16 @@ const ResidentialRoofingPage = () => {
               <FleckHero
                 primaryText="Residential Roofing Services"
                 imageUrl="/img/services/residential-hero.jpeg"
+                className={styles['residential-hero']}
               />
-              <Grid container>
-                <Grid item xs={12} md={6} className={styles['residential-text-container']}>
+              <Grid container justify="center">
+                <Grid item xs={12} sm={8} className={styles['residential-text-container']}>
                   <Grid container className={styles['residential-text-group']}>
-                    <Typography variant="h4" align="center">
+                    <Typography
+                      variant="h4"
+                      align="center"
+                      className={styles['residential-text-heading']}
+                    >
                       A Roofing Company You Can Trust
                     </Typography>
                     <Typography className={styles['residential-text']}>
@@ -48,7 +52,11 @@ const ResidentialRoofingPage = () => {
                     </Typography>
                   </Grid>
                   <Grid container className={styles['residential-text-group']}>
-                    <Typography variant="h4" align="center">
+                    <Typography
+                      variant="h4"
+                      align="center"
+                      className={styles['residential-text-heading']}
+                    >
                       Is It Time to Replace Your Roof?
                     </Typography>
                     <Typography className={styles['residential-text']}>
@@ -60,7 +68,11 @@ const ResidentialRoofingPage = () => {
                     </Typography>
                   </Grid>
                   <Grid container className={styles['residential-text-group']}>
-                    <Typography variant="h4" align="center">
+                    <Typography
+                      variant="h4"
+                      align="center"
+                      className={styles['residential-text-heading']}
+                    >
                       Full-Service Roof Replacement Contractors
                     </Typography>
                     <Typography className={styles['residential-text']}>
@@ -85,7 +97,11 @@ const ResidentialRoofingPage = () => {
                     </ul>
                   </Grid>
                   <Grid container className={styles['residential-text-group']}>
-                    <Typography variant="h4" align="center">
+                    <Typography
+                      variant="h4"
+                      align="center"
+                      className={styles['residential-text-heading']}
+                    >
                       Roofing That Includes Excellent Warranties
                     </Typography>
                     <Typography className={styles['residential-text']}>
@@ -95,7 +111,11 @@ const ResidentialRoofingPage = () => {
                     </Typography>
                   </Grid>
                   <Grid container className={styles['residential-text-group']}>
-                    <Typography variant="h4" align="center">
+                    <Typography
+                      variant="h4"
+                      align="center"
+                      className={styles['residential-text-heading']}
+                    >
                       Comprehensive Roofing-Related Repair
                     </Typography>
                     <ul>
@@ -120,7 +140,7 @@ const ResidentialRoofingPage = () => {
                     </ul>
                   </Grid>
                 </Grid>
-                <Grid item xs={12} md={6}>
+                <Grid item xs={12} sm={4}>
                   <Typography></Typography>
                   <FleckCTA color="secondary" />
                   <FleckCTA color="secondary" />

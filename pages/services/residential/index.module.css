@@ -17,10 +17,16 @@
 
 .residential-text-group ul {
   margin: 0;
+  padding: 0 0 0 50px;
 }
 
 .residential-text {
-  padding: 15px 0 0 10px;
+  padding: 15px 15px 0 25px;
+}
+
+.residential .residential-hero {
+  min-height: 0;
+  transition: min-height 1s;
 }
 
 /* 
@@ -33,6 +39,16 @@
     flex-flow: row nowrap;
     justify-content: center;
   }
+
+  .residential .residential-text-heading {
+    font-size: 1.5em;
+    text-align: left;
+    /* padding: 15px 0 0 10px; */
+  }
+
+  .residential .residential-text {
+    padding: 15px 0 0 8px;
+  }
 }
 
 /* @media only screen and (min-width: var(--md)) { */
@@ -44,5 +60,9 @@
 
   .residential-container .residential {
     padding: 0;
+  }
+
+  .residential .residential-hero {
+    min-height: 655px;
   }
 }

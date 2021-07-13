@@ -3,11 +3,12 @@ import styles from './index.module.css'
 import { Grid, Link, Typography } from '@material-ui/core'
 import React from 'react'
 import Hero from '../abstractions/Hero'
+import classNames from 'classnames'
 
 type FleckHero = {
   primaryText: string
   imageUrl?: string
-}
+} & React.HTMLAttributes<HTMLDivElement>
 
 type OperationHours = {
   id: number
@@ -78,7 +79,7 @@ const displayHours = (hours: number) => {
 }
 
 const FleckHero: React.FC<FleckHero> = (props: FleckHero) => {
-  const { primaryText, imageUrl } = props
+  const { className, primaryText, imageUrl } = props
   const currDate = new Date()
   const currDay = currDate.getDay()
   const currHour = currDate.getHours()
@@ -108,7 +109,7 @@ const FleckHero: React.FC<FleckHero> = (props: FleckHero) => {
   }
 
   return (
-    <Grid container className={styles['fleck-hero-container']}>
+    <Grid container className={classNames(styles['fleck-hero-container'], className)}>
       <Hero
         primaryText={primaryText}
         gutters
