@@ -29,6 +29,30 @@
   transition: min-height 1s;
 }
 
+.residential .roof-integrity-icon {
+  height: 60px;
+  width: 60px;
+}
+
+.residential .italic {
+  font-style: italic;
+}
+
+.residential-cta-container .roof-integrity-cta {
+  padding: 0;
+  color: var(--text-primary);
+}
+
+.residential .residential-cta-link {
+  color: var(--textPrimary);
+}
+
+.residential .residential-cta-link:hover,
+.residential .residential-cta-link:focus {
+  color: var(--primary-color);
+  border: none;
+}
+
 /* 
   Cannot use CSS variables in media queries.
   CSS variables can only be used on CSS declarations.
@@ -64,5 +88,9 @@
 
   .residential .residential-hero {
     min-height: 655px;
+  }
+
+  .residential-cta-container {
+    padding: 20px 0 0;
   }
 }

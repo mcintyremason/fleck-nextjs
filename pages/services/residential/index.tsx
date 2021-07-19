@@ -2,7 +2,7 @@ import styles from './index.module.css'
 import classNames from 'classnames'
 
 import React from 'react'
-import { Grid, ThemeProvider, Typography } from '@material-ui/core'
+import { Grid, Link, ThemeProvider, Typography } from '@material-ui/core'
 
 import fleckTheme from '../../../themes/fleckTheme'
 import Layout from '../../../components/Layout'
@@ -10,6 +10,7 @@ import FleckHeader from '../../../components/FleckHeader'
 import FleckFooter from '../../../components/FleckFooter'
 import FleckHero from '../../../components/FleckHero'
 import FleckCTA from '../../../components/FleckCTA'
+import RoofWithIntegrityIcon from '../../../components/icons/RoofWithIntegrityIcon'
 
 const ResidentialRoofingPage = () => {
   return (
@@ -33,6 +34,7 @@ const ResidentialRoofingPage = () => {
                   <Grid container className={styles['residential-text-group']}>
                     <Typography
                       variant="h4"
+                      color="primary"
                       align="center"
                       className={styles['residential-text-heading']}
                     >
@@ -54,6 +56,7 @@ const ResidentialRoofingPage = () => {
                   <Grid container className={styles['residential-text-group']}>
                     <Typography
                       variant="h4"
+                      color="primary"
                       align="center"
                       className={styles['residential-text-heading']}
                     >
@@ -70,6 +73,7 @@ const ResidentialRoofingPage = () => {
                   <Grid container className={styles['residential-text-group']}>
                     <Typography
                       variant="h4"
+                      color="primary"
                       align="center"
                       className={styles['residential-text-heading']}
                     >
@@ -99,6 +103,7 @@ const ResidentialRoofingPage = () => {
                   <Grid container className={styles['residential-text-group']}>
                     <Typography
                       variant="h4"
+                      color="primary"
                       align="center"
                       className={styles['residential-text-heading']}
                     >
@@ -113,6 +118,7 @@ const ResidentialRoofingPage = () => {
                   <Grid container className={styles['residential-text-group']}>
                     <Typography
                       variant="h4"
+                      color="primary"
                       align="center"
                       className={styles['residential-text-heading']}
                     >
@@ -140,11 +146,41 @@ const ResidentialRoofingPage = () => {
                     </ul>
                   </Grid>
                 </Grid>
-                <Grid item xs={12} sm={4}>
-                  <Typography></Typography>
-                  <FleckCTA color="secondary" />
-                  <FleckCTA color="secondary" />
-                  <FleckCTA color="secondary" />
+                <Grid item xs={12} sm={4} className={styles['residential-cta-container']}>
+                  <FleckCTA
+                    color="secondary"
+                    icon={<RoofWithIntegrityIcon className={styles['roof-integrity-icon']} />}
+                    className={styles['roof-integrity-cta']}
+                  >
+                    <Typography variant="h5" align="center" gutterBottom>
+                      Roofers With Integrity
+                    </Typography>
+                    <Typography variant="subtitle2" align="center" gutterBottom color="textPrimary">
+                      Call today for a free quote.
+                    </Typography>
+                    <Typography variant="h5" align="center">
+                      <Link href="tel:(610)250-0737" className={styles['residential-cta-link']}>
+                        (610) 250-0737
+                      </Link>
+                    </Typography>
+                  </FleckCTA>
+                  <FleckCTA color="secondary">
+                    Veteran and senior discounts are available! Call to let us know if you qualify.
+                  </FleckCTA>
+                  <FleckCTA color="secondary">
+                    <Typography
+                      variant="body2"
+                      align="center"
+                      gutterBottom
+                      className={styles['italic']}
+                    >
+                      Did the work as scheduled. Constantly stayed in touch. Answered all my
+                      questions. Would recommend them!
+                    </Typography>
+                    <Typography variant="subtitle2" align="center" color="textPrimary">
+                      - Virginia S., HomeAdvisor Review
+                    </Typography>
+                  </FleckCTA>
                 </Grid>
               </Grid>
             </Grid>

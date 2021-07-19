@@ -1,7 +1,7 @@
 import styles from './index.module.css'
 import classNames from 'classnames'
 
-import React from 'react'
+import React, { ReactNode } from 'react'
 import ChatOutlinedIcon from '@material-ui/icons/ChatOutlined'
 import { Grid, GridSize, Typography } from '@material-ui/core'
 import { Breakpoint } from '@material-ui/core/styles/createBreakpoints'
@@ -14,30 +14,35 @@ type FleckCTAProps = {
   // title: string
   color: Color
   borderColor?: Color
-} & Partial<Record<Breakpoint, boolean | GridSize>>
+  children?: ReactNode
+  icon?: ReactNode
+} & Partial<Record<Breakpoint, boolean | GridSize>> &
+  React.HTMLAttributes<HTMLDivElement>
 
 const FleckCTA: React.FC<FleckCTAProps> = (props: FleckCTAProps) => {
-  const { color, borderColor, xs, sm, md, lg, xl } = props
+  const { children, className, color, borderColor, icon, xs, sm, md, lg, xl } = props
 
   return (
-    <Grid item xs={xs} sm={sm} md={md} lg={lg} xl={xl} className={styles['fleck-cta-container']}>
+    <Grid
+      item
+      xs={xs}
+      sm={sm}
+      md={md}
+      lg={lg}
+      xl={xl}
+      className={classNames(styles['fleck-cta-container'], className)}
+    >
       <CTA color={color} borderColor={borderColor} xs={12}>
         <Grid container direction="column">
           <Grid container justify="center">
-            <ChatOutlinedIcon fontSize="large" className={classNames(styles['fleck-cta-icon'])} />
+            {icon ? (
+              icon
+            ) : (
+              <ChatOutlinedIcon fontSize="large" className={classNames(styles['fleck-cta-icon'])} />
+            )}
           </Grid>
-          <Grid
-            container
-            justify="center"
-            className={classNames(styles['fleck-cta-text'], styles['italic'])}
-          >
-            <Typography variant="body2" align="center">
-              Did the work as scheduled. Constantly stayed in touch. Answered all my questions.
-              Would recommend them!
-            </Typography>
-            <Typography variant="subtitle2" align="center" color="textPrimary">
-              - Virginia S., HomeAdvisor Review
-            </Typography>
+          <Grid container justify="center" className={classNames(styles['fleck-cta-text'])}>
+            {children}
           </Grid>
         </Grid>
       </CTA>

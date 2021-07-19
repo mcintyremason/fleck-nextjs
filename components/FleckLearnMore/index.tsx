@@ -9,7 +9,12 @@ type FleckLearnMoreProps = {}
 const FleckLearnMore: React.FC<FleckLearnMoreProps> = (_: FleckLearnMoreProps) => {
   return (
     <Grid container justify="center" className={styles['learn-more-container']}>
-      <Typography variant="h2" align="center" className={styles['learn-more-title']}>
+      <Typography
+        variant="h2"
+        color="primary"
+        align="center"
+        className={styles['learn-more-title']}
+      >
         Fleck Roofing & Construction - Getting It Right Since 1988
       </Typography>
       <Grid container direction="column" className={styles['learn-more-cards-container']}>
