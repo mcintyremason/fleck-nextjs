@@ -16,6 +16,16 @@
   background-color: var(--secondary-color);
 }
 
+.cta.text-primary {
+  background-color: var(--text-primary);
+  color: var(--text-secondary);
+}
+
+.cta.text-secondary {
+  background-color: var(--text-secondary);
+  color: var(--text-primary);
+}
+
 .cta.no-color {
   background-color: var(--background-primary);
 }
@@ -26,6 +36,14 @@
 
 .cta-container .cta.secondary-border {
   border: 1px solid var(--secondary-color);
+}
+
+.cta-container .cta.text-primary-border {
+  border: 1px solid var(--text-primary);
+}
+
+.cta-container .cta.text-secondary-border {
+  border: 1px solid var(--text-secondary);
 }
 
 .cta.no-color-border {

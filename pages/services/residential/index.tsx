@@ -3,6 +3,7 @@ import classNames from 'classnames'
 
 import React from 'react'
 import { Grid, Link, ThemeProvider, Typography } from '@material-ui/core'
+import ChatOutlinedIcon from '@material-ui/icons/ChatOutlined'
 
 import fleckTheme from '../../../themes/fleckTheme'
 import Layout from '../../../components/Layout'
@@ -149,25 +150,48 @@ const ResidentialRoofingPage = () => {
                 <Grid item xs={12} sm={4} className={styles['residential-cta-container']}>
                   <FleckCTA
                     color="secondary"
-                    icon={<RoofWithIntegrityIcon className={styles['roof-integrity-icon']} />}
+                    icon={<RoofWithIntegrityIcon className={styles['cta-icon']} />}
                     className={styles['roof-integrity-cta']}
                   >
-                    <Typography variant="h5" align="center" gutterBottom>
-                      Roofers With Integrity
-                    </Typography>
-                    <Typography variant="subtitle2" align="center" gutterBottom color="textPrimary">
-                      Call today for a free quote.
-                    </Typography>
-                    <Typography variant="h5" align="center">
-                      <Link href="tel:(610)250-0737" className={styles['residential-cta-link']}>
-                        (610) 250-0737
-                      </Link>
+                    <Grid item xs={12}>
+                      <Typography variant="h4" align="center" gutterBottom>
+                        Roofers With Integrity
+                      </Typography>
+                    </Grid>
+                    <Grid item xs={12}>
+                      <Typography align="center" gutterBottom color="textPrimary">
+                        Call today for a free quote.
+                      </Typography>
+                    </Grid>
+                    <Grid item xs={12}>
+                      <Typography variant="h5" align="center">
+                        <Link
+                          href="tel:(610)250-0737"
+                          className={classNames(
+                            styles['residential-cta-link'],
+                            styles['residential-cta-phone'],
+                          )}
+                        >
+                          (610) 250-0737
+                        </Link>
+                      </Typography>
+                    </Grid>
+                  </FleckCTA>
+                  <FleckCTA color="text-primary" borderColor="text-primary">
+                    <Typography align="center">
+                      Veteran and senior discounts are available! Call to let us know if you
+                      qualify.
                     </Typography>
                   </FleckCTA>
-                  <FleckCTA color="secondary">
-                    Veteran and senior discounts are available! Call to let us know if you qualify.
-                  </FleckCTA>
-                  <FleckCTA color="secondary">
+                  <FleckCTA
+                    color="secondary"
+                    icon={
+                      <ChatOutlinedIcon
+                        fontSize="large"
+                        className={classNames(styles['cta-icon'])}
+                      />
+                    }
+                  >
                     <Typography
                       variant="body2"
                       align="center"

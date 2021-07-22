@@ -5,7 +5,7 @@ import React, { ReactNode } from 'react'
 import { Card, Grid, GridSize } from '@material-ui/core'
 import { Breakpoint } from '@material-ui/core/styles/createBreakpoints'
 
-export type Color = 'primary' | 'secondary' | 'no-color'
+export type Color = 'primary' | 'secondary' | 'text-primary' | 'text-secondary' | 'no-color'
 
 type CTAProps = {
   color: Color

@@ -1,4 +1,7 @@
+.fleck-cta-container .fleck-cta {
+  padding: 12px;
+}
+
 .fleck-cta-container .fleck-cta-icon {
-  height: 60px;
-  width: 60px;
+  padding: 0 0 10px;
 }

@@ -29,9 +29,9 @@
   transition: min-height 1s;
 }
 
-.residential .roof-integrity-icon {
-  height: 60px;
-  width: 60px;
+.residential .cta-icon {
+  height: 70px;
+  width: 70px;
 }
 
 .residential .italic {
@@ -51,6 +51,10 @@
 .residential .residential-cta-link:focus {
   color: var(--primary-color);
   border: none;
+}
+
+.residential .residential-cta-phone {
+  font-size: 24px;
 }
 
 /* 

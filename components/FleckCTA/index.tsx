@@ -2,16 +2,12 @@ import styles from './index.module.css'
 import classNames from 'classnames'
 
 import React, { ReactNode } from 'react'
-import ChatOutlinedIcon from '@material-ui/icons/ChatOutlined'
-import { Grid, GridSize, Typography } from '@material-ui/core'
+import { Grid, GridSize } from '@material-ui/core'
 import { Breakpoint } from '@material-ui/core/styles/createBreakpoints'
 
 import CTA, { Color } from '../abstractions/CTA'
 
 type FleckCTAProps = {
-  // description: string
-  // imgurl: string
-  // title: string
   color: Color
   borderColor?: Color
   children?: ReactNode
@@ -33,14 +29,12 @@ const FleckCTA: React.FC<FleckCTAProps> = (props: FleckCTAProps) => {
       className={classNames(styles['fleck-cta-container'], className)}
     >
       <CTA color={color} borderColor={borderColor} xs={12}>
-        <Grid container direction="column">
-          <Grid container justify="center">
-            {icon ? (
-              icon
-            ) : (
-              <ChatOutlinedIcon fontSize="large" className={classNames(styles['fleck-cta-icon'])} />
-            )}
-          </Grid>
+        <Grid container direction="column" className={styles['fleck-cta']}>
+          {icon && (
+            <Grid container justify="center" className={styles['fleck-cta-icon']}>
+              {icon}
+            </Grid>
+          )}
           <Grid container justify="center" className={classNames(styles['fleck-cta-text'])}>
             {children}
           </Grid>
