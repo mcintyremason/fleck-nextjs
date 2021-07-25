@@ -17,7 +17,12 @@ const FleckLearnMore: React.FC<FleckLearnMoreProps> = (_: FleckLearnMoreProps) =
       >
         Fleck Roofing & Construction - Getting It Right Since 1988
       </Typography>
-      <Grid container direction="column" className={styles['learn-more-cards-container']}>
+      <Grid
+        container
+        direction="column"
+        wrap="nowrap"
+        className={styles['learn-more-cards-container']}
+      >
         <LearnMoreCard
           key="learn-more-emergency"
           title="Emergency Roofing"

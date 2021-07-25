@@ -7,6 +7,10 @@
   padding: 0;
 }
 
+.residential-content {
+  max-width: 1200px;
+}
+
 .residential-text-container {
   padding: 40px 25px 10px;
 }
@@ -91,7 +95,7 @@
   }
 
   .residential .residential-hero {
-    min-height: 655px;
+    min-height: var(--hero-md-height);
   }
 
   .residential-cta-container {

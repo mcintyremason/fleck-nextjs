@@ -17,6 +17,9 @@
 
   --desktop-header-height: 146px;
 
+  --hero-xs-height: 450px;
+  --hero-md-height: 655px;
+
   --footer-height: 65px;
   --card-width: 345px;
   --card-image-max-height: 250px;
