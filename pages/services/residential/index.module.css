@@ -9,19 +9,29 @@
 
 .residential-content {
   max-width: 1200px;
+  padding: 55px 0;
 }
 
 .residential-text-container {
-  padding: 40px 25px 10px;
+  padding: 0 25px;
 }
 
 .residential-text-group {
   padding: 0 0 40px;
 }
 
+.residential-text-group:last-child {
+  padding: 0;
+}
+
 .residential-text-group ul {
   margin: 0;
   padding: 0 0 0 50px;
+}
+
+.residential-text-group ul li {
+  margin: 0;
+  padding: 10px 0 0;
 }
 
 .residential-text {
@@ -61,6 +71,10 @@
   font-size: 24px;
 }
 
+.residential-cta-container {
+  padding: 0 25px 0 0;
+}
+
 /* 
   Cannot use CSS variables in media queries.
   CSS variables can only be used on CSS declarations.
@@ -96,9 +110,5 @@
 
   .residential .residential-hero {
     min-height: var(--hero-md-height);
-  }
-
-  .residential-cta-container {
-    padding: 20px 0 0;
   }
 }

@@ -7,6 +7,69 @@
   padding: 0;
 }
 
+.commercial-content {
+  max-width: 1200px;
+  padding: 55px 0;
+}
+
+.commercial-text-container {
+  padding: 0 25px 10px;
+}
+
+.commercial-text-group {
+  padding: 0 0 40px;
+}
+
+.commercial-text-group:last-child {
+  padding: 0;
+}
+
+.commercial-text-group ul {
+  margin: 0;
+  padding: 0 0 0 50px;
+}
+
+.commercial-text {
+  padding: 15px 15px 0 25px;
+}
+
+.commercial .commercial-hero {
+  min-height: 0;
+  transition: min-height 1s;
+}
+
+.commercial .cta-icon {
+  height: 70px;
+  width: 70px;
+}
+
+.commercial .italic {
+  font-style: italic;
+}
+
+.commercial-cta-container {
+  padding: 0 25px 0 0;
+}
+
+.commercial-cta-container .roof-integrity-cta {
+  padding: 0;
+  color: var(--text-primary);
+}
+
+.commercial .commercial-cta-link {
+  color: var(--textPrimary);
+}
+
+.commercial .commercial-cta-link:hover,
+.commercial .commercial-cta-link:focus {
+  color: var(--primary-color);
+  border: none;
+}
+
+.commercial .commercial-cta-phone {
+  font-size: 24px;
+}
+
 /* 
   Cannot use CSS variables in media queries.
   CSS variables can only be used on CSS declarations.
@@ -16,6 +79,16 @@
   .commercial {
     flex-flow: row nowrap;
     justify-content: center;
+  }
+
+  .commercial .commercial-text-heading {
+    font-size: 1.5em;
+    text-align: left;
+    /* padding: 15px 0 0 10px; */
+  }
+
+  .commercial .commercial-text {
+    padding: 15px 0 0 8px;
   }
 }
 
@@ -28,5 +101,9 @@
 
   .commercial-container .commercial {
     padding: 0;
+  }
+
+  .commercial .commercial-hero {
+    min-height: var(--hero-md-height);
   }
 }

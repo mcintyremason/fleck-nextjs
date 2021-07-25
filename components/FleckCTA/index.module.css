@@ -1,7 +1,17 @@
+.fleck-cta-container {
+  padding: 5px 0 0;
+}
+
 .fleck-cta-container .fleck-cta {
   padding: 12px 0;
 }
 
 .fleck-cta-container .fleck-cta-icon {
   padding: 0 0 10px;
+}
+
+@media only screen and (min-width: 768px) {
+  .fleck-cta-container {
+    padding: 15px 0 0;
+  }
 }
