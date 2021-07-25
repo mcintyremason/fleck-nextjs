@@ -1,13 +1,13 @@
 .hero {
   position: relative;
-  min-height: 450px;
+  min-height: var(--hero-xs-height);
   width: 100%;
 }
 
 .hero .overlay {
   width: 100%;
   height: 100%;
-  min-height: 450px;
+  min-height: var(--hero-xs-height);
   background-color: #0000007f;
 }
 
@@ -26,6 +26,11 @@
 @media only screen and (min-width: 768px) {
   .hero h1 {
     font-size: 54px;
+  }
+
+  .hero,
+  .hero .overlay {
+    min-height: var(--hero-md-height);
   }
 }
 

@@ -1,8 +1,7 @@
-.fleck-cta-container .fleck-cta-icon {
-  height: 60px;
-  width: 50px;
+.fleck-cta-container .fleck-cta {
+  padding: 12px 0;
 }
 
-.fleck-cta-text.italic {
-  font-style: italic;
+.fleck-cta-container .fleck-cta-icon {
+  padding: 0 0 10px;
 }
