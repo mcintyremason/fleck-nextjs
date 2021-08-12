@@ -109,8 +109,10 @@ const FleckHeader: React.FC<HeaderProps> = (_: HeaderProps) => {
   }
 
   const expandLinkHandler = (link: ListMenuLink) => {
+    console.log('expandLinkHandler')
     const updatedListMenuLinks = menuLinks.map((_link) => {
       if (link === _link) {
+        console.log(link)
         _link.isExpanded = !_link.isExpanded
       }
       return _link

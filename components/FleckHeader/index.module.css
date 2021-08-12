@@ -84,6 +84,7 @@ header.app-bar {
 
 div.menu-popper {
   z-index: 1300;
+  display: none;
 }
 
 @media only screen and (min-width: 425px) {
@@ -93,6 +94,10 @@ div.menu-popper {
 }
 
 @media only screen and (min-width: 1280px) {
+  div.menu-popper {
+    display: block;
+  }
+
   header.app-bar {
     padding: 0 2%;
   }

@@ -50,6 +50,11 @@ const ListMenu: React.FC<ListMenuProps> = (props: ListMenuProps) => {
     setListMenuLinks(updatedListMenuLinks)
   }
 
+  const linkClickHandler = (e: any, link: ListMenuLink) => {
+    e.preventDefault()
+    router.push(link.href)
+  }
+
   return (
     <Grid className={styles['list-menu']} container direction="column" wrap="nowrap">
       {menuLinks.map((link: ListMenuLink) => (
@@ -70,6 +75,9 @@ const ListMenu: React.FC<ListMenuProps> = (props: ListMenuProps) => {
                     link.isExpanded ? styles['active'] : '',
                     subLinksActive(link, router) && styles['active'],
                   )}
+                  onClick={(e: any) => {
+                    linkClickHandler(e, link)
+                  }}
                 >
                   <Grid item xs={2} container direction="column" justify="center">
                     {link.icon ? <ListItemIcon>{link.icon}</ListItemIcon> : null}
