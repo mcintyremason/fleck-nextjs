@@ -7,6 +7,82 @@
   padding: 0;
 }
 
+.emergency-content {
+  max-width: 1200px;
+  padding: 55px 0;
+}
+
+.emergency-text-container {
+  padding: 0 25px 10px;
+}
+
+.emergency-text-group {
+  padding: 0 0 40px;
+}
+
+.emergency-text-group:last-child {
+  padding: 0;
+}
+
+.emergency-text-group ul {
+  margin: 0;
+  padding: 0 0 0 50px;
+}
+
+.emergency-text {
+  padding: 15px 15px 0 25px;
+}
+
+.emergency .emergency-hero {
+  min-height: 0;
+  transition: min-height 1s;
+}
+
+.emergency .emergency-hero h1 {
+  font-size: 48px;
+}
+
+.emergency .cta-icon {
+  height: 70px;
+  width: 70px;
+}
+
+.emergency .team-icon {
+  height: 90px;
+  width: 90px;
+}
+
+.emergency .italic {
+  font-style: italic;
+}
+
+.emergency-cta-container {
+  padding: 25px 5px 0;
+}
+
+.emergency-review-container {
+  padding: 0 5px;
+}
+
+.emergency-cta-container .roof-integrity-cta {
+  padding: 0;
+  color: var(--text-primary);
+}
+
+.emergency .emergency-cta-link {
+  color: var(--textPrimary);
+}
+
+.emergency .emergency-cta-link:hover,
+.emergency .emergency-cta-link:focus {
+  color: var(--primary-color);
+  border: none;
+}
+
+.emergency .emergency-cta-phone {
+  font-size: 24px;
+}
+
 /* 
   Cannot use CSS variables in media queries.
   CSS variables can only be used on CSS declarations.
@@ -16,6 +92,24 @@
   .emergency {
     flex-flow: row nowrap;
     justify-content: center;
+  }
+
+  .emergency .emergency-hero h1 {
+    font-size: 54px;
+  }
+
+  .emergency .emergency-text-heading {
+    font-size: 1.5em;
+    text-align: left;
+    /* padding: 15px 0 0 10px; */
+  }
+
+  .emergency .emergency-text {
+    padding: 15px 0 0 8px;
+  }
+
+  .emergency-cta-container {
+    padding: 0 25px;
   }
 }
 
@@ -28,5 +122,13 @@
 
   .emergency-container .emergency {
     padding: 0;
+  }
+
+  .emergency .emergency-hero {
+    min-height: var(--hero-md-height);
+  }
+
+  .emergency-cta-container {
+    padding: 0 25px 0 0;
   }
 }

@@ -87,7 +87,7 @@ const FleckHeader: React.FC<HeaderProps> = (_: HeaderProps) => {
   const divRef = React.useRef()
   const ourServicesLinks = menuLinks[0]?.subLinks
 
-  const hamburgerOnClick = (e: any) => {
+  const hamburgerOnClick = () => {
     setHambugerActive(!hambugerActive)
   }
 

@@ -42,7 +42,7 @@ const FleckCustomerSays: React.FC<FleckCustomerSaysProps> = (_: FleckCustomerSay
         </Grid>
       </Grid>
     </Grid>
-    <Grid item xs={12} md={4} container direction="column">
+    <Grid item xs={12} md={4} lg={3} container direction="column">
       <Grid container direction="column" className={styles['customer-says-review']}>
         <Grid container>
           <Grid item xs={6}>

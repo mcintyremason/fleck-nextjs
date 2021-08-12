@@ -4,6 +4,7 @@ import classNames from 'classnames'
 import React from 'react'
 import { Grid, Link, ThemeProvider, Typography } from '@material-ui/core'
 import ChatOutlinedIcon from '@material-ui/icons/ChatOutlined'
+import GroupAddOutlinedIcon from '@material-ui/icons/GroupAddOutlined'
 
 import fleckTheme from '../../../themes/fleckTheme'
 import Layout from '../../../components/Layout'
@@ -11,8 +12,6 @@ import FleckHeader from '../../../components/FleckHeader'
 import FleckFooter from '../../../components/FleckFooter'
 import FleckHero from '../../../components/FleckHero'
 import FleckCTA from '../../../components/FleckCTA'
-import RoofWithIntegrityIcon from '../../../components/icons/RoofWithIntegrityIcon'
-import GroupAddOutlinedIcon from '@material-ui/icons/GroupAddOutlined'
 
 const CommercialRoofingPage = () => {
   return (

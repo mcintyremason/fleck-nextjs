@@ -72,7 +72,7 @@
 }
 
 .residential-cta-container {
-  padding: 0 25px 0 0;
+  padding: 25px 5px 0;
 }
 
 /* 
@@ -110,5 +110,9 @@
 
   .residential .residential-hero {
     min-height: var(--hero-md-height);
+  }
+
+  .residential-cta-container {
+    padding: 0 25px 0 0;
   }
 }

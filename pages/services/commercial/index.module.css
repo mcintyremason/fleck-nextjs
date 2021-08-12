@@ -38,6 +38,10 @@
   transition: min-height 1s;
 }
 
+.commercial .commercial-hero h1 {
+  font-size: 48px;
+}
+
 .commercial .cta-icon {
   height: 70px;
   width: 70px;
@@ -48,7 +52,7 @@
 }
 
 .commercial-cta-container {
-  padding: 0 25px 0 0;
+  padding: 25px 5px 0;
 }
 
 .commercial-cta-container .roof-integrity-cta {
@@ -81,6 +85,10 @@
     justify-content: center;
   }
 
+  .commercial .commercial-hero h1 {
+    font-size: 54px;
+  }
+
   .commercial .commercial-text-heading {
     font-size: 1.5em;
     text-align: left;
@@ -105,5 +113,9 @@
 
   .commercial .commercial-hero {
     min-height: var(--hero-md-height);
+  }
+
+  .commercial-cta-container {
+    padding: 0 25px 0 0;
   }
 }
