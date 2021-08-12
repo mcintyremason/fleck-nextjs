@@ -1,5 +1,5 @@
 .cta-container {
-  padding: 5px;
+  /* padding: 5px; */
 }
 
 .cta {
@@ -60,7 +60,6 @@
 
 @media only screen and (min-width: 768px) {
   .cta-container {
-    padding: 15px;
     flex-basis: unset;
   }
 

@@ -1,10 +1,77 @@
-.general-contracting-container {
+.contracting-container {
   background-color: var(--background-primary);
   padding: var(--mobile-header-height) 0 0;
 }
 
-.general-contracting {
+.contracting {
   padding: 0;
+}
+
+.contracting-content {
+  max-width: 1200px;
+  padding: 55px 0;
+}
+
+.contracting-text-container {
+  padding: 0 25px 10px;
+}
+
+.contracting-text-group {
+  padding: 0 0 40px;
+}
+
+.contracting-text-group:last-child {
+  padding: 0;
+}
+
+.contracting-text-group ul {
+  margin: 0;
+  padding: 0 0 0 50px;
+}
+
+.contracting-text {
+  padding: 15px 15px 0 25px;
+}
+
+.contracting .contracting-hero {
+  min-height: 0;
+  transition: min-height 1s;
+}
+
+.contracting .contracting-hero h1 {
+  font-size: 48px;
+}
+
+.contracting .cta-icon {
+  height: 70px;
+  width: 70px;
+}
+
+.contracting .italic {
+  font-style: italic;
+}
+
+.contracting-cta-container {
+  padding: 25px 5px 0;
+}
+
+.contracting-cta-container .roof-integrity-cta {
+  padding: 0;
+  color: var(--text-primary);
+}
+
+.contracting .contracting-cta-link {
+  color: var(--textPrimary);
+}
+
+.contracting .contracting-cta-link:hover,
+.contracting .contracting-cta-link:focus {
+  color: var(--primary-color);
+  border: none;
+}
+
+.contracting .contracting-cta-phone {
+  font-size: 24px;
 }
 
 /* 
@@ -13,20 +80,42 @@
 */
 /* @media only screen and (min-width: var(--sm)) { */
 @media only screen and (min-width: 425px) {
-  .general-contracting {
+  .contracting {
     flex-flow: row nowrap;
     justify-content: center;
+  }
+
+  .contracting .contracting-hero h1 {
+    font-size: 54px;
+  }
+
+  .contracting .contracting-text-heading {
+    font-size: 1.5em;
+    text-align: left;
+    /* padding: 15px 0 0 10px; */
+  }
+
+  .contracting .contracting-text {
+    padding: 15px 0 0 8px;
   }
 }
 
 /* @media only screen and (min-width: var(--md)) { */
 @media only screen and (min-width: 768px) {
-  div.general-contracting-container {
+  div.contracting-container {
     padding: var(--desktop-header-height) 0 0;
     flex-flow: column nowrap;
   }
 
-  .general-contracting-container .general-contracting {
+  .contracting-container .contracting {
     padding: 0;
+  }
+
+  .contracting .contracting-hero {
+    min-height: var(--hero-md-height);
+  }
+
+  .contracting-cta-container {
+    padding: 0 25px 0 0;
   }
 }

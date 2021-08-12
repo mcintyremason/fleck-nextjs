@@ -12,11 +12,28 @@ type FleckCTAProps = {
   borderColor?: Color
   children?: ReactNode
   icon?: ReactNode
+  iconGutterBottom?: boolean
+  ctaGutterTop?: boolean
+  ctaGutterBottom?: boolean
 } & Partial<Record<Breakpoint, boolean | GridSize>> &
   React.HTMLAttributes<HTMLDivElement>
 
 const FleckCTA: React.FC<FleckCTAProps> = (props: FleckCTAProps) => {
-  const { children, className, color, borderColor, icon, xs, sm, md, lg, xl } = props
+  const {
+    children,
+    className,
+    color,
+    borderColor,
+    icon,
+    xs,
+    sm,
+    md,
+    lg,
+    xl,
+    iconGutterBottom = true,
+    ctaGutterTop = true,
+    ctaGutterBottom = true,
+  } = props
 
   return (
     <Grid
@@ -29,9 +46,20 @@ const FleckCTA: React.FC<FleckCTAProps> = (props: FleckCTAProps) => {
       className={classNames(styles['fleck-cta-container'], className)}
     >
       <CTA color={color} borderColor={borderColor} xs={12}>
-        <Grid container direction="column" className={styles['fleck-cta']}>
+        <Grid
+          container
+          direction="column"
+          className={classNames(
+            ctaGutterTop && styles['gutter-top'],
+            ctaGutterBottom && styles['gutter-bottom'],
+          )}
+        >
           {icon && (
-            <Grid container justify="center" className={styles['fleck-cta-icon']}>
+            <Grid
+              container
+              justify="center"
+              className={classNames(iconGutterBottom && styles['icon-gutter'])}
+            >
               {icon}
             </Grid>
           )}

@@ -7,6 +7,78 @@
   padding: 0;
 }
 
+.siding-content {
+  max-width: 1200px;
+  padding: 55px 0;
+}
+
+.siding-text-container {
+  padding: 0 25px 10px;
+}
+
+.siding-text-group {
+  padding: 0 0 40px;
+}
+
+.siding-text-group:last-child {
+  padding: 0;
+}
+
+.siding-text-group ul {
+  margin: 0;
+  padding: 0 0 0 50px;
+}
+
+.siding-text {
+  padding: 15px 15px 0 25px;
+}
+
+.siding .siding-hero {
+  min-height: 0;
+  transition: min-height 1s;
+}
+
+.siding .siding-hero h1 {
+  font-size: 48px;
+}
+
+.siding .cta-icon {
+  height: 70px;
+  width: 70px;
+}
+
+.siding .team-icon {
+  height: 90px;
+  width: 90px;
+}
+
+.siding .italic {
+  font-style: italic;
+}
+
+.siding-cta-container {
+  padding: 25px 5px 0;
+}
+
+.siding-cta-container .roof-integrity-cta {
+  padding: 0;
+  color: var(--text-primary);
+}
+
+.siding .siding-cta-link {
+  color: var(--textPrimary);
+}
+
+.siding .siding-cta-link:hover,
+.siding .siding-cta-link:focus {
+  color: var(--primary-color);
+  border: none;
+}
+
+.siding .siding-cta-phone {
+  font-size: 24px;
+}
+
 /* 
   Cannot use CSS variables in media queries.
   CSS variables can only be used on CSS declarations.
@@ -16,6 +88,20 @@
   .siding {
     flex-flow: row nowrap;
     justify-content: center;
+  }
+
+  .siding .siding-hero h1 {
+    font-size: 54px;
+  }
+
+  .siding .siding-text-heading {
+    font-size: 1.5em;
+    text-align: left;
+    /* padding: 15px 0 0 10px; */
+  }
+
+  .siding .siding-text {
+    padding: 15px 0 0 8px;
   }
 }
 
@@ -28,5 +114,13 @@
 
   .siding-container .siding {
     padding: 0;
+  }
+
+  .siding .siding-hero {
+    min-height: var(--hero-md-height);
+  }
+
+  .siding-cta-container {
+    padding: 0 25px 0 0;
   }
 }
