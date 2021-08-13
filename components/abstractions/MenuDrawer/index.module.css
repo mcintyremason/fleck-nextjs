@@ -10,4 +10,8 @@
   .menu-drawer {
     display: none;
   }
+
+  .menu-drawer .list-menu-container {
+    display: none;
+  }
 }

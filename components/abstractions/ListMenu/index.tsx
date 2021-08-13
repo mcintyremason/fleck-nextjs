@@ -40,6 +40,7 @@ const ListMenu: React.FC<ListMenuProps> = (props: ListMenuProps) => {
   const [menuLinks, setListMenuLinks] = useState<Array<ListMenuLink>>(links)
 
   const expandLinkHandler = (link: ListMenuLink) => {
+    console.log('expandLinkHandler')
     const updatedListMenuLinks = menuLinks.map((_link) => {
       if (link === _link) {
         _link.isExpanded = !_link.isExpanded
