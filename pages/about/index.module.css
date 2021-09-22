@@ -7,6 +7,17 @@
   padding: 0;
 }
 
+.about-container .banner-contaner {
+  background-color: var(--banner-background);
+  color: var(--text-secondary);
+  padding: 30px 20px 20px;
+}
+
+.about-container .about-map {
+  width: 100%;
+  min-height: 250px;
+}
+
 /* 
   Cannot use CSS variables in media queries.
   CSS variables can only be used on CSS declarations.

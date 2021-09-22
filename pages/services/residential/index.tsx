@@ -30,8 +30,8 @@ const ResidentialRoofingPage = () => {
                 imageUrl="/img/services/residential-hero.jpeg"
                 className={styles['residential-hero']}
               />
-              <Grid container justify="center">
-                <Grid container justify="center" className={styles['residential-content']}>
+              <Grid container justifyContent="center">
+                <Grid container justifyContent="center" className={styles['residential-content']}>
                   <Grid item xs={12} sm={8} className={styles['residential-text-container']}>
                     <Grid container className={styles['residential-text-group']}>
                       <Grid item xs={12}>

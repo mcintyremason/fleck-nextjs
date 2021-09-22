@@ -1,7 +1,7 @@
-import { createMuiTheme, responsiveFontSizes } from '@material-ui/core'
+import { createTheme, responsiveFontSizes } from '@material-ui/core'
 
 const fleckTheme = responsiveFontSizes(
-  createMuiTheme({
+  createTheme({
     breakpoints: {
       values: {
         xs: 0,

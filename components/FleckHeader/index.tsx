@@ -62,8 +62,8 @@ const initialMenuLinks: Array<ListMenuLink> = [
     icon: <RequestQuoteIcon color="primary" />,
   },
   {
-    text: 'Reviews',
-    href: '/reviews',
+    text: 'Testimonials',
+    href: '/testimonials',
     icon: <GradeRoundedIcon color="primary" />,
   },
   {
@@ -123,7 +123,7 @@ const FleckHeader: React.FC<HeaderProps> = (_: HeaderProps) => {
 
   return (
     <AppBar position="fixed" className={styles['app-bar']}>
-      <Grid container direction="column" justify="center">
+      <Grid container direction="column" justifyContent="center">
         <Grid container className={styles['header']}>
           <Grid
             container
@@ -131,7 +131,7 @@ const FleckHeader: React.FC<HeaderProps> = (_: HeaderProps) => {
             xs={10}
             sm={4}
             direction="column"
-            justify="center"
+            justifyContent="center"
             className={styles['logo-nav-container']}
           >
             <h1 className={styles['header-name']}>
@@ -161,7 +161,7 @@ const FleckHeader: React.FC<HeaderProps> = (_: HeaderProps) => {
           </Grid>
           <Grid
             container
-            justify="center"
+            justifyContent="center"
             item
             xs={12}
             className={classNames(styles['menu-container'])}
@@ -169,7 +169,7 @@ const FleckHeader: React.FC<HeaderProps> = (_: HeaderProps) => {
             <Grid
               className={styles['menu']}
               container
-              justify="flex-end"
+              justifyContent="flex-end"
               direction="row"
               wrap="nowrap"
             >

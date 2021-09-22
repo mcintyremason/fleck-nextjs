@@ -130,7 +130,7 @@ const FleckHero: React.FC<FleckHero> = (props: FleckHero) => {
             Free Quotes
           </Typography>
         </Grid>
-        <Grid container justify="center" className={styles['fleck-hero-phone']}>
+        <Grid container justifyContent="center" className={styles['fleck-hero-phone']}>
           <Typography
             variant="h3"
             color="textSecondary"
@@ -142,7 +142,7 @@ const FleckHero: React.FC<FleckHero> = (props: FleckHero) => {
             </Link>
           </Typography>
         </Grid>
-        <Grid container justify="center" className={styles['hours-container']}>
+        <Grid container justifyContent="center" className={styles['hours-container']}>
           <Typography variant="h5" color="textSecondary" className={styles['text-shadow']}>
             Hours:{' '}
             {isOpen() ? (

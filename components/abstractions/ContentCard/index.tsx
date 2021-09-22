@@ -28,7 +28,7 @@ const ContentCard: React.FC<ContentCardProps> = (props) => {
       <Card>
         <Grid
           container
-          justify="center"
+          justifyContent="center"
           className={classNames(styles['content-card-image-container'])}
         >
           <img className={classNames(styles['content-card-image'])} src={imgurl} alt={title} />

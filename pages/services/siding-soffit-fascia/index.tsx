@@ -25,8 +25,8 @@ const SidingSoffitFasciaPage = () => {
                 primaryText="Siding, Soffit, & Fascia Services"
                 imageUrl="/img/services/siding-soffit-fascia-hero.jpeg"
               />
-              <Grid container justify="center">
-                <Grid container justify="center" className={styles['siding-content']}>
+              <Grid container justifyContent="center">
+                <Grid container justifyContent="center" className={styles['siding-content']}>
                   <Grid item xs={12} sm={8} className={styles['siding-text-container']}>
                     <Grid container className={styles['siding-text-group']}>
                       <Grid item xs={12}>

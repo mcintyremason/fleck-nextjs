@@ -22,7 +22,7 @@ const ContactPage = () => {
                 gutters
                 overlay
                 justify="center"
-                imageUrl="/img/reviews/reviews-hero.webp"
+                imageUrl="/img/testimonials/testimonials-hero.webp"
               />
             </Grid>
           </Grid>

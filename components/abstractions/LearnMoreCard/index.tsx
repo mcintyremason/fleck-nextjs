@@ -37,11 +37,11 @@ const LearnMoreCard: React.FC<LearnMoreCardProps> = (props: LearnMoreCardProps) 
             <Grid
               container
               direction="column"
-              justify="center"
+              justifyContent="center"
               className={classNames(styles['hero-overlay'])}
             >
               <CardContent>
-                <Grid container justify="center">
+                <Grid container justifyContent="center">
                   <Typography
                     variant="h5"
                     component="h5"
