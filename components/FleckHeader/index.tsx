@@ -186,11 +186,6 @@ const FleckHeader: React.FC<HeaderProps> = (_: HeaderProps) => {
                       expandLinkHandler(link)
                       handlePopoverClose(link)
                     }}
-                    // onClick={() => {
-                    //   console.log(link)
-                    //   expandLinkHandler(link)
-                    //   link.isExpanded ? handlePopoverOpen(link) : handlePopoverClose(link)
-                    // }}
                     className={classNames(
                       styles['menu-link-container'],
                       link.isExpanded && styles['active'],

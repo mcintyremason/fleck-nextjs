@@ -26,15 +26,10 @@ const AboutPage = () => {
               />
               <Grid container justifyContent="center">
                 <Grid container justifyContent="center" className={styles['about-content']}>
-                  <Grid item xs={12} sm={8} className={styles['about-text-container']}>
+                  <Grid item xs={12} className={styles['about-text-container']}>
                     <Grid container className={styles['about-text-group']}>
                       <Grid item xs={12}>
-                        <Typography
-                          variant="h4"
-                          color="primary"
-                          align="center"
-                          className={styles['about-text-heading']}
-                        >
+                        <Typography variant="h2" color="primary" align="center">
                           Advanced Protection for Your Business
                         </Typography>
                       </Grid>
@@ -64,33 +59,41 @@ const AboutPage = () => {
                       </Grid>
                       <Grid item xs={12} md={6}>
                         <Grid container justifyContent="center">
-                          <Typography variant="h2" align="center">
-                            Our Specialties
-                          </Typography>
-                          <ul className={styles['about-services']}>
-                            <li>
-                              <Typography>Slate roofing repair</Typography>
-                            </li>
-                            <li>
-                              <Typography>Metal roofing repair</Typography>
-                            </li>
-                            <li>
-                              <Typography>Leak detection and repair</Typography>
-                            </li>
-                            <li>
-                              <Typography>Storm and wind damage repair</Typography>
-                            </li>
-                            <li>
-                              <Typography>Roof drain system fixes</Typography>
-                            </li>
-                            <li>
-                              <Typography>Gutter installation and repair</Typography>
-                            </li>
-                          </ul>
+                          <Grid container justifyContent="center">
+                            <Typography
+                              variant="h3"
+                              align="center"
+                              className={styles['about-text-heading']}
+                            >
+                              Our Trusted Specialties
+                            </Typography>
+                          </Grid>
+                          <Grid container justifyContent="center">
+                            <ul className={styles['about-services']}>
+                              <li>
+                                <Typography>Slate roofing repair</Typography>
+                              </li>
+                              <li>
+                                <Typography>Metal roofing repair</Typography>
+                              </li>
+                              <li>
+                                <Typography>Leak detection and repair</Typography>
+                              </li>
+                              <li>
+                                <Typography>Storm and wind damage repair</Typography>
+                              </li>
+                              <li>
+                                <Typography>Roof drain system fixes</Typography>
+                              </li>
+                              <li>
+                                <Typography>Gutter installation and repair</Typography>
+                              </li>
+                            </ul>
+                          </Grid>
                         </Grid>
                       </Grid>
                       <Grid container className={styles['banner-contaner']}>
-                        <Typography variant="h4" align="center">
+                        <Typography variant="h2" align="center">
                           In Business Since 1988 | Warranties Available | Free Quotes
                         </Typography>
                       </Grid>

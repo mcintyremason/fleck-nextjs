@@ -83,7 +83,7 @@ const ListMenu: React.FC<ListMenuProps> = (props: ListMenuProps) => {
                   <Grid item xs={2} container direction="column" justifyContent="center">
                     {link.icon ? <ListItemIcon>{link.icon}</ListItemIcon> : null}
                   </Grid>
-                  <Grid item xs={10} container justify={justifyText}>
+                  <Grid item xs={10} container justifyContent={justifyText}>
                     <Grid
                       item
                       xs={10}
@@ -116,7 +116,7 @@ const ListMenu: React.FC<ListMenuProps> = (props: ListMenuProps) => {
                             {subLink.icon ? <ListItemIcon>{subLink.icon}</ListItemIcon> : null}
                           </Grid>
                           <Grid item xs={10} container direction="column" justifyContent="center">
-                            <Grid container justify={justifyText}>
+                            <Grid container justifyContent={justifyText}>
                               {subLink.text}
                             </Grid>
                           </Grid>
@@ -152,7 +152,7 @@ const ListMenu: React.FC<ListMenuProps> = (props: ListMenuProps) => {
                         {link.icon ? <ListItemIcon>{link.icon}</ListItemIcon> : null}
                       </Grid>
                       <Grid item xs={10} container direction="column" justifyContent="center">
-                        <Grid container justify={justifyText}>
+                        <Grid container justifyContent={justifyText}>
                           {link.text}
                         </Grid>
                       </Grid>
