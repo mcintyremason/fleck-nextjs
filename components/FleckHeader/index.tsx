@@ -79,12 +79,12 @@ const initialMenuLinks: Array<ListMenuLink> = [
 ]
 
 const FleckHeader: React.FC<HeaderProps> = (_: HeaderProps) => {
+  const divRef = React.useRef()
   const router = useRouter()
   const [hambugerActive, setHambugerActive] = useState(false)
-  const [anchorEl, setAnchorEl] = useState(null)
+  const [anchorEl, setAnchorEl] = useState(divRef)
   const [menuLinks, setMenuLinks] = useState<Array<ListMenuLink>>([...initialMenuLinks])
 
-  const divRef = React.useRef()
   const ourServicesLinks = menuLinks[0]?.subLinks
 
   const hamburgerOnClick = () => {
