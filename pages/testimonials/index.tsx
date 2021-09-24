@@ -10,7 +10,7 @@ import FleckHeader from '../../components/FleckHeader'
 import FleckFooter from '../../components/FleckFooter'
 import FleckHero from '../../components/FleckHero'
 
-const ReviewsPage = () => {
+const TestimonialsPage = () => {
   return (
     <ThemeProvider theme={fleckTheme}>
       <Layout title="Fleck Roofing & Construction">
@@ -19,8 +19,8 @@ const ReviewsPage = () => {
           <Grid className={classNames(styles['reviews-container'])}>
             <Grid container direction="column" className={classNames(styles['reviews'])}>
               <FleckHero
-                primaryText="Fleck Roofing & Construction Customer Reviews"
-                imageUrl="/img/reviews/reviews-hero.webp"
+                primaryText="Fleck Roofing & Construction Customer Testimonials"
+                imageUrl="/img/testimonials/testimonials-hero.webp"
               />
             </Grid>
           </Grid>
@@ -31,4 +31,4 @@ const ReviewsPage = () => {
   )
 }
 
-export default ReviewsPage
+export default TestimonialsPage

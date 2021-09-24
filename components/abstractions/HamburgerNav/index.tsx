@@ -12,7 +12,7 @@ const HamburgerNav: React.FC<HamburgerNavProps> = (props: HamburgerNavProps) => 
   const { active, onClick } = props
 
   return (
-    <Grid container justify="flex-end" className={styles['hamburger-container']}>
+    <Grid container justifyContent="flex-end" className={styles['hamburger-container']}>
       <button
         onClick={onClick}
         type="button"

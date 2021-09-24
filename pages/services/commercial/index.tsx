@@ -26,8 +26,8 @@ const CommercialRoofingPage = () => {
                 imageUrl="/img/services/commercial-hero.webp"
                 className={styles['commercial-hero']}
               />
-              <Grid container justify="center">
-                <Grid container justify="center" className={styles['commercial-content']}>
+              <Grid container justifyContent="center">
+                <Grid container justifyContent="center" className={styles['commercial-content']}>
                   <Grid item xs={12} sm={8} className={styles['commercial-text-container']}>
                     <Grid container className={styles['commercial-text-group']}>
                       <Grid item xs={12}>

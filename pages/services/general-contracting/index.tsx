@@ -26,8 +26,8 @@ const GeneralContractingPage = () => {
                 imageUrl="/img/services/general-contracting-hero.jpeg"
                 className={styles['contracting-hero']}
               />
-              <Grid container justify="center">
-                <Grid container justify="center" className={styles['contracting-content']}>
+              <Grid container justifyContent="center">
+                <Grid container justifyContent="center" className={styles['contracting-content']}>
                   <Grid item xs={12} sm={8} className={styles['contracting-text-container']}>
                     <Grid container className={styles['contracting-text-group']}>
                       <Grid item xs={12}>

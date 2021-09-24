@@ -3,7 +3,7 @@ import classNames from 'classnames'
 
 import React, { useState } from 'react'
 import { useRouter } from 'next/router'
-import { AppBar, Box, Grid, Link, Paper, Popper } from '@material-ui/core'
+import { AppBar, Box, Grid, Hidden, Link, Paper, Popper } from '@material-ui/core'
 import HouseOutlinedIcon from '@material-ui/icons/HouseOutlined'
 import BusinessIcon from '@material-ui/icons/Business'
 import ReportProblemOutlinedIcon from '@material-ui/icons/ReportProblemOutlined'
@@ -62,8 +62,8 @@ const initialMenuLinks: Array<ListMenuLink> = [
     icon: <RequestQuoteIcon color="primary" />,
   },
   {
-    text: 'Reviews',
-    href: '/reviews',
+    text: 'Testimonials',
+    href: '/testimonials',
     icon: <GradeRoundedIcon color="primary" />,
   },
   {
@@ -91,12 +91,12 @@ const FleckHeader: React.FC<HeaderProps> = (_: HeaderProps) => {
     setHambugerActive(!hambugerActive)
   }
 
-  const handlePopoverOpen = () => {
-    setAnchorEl(divRef.current)
+  const handlePopoverOpen = (link: ListMenuLink) => {
+    link.isExpanded && setAnchorEl(divRef.current)
   }
 
-  const handlePopoverClose = () => {
-    setAnchorEl(null)
+  const handlePopoverClose = (link: ListMenuLink) => {
+    !link.isExpanded && setAnchorEl(null)
   }
 
   const resetMenuLinks = () => {
@@ -109,8 +109,10 @@ const FleckHeader: React.FC<HeaderProps> = (_: HeaderProps) => {
   }
 
   const expandLinkHandler = (link: ListMenuLink) => {
+    console.log('expandLinkHandler')
     const updatedListMenuLinks = menuLinks.map((_link) => {
       if (link === _link) {
+        console.log(link)
         _link.isExpanded = !_link.isExpanded
       }
       return _link
@@ -121,7 +123,7 @@ const FleckHeader: React.FC<HeaderProps> = (_: HeaderProps) => {
 
   return (
     <AppBar position="fixed" className={styles['app-bar']}>
-      <Grid container direction="column" justify="center">
+      <Grid container direction="column" justifyContent="center">
         <Grid container className={styles['header']}>
           <Grid
             container
@@ -129,7 +131,7 @@ const FleckHeader: React.FC<HeaderProps> = (_: HeaderProps) => {
             xs={10}
             sm={4}
             direction="column"
-            justify="center"
+            justifyContent="center"
             className={styles['logo-nav-container']}
           >
             <h1 className={styles['header-name']}>
@@ -159,7 +161,7 @@ const FleckHeader: React.FC<HeaderProps> = (_: HeaderProps) => {
           </Grid>
           <Grid
             container
-            justify="center"
+            justifyContent="center"
             item
             xs={12}
             className={classNames(styles['menu-container'])}
@@ -167,7 +169,7 @@ const FleckHeader: React.FC<HeaderProps> = (_: HeaderProps) => {
             <Grid
               className={styles['menu']}
               container
-              justify="flex-end"
+              justifyContent="flex-end"
               direction="row"
               wrap="nowrap"
             >
@@ -178,11 +180,11 @@ const FleckHeader: React.FC<HeaderProps> = (_: HeaderProps) => {
                     ref={divRef}
                     onMouseEnter={() => {
                       expandLinkHandler(link)
-                      handlePopoverOpen()
+                      handlePopoverOpen(link)
                     }}
                     onMouseLeave={() => {
                       expandLinkHandler(link)
-                      handlePopoverClose()
+                      handlePopoverClose(link)
                     }}
                     className={classNames(
                       styles['menu-link-container'],
@@ -202,16 +204,18 @@ const FleckHeader: React.FC<HeaderProps> = (_: HeaderProps) => {
                     </Link>
                     {/* TODO: Add transition */}
                     {link.isExpanded ? <ExpandLess /> : <ExpandMore />}
-                    <Popper
-                      className={styles['menu-popper']}
-                      open={link.isExpanded ? link.isExpanded : false}
-                      anchorEl={anchorEl}
-                      placement="bottom-end"
-                    >
-                      <Paper>
-                        <ListMenu links={ourServicesLinks} justifyText="center" />
-                      </Paper>
-                    </Popper>
+                    <Hidden mdDown>
+                      <Popper
+                        className={styles['menu-popper']}
+                        open={link.isExpanded ? link.isExpanded : false}
+                        anchorEl={anchorEl}
+                        placement="bottom-end"
+                      >
+                        <Paper>
+                          <ListMenu links={ourServicesLinks} justifyText="center" />
+                        </Paper>
+                      </Popper>
+                    </Hidden>
                   </Grid>
                 ) : (
                   <Box display="flex" key={`${link.text}-link`} clone>

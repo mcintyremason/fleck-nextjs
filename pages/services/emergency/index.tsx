@@ -25,8 +25,8 @@ const EmergencyRoofingPage = () => {
                 primaryText="Emergency Roofing Services"
                 imageUrl="/img/services/emergency-hero.jpeg"
               />
-              <Grid container justify="center">
-                <Grid container justify="center" className={styles['emergency-content']}>
+              <Grid container justifyContent="center">
+                <Grid container justifyContent="center" className={styles['emergency-content']}>
                   <Grid item xs={12} sm={8} className={styles['emergency-text-container']}>
                     <Grid container className={styles['emergency-text-group']}>
                       <Grid item xs={12}>

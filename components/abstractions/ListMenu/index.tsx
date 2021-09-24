@@ -40,6 +40,7 @@ const ListMenu: React.FC<ListMenuProps> = (props: ListMenuProps) => {
   const [menuLinks, setListMenuLinks] = useState<Array<ListMenuLink>>(links)
 
   const expandLinkHandler = (link: ListMenuLink) => {
+    console.log('expandLinkHandler')
     const updatedListMenuLinks = menuLinks.map((_link) => {
       if (link === _link) {
         _link.isExpanded = !_link.isExpanded
@@ -48,6 +49,11 @@ const ListMenu: React.FC<ListMenuProps> = (props: ListMenuProps) => {
     })
 
     setListMenuLinks(updatedListMenuLinks)
+  }
+
+  const linkClickHandler = (e: any, link: ListMenuLink) => {
+    e.preventDefault()
+    router.push(link.href)
   }
 
   return (
@@ -64,28 +70,31 @@ const ListMenu: React.FC<ListMenuProps> = (props: ListMenuProps) => {
               >
                 <Grid
                   container
-                  justify="space-between"
+                  justifyContent="space-between"
                   className={classNames(
                     styles['list-menu-link'],
                     link.isExpanded ? styles['active'] : '',
                     subLinksActive(link, router) && styles['active'],
                   )}
+                  onClick={(e: any) => {
+                    linkClickHandler(e, link)
+                  }}
                 >
-                  <Grid item xs={2} container direction="column" justify="center">
+                  <Grid item xs={2} container direction="column" justifyContent="center">
                     {link.icon ? <ListItemIcon>{link.icon}</ListItemIcon> : null}
                   </Grid>
-                  <Grid item xs={10} container justify={justifyText}>
+                  <Grid item xs={10} container justifyContent={justifyText}>
                     <Grid
                       item
                       xs={10}
                       container
                       direction="column"
-                      justify="center"
+                      justifyContent="center"
                       className={styles['list-menu-link-text']}
                     >
                       {link.text}
                     </Grid>
-                    <Grid item xs={2} container direction="column" justify="center">
+                    <Grid item xs={2} container direction="column" justifyContent="center">
                       {link.isExpanded ? <ExpandLess /> : <ExpandMore />}
                     </Grid>
                   </Grid>
@@ -102,12 +111,12 @@ const ListMenu: React.FC<ListMenuProps> = (props: ListMenuProps) => {
                         )}
                         href={subLink.href}
                       >
-                        <Grid container justify="space-between">
-                          <Grid item xs={2} container direction="column" justify="center">
+                        <Grid container justifyContent="space-between">
+                          <Grid item xs={2} container direction="column" justifyContent="center">
                             {subLink.icon ? <ListItemIcon>{subLink.icon}</ListItemIcon> : null}
                           </Grid>
-                          <Grid item xs={10} container direction="column" justify="center">
-                            <Grid container justify={justifyText}>
+                          <Grid item xs={10} container direction="column" justifyContent="center">
+                            <Grid container justifyContent={justifyText}>
                               {subLink.text}
                             </Grid>
                           </Grid>
@@ -138,12 +147,12 @@ const ListMenu: React.FC<ListMenuProps> = (props: ListMenuProps) => {
                     )}
                     href={link.href}
                   >
-                    <Grid container justify="space-between">
-                      <Grid item xs={2} container direction="column" justify="center">
+                    <Grid container justifyContent="space-between">
+                      <Grid item xs={2} container direction="column" justifyContent="center">
                         {link.icon ? <ListItemIcon>{link.icon}</ListItemIcon> : null}
                       </Grid>
-                      <Grid item xs={10} container direction="column" justify="center">
-                        <Grid container justify={justifyText}>
+                      <Grid item xs={10} container direction="column" justifyContent="center">
+                        <Grid container justifyContent={justifyText}>
                           {link.text}
                         </Grid>
                       </Grid>

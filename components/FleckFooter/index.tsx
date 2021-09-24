@@ -18,13 +18,13 @@ const FleckFooter: React.FC<FleckFooterProps> = (props: FleckFooterProps) => {
       <Grid
         container
         direction="column"
-        justify="center"
+        justifyContent="center"
         className={styles['fleck-footer-container']}
       >
         <Grid container item xs={12}>
           <Grid
             container
-            justify="center"
+            justifyContent="center"
             item
             xs={12}
             className={classNames(styles['social-media-icons'])}
@@ -36,8 +36,15 @@ const FleckFooter: React.FC<FleckFooterProps> = (props: FleckFooterProps) => {
               <InstagramIcon className={styles['instagram']} />
             </Link>
           </Grid>
-          <Grid container justify="center" item xs={12} md={4} className={styles['footer-content']}>
-            <Grid container direction="column" justify="flex-start" alignItems="center">
+          <Grid
+            container
+            justifyContent="center"
+            item
+            xs={12}
+            md={4}
+            className={styles['footer-content']}
+          >
+            <Grid container direction="column" justifyContent="flex-start" alignItems="center">
               <Typography variant="h5" className={styles['footer-content-title']}>
                 Address
               </Typography>
@@ -45,7 +52,7 @@ const FleckFooter: React.FC<FleckFooterProps> = (props: FleckFooterProps) => {
               <Grid
                 container
                 direction="column"
-                justify="center"
+                justifyContent="center"
                 alignItems="center"
                 className={styles['footer-content-text']}
               >
@@ -59,9 +66,16 @@ const FleckFooter: React.FC<FleckFooterProps> = (props: FleckFooterProps) => {
               </Grid>
             </Grid>
           </Grid>
-          <Grid container justify="center" item xs={12} md={4} className={styles['footer-content']}>
-            <Grid container direction="column" justify="flex-start">
-              <Grid container justify="center">
+          <Grid
+            container
+            justifyContent="center"
+            item
+            xs={12}
+            md={4}
+            className={styles['footer-content']}
+          >
+            <Grid container direction="column" justifyContent="flex-start">
+              <Grid container justifyContent="center">
                 <Typography variant="h5" className={styles['footer-content-title']}>
                   Hours
                 </Typography>
@@ -94,7 +108,7 @@ const FleckFooter: React.FC<FleckFooterProps> = (props: FleckFooterProps) => {
                     <Typography>Closed</Typography>
                   </Grid>
                 </Grid>
-                <Grid container justify="center" item xs={12}>
+                <Grid container justifyContent="center" item xs={12}>
                   <Typography gutterBottom className={styles['hours-meta']}>
                     Our services are weather-dependent
                   </Typography>
@@ -102,25 +116,32 @@ const FleckFooter: React.FC<FleckFooterProps> = (props: FleckFooterProps) => {
               </Grid>
             </Grid>
           </Grid>
-          <Grid container justify="center" item xs={12} md={4} className={styles['footer-content']}>
-            <Grid container direction="column" justify="flex-start">
-              <Grid container justify="center">
+          <Grid
+            container
+            justifyContent="center"
+            item
+            xs={12}
+            md={4}
+            className={styles['footer-content']}
+          >
+            <Grid container direction="column" justifyContent="flex-start">
+              <Grid container justifyContent="center">
                 <Typography variant="h5" className={styles['footer-content-title']}>
                   Contact Us
                 </Typography>
               </Grid>
               <Grid className={styles['footer-content-text']}>
-                <Grid container justify="center" item xs={12}>
+                <Grid container justifyContent="center" item xs={12}>
                   <Typography gutterBottom>
                     Main: <Link href="tel:6102500737">(610) 250-0737</Link>
                   </Typography>
                 </Grid>
-                <Grid container justify="center" item xs={12}>
+                <Grid container justifyContent="center" item xs={12}>
                   <Typography gutterBottom>
                     Mobile: <Link href="tel:5702348247">(570) 234-8247</Link>
                   </Typography>
                 </Grid>
-                <Grid container justify="center" item xs={12}>
+                <Grid container justifyContent="center" item xs={12}>
                   <Typography>Call or Text</Typography>
                 </Grid>
               </Grid>

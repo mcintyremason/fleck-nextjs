@@ -10,11 +10,11 @@ import FleckButton from '../FleckButton'
 type FleckCustomerSaysProps = {}
 
 const FleckCustomerSays: React.FC<FleckCustomerSaysProps> = (_: FleckCustomerSaysProps) => (
-  <Grid container justify="center" className={styles['customer-says-container']}>
+  <Grid container justifyContent="center" className={styles['customer-says-container']}>
     <Grid
       container
       direction="column"
-      justify="center"
+      justifyContent="center"
       item
       xs={12}
       md={4}
@@ -27,7 +27,7 @@ const FleckCustomerSays: React.FC<FleckCustomerSaysProps> = (_: FleckCustomerSay
           md={12}
           container
           alignItems="center"
-          justify="flex-start"
+          justifyContent="flex-start"
           className={styles['chat-icon-container']}
         >
           <ChatOutlinedIcon
@@ -50,7 +50,7 @@ const FleckCustomerSays: React.FC<FleckCustomerSaysProps> = (_: FleckCustomerSay
               Allen W
             </Typography>
           </Grid>
-          <Grid item xs={6} container justify="flex-end">
+          <Grid item xs={6} container justifyContent="flex-end">
             <Rating defaultValue={5} precision={0.1} readOnly />
           </Grid>
         </Grid>
@@ -68,7 +68,7 @@ const FleckCustomerSays: React.FC<FleckCustomerSaysProps> = (_: FleckCustomerSay
               Matt E
             </Typography>
           </Grid>
-          <Grid item xs={6} container justify="flex-end">
+          <Grid item xs={6} container justifyContent="flex-end">
             <Rating defaultValue={5} precision={0.1} readOnly />
           </Grid>
         </Grid>
@@ -79,7 +79,7 @@ const FleckCustomerSays: React.FC<FleckCustomerSaysProps> = (_: FleckCustomerSay
         <Typography className={styles['customer-says-review-date']}>2/13/2021</Typography>
       </Grid>
       <Divider className={styles['customer-says-review-divider']} />
-      <Grid container justify="center">
+      <Grid container justifyContent="center">
         <FleckButton text="Read More Reviews" color="secondary" xs={12} />
       </Grid>
     </Grid>

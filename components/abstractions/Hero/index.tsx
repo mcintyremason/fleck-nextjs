@@ -23,7 +23,7 @@ const Hero: React.FC<HeroProps> = (props: HeroProps) => {
         <Grid
           container
           direction="column"
-          justify={justify}
+          justifyContent={justify}
           alignItems="center"
           className={classNames(overlay && styles['overlay'], gutters && styles['gutters'])}
         >

@@ -1,7 +1,7 @@
-import { createMuiTheme, responsiveFontSizes } from '@material-ui/core'
+import { createTheme, responsiveFontSizes } from '@material-ui/core'
 
 const fleckTheme = responsiveFontSizes(
-  createMuiTheme({
+  createTheme({
     breakpoints: {
       values: {
         xs: 0,
@@ -80,9 +80,19 @@ const fleckTheme = responsiveFontSizes(
           letterSpacing: 'normal',
         },
         h3: {
+          fontSize: '22px',
           fontWeight: 700,
         },
         h4: {
+          fontSize: '18px',
+          fontWeight: 700,
+        },
+        h5: {
+          fontSize: '16px',
+          fontWeight: 700,
+        },
+        h6: {
+          fontSize: '14px',
           fontWeight: 700,
         },
         body2: {
@@ -132,7 +142,6 @@ const fleckTheme = responsiveFontSizes(
 )
 
 fleckTheme.typography.h5 = {
-  fontSize: '1em',
   [fleckTheme.breakpoints.up('md')]: {
     fontSize: '24px',
   },

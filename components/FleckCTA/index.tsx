@@ -57,13 +57,13 @@ const FleckCTA: React.FC<FleckCTAProps> = (props: FleckCTAProps) => {
           {icon && (
             <Grid
               container
-              justify="center"
+              justifyContent="center"
               className={classNames(iconGutterBottom && styles['icon-gutter'])}
             >
               {icon}
             </Grid>
           )}
-          <Grid container justify="center" className={classNames(styles['fleck-cta-text'])}>
+          <Grid container justifyContent="center" className={classNames(styles['fleck-cta-text'])}>
             {children}
           </Grid>
         </Grid>

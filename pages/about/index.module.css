@@ -7,6 +7,35 @@
   padding: 0;
 }
 
+.about-content {
+  padding: 55px 0;
+}
+
+.about-text {
+  padding: 15px 25px 0;
+}
+
+.about-text-heading {
+  padding: 30px 0 0;
+}
+
+.about-container .banner-contaner {
+  background-color: var(--banner-background);
+  color: var(--text-secondary);
+  padding: 30px 20px 20px;
+}
+
+.about-container .about-map {
+  width: calc(100% - 40px);
+  padding: 20px;
+}
+
+.about-services {
+  list-style: none;
+  padding: 0 0 45px;
+  margin: 0;
+}
+
 /* 
   Cannot use CSS variables in media queries.
   CSS variables can only be used on CSS declarations.
@@ -28,5 +57,13 @@
 
   .about-container .about {
     padding: 0;
+  }
+
+  .about h2 {
+    font-size: 2.5rem;
+  }
+
+  .about h2 {
+    font-size: 2.5rem;
   }
 }
