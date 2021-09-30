@@ -79,7 +79,7 @@ const initialMenuLinks: Array<ListMenuLink> = [
 ]
 
 const FleckHeader: React.FC<HeaderProps> = (_: HeaderProps) => {
-  const divRef = React.useRef()
+  const divRef = React.useRef(null)
   const router = useRouter()
   const [hambugerActive, setHambugerActive] = useState(false)
   const [anchorEl, setAnchorEl] = useState(divRef)

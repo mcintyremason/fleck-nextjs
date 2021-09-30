@@ -70,7 +70,7 @@ const fleckTheme = responsiveFontSizes(
           letterSpacing: 'normal',
         },
         h2: {
-          fontSize: '24px',
+          fontSize: '28px',
           fontWeight: 700,
           lineHeight: '36px',
           fontFamily:
@@ -80,19 +80,19 @@ const fleckTheme = responsiveFontSizes(
           letterSpacing: 'normal',
         },
         h3: {
-          fontSize: '22px',
+          fontSize: '24px',
           fontWeight: 700,
         },
         h4: {
-          fontSize: '18px',
+          fontSize: '22px',
           fontWeight: 700,
         },
         h5: {
-          fontSize: '16px',
+          fontSize: '18px',
           fontWeight: 700,
         },
         h6: {
-          fontSize: '14px',
+          fontSize: '16px',
           fontWeight: 700,
         },
         body2: {

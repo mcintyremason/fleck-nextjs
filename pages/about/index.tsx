@@ -59,7 +59,7 @@ const AboutPage = () => {
                         <Grid container justifyContent="center">
                           <Grid container justifyContent="center">
                             <Typography
-                              variant="h3"
+                              variant="h4"
                               align="center"
                               className={styles['about-text-heading']}
                             >
@@ -103,16 +103,6 @@ const AboutPage = () => {
                             src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBXUzkyFX7TcltENw5Z0Cv5zmvRfdKInRc&q=2100+Edgewood+Avenue%2C%2CEaston%2CPA%2C18045%2C"
                             allowFullScreen
                           ></iframe>
-                        </Grid>
-                        <Grid item xs={12} md={6}>
-                          <Typography>Fleck Roofing & Construction</Typography>
-                          <Typography>2100 Edgewood Avenue</Typography>
-                          <Typography>Easton, PA 18015</Typography>
-                          <Typography>
-                            <Link href="https://maps.google.com/maps?daddr=2100%20Edgewood%20Avenue,%20Easton,%20PA%2018045&hl=en">
-                              Get Directions
-                            </Link>
-                          </Typography>
                         </Grid>
                       </Grid>
                     </Grid>

@@ -8,7 +8,7 @@
 }
 
 .about-content {
-  padding: 55px 0;
+  padding: 55px 0 0;
 }
 
 .about-text {
@@ -34,6 +34,15 @@
   list-style: none;
   padding: 0 0 45px;
   margin: 0;
+}
+
+.about-address-hours-container {
+  background-color: var(--secondary-color);
+  padding: 15px 20px;
+}
+
+.about-address-hours-container .about-address-hours {
+  padding: 0 5px 0;
 }
 
 /* 
