@@ -114,7 +114,7 @@ const FleckHero: React.FC<FleckHero> = (props: FleckHero) => {
         primaryText={primaryText}
         gutters
         overlay
-        justify="center"
+        // justify="center"
         imageUrl={imageUrl ? imageUrl : '/img/components/hero-image.jpeg'}
       >
         <Grid container direction="column" className={styles['fleck-hero-secondary-container']}>

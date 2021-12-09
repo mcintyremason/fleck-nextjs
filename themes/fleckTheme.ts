@@ -61,7 +61,7 @@ const fleckTheme = responsiveFontSizes(
           color: '#ffffff',
         },
         h1: {
-          fontSize: '54px',
+          fontSize: '46px',
           fontWeight: 600,
           fontFamily:
             'Raleway, San Frediano, BloggerSans, Helvetica Neue, Helvetica, Arial, sans-serif',

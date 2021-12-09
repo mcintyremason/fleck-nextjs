@@ -1,6 +1,11 @@
+import styles from './index.module.css'
+import classNames from 'classnames'
+
 import React, { ReactNode } from 'react'
 import Head from 'next/head'
-import { Grid } from '@material-ui/core'
+import { Fab, Grid, Link } from '@material-ui/core'
+import PhoneInTalkIcon from '@material-ui/icons/PhoneInTalk'
+
 import FleckHeader from '../FleckHeader'
 import FleckFooter from '../FleckFooter'
 
@@ -11,7 +16,7 @@ type Props = {
 }
 
 const Layout = ({ children, title = 'Fleck Roofing & Construction' }: Props) => (
-  <div>
+  <Grid className={styles['layout-container']}>
     <Head>
       <title>{title}</title>
       <meta charSet="utf-8" />
@@ -39,8 +44,15 @@ const Layout = ({ children, title = 'Fleck Roofing & Construction' }: Props) => 
       <FleckHeader />
       {children}
       <FleckFooter />
+      <Grid>
+        <Link color="secondary" href="tel:5702348247">
+          <Fab color="primary" className={styles['call-fab-container']} aria-label="call-us">
+            <PhoneInTalkIcon />
+          </Fab>
+        </Link>
+      </Grid>
     </Grid>
-  </div>
+  </Grid>
 )
 
 export default Layout
