@@ -1,5 +1,8 @@
 import React, { ReactNode } from 'react'
 import Head from 'next/head'
+import { Grid } from '@material-ui/core'
+import FleckHeader from '../FleckHeader'
+import FleckFooter from '../FleckFooter'
 
 type Props = {
   children?: ReactNode
@@ -32,7 +35,11 @@ const Layout = ({ children, title = 'Fleck Roofing & Construction' }: Props) => 
         href="/css/fonts/font-awesome-4.7.0/css/font-awesome.min.css"
       />
     </Head>
-    {children}
+    <Grid className="app height-full" itemScope itemType="http://schema.org/LocalBusiness">
+      <FleckHeader />
+      {children}
+      <FleckFooter />
+    </Grid>
   </div>
 )
 

@@ -207,7 +207,7 @@ const FleckHeader: React.FC<HeaderProps> = (_: HeaderProps) => {
                       <Popper
                         className={styles['menu-popper']}
                         open={link.isExpanded ? link.isExpanded : false}
-                        anchorEl={anchorEl}
+                        anchorEl={anchorEl as any}
                         placement="bottom-end"
                       >
                         <Paper>

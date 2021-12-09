@@ -13,20 +13,16 @@ const ContactPage = () => {
   return (
     <ThemeProvider theme={fleckTheme}>
       <Layout title="Fleck Roofing & Construction">
-        <Grid className="app height-full" itemScope itemType="http://schema.org/LocalBusiness">
-          <FleckHeader />
-          <Grid className={classNames(styles['contact-container'])}>
-            <Grid container direction="column" className={classNames(styles['contact'])}>
-              <Hero
-                primaryText="Contact Fleck Roofing & Construction"
-                gutters
-                overlay
-                justify="center"
-                imageUrl="/img/testimonials/testimonials-hero.webp"
-              />
-            </Grid>
+        <Grid className={classNames(styles['contact-container'])}>
+          <Grid container direction="column" className={classNames(styles['contact'])}>
+            <Hero
+              primaryText="Contact Fleck Roofing & Construction"
+              gutters
+              overlay
+              justify="center"
+              imageUrl="/img/testimonials/testimonials-hero.webp"
+            />
           </Grid>
-          <FleckFooter />
         </Grid>
       </Layout>
     </ThemeProvider>

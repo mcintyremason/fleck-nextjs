@@ -14,17 +14,13 @@ const TestimonialsPage = () => {
   return (
     <ThemeProvider theme={fleckTheme}>
       <Layout title="Fleck Roofing & Construction">
-        <Grid className="app height-full" itemScope itemType="http://schema.org/LocalBusiness">
-          <FleckHeader />
-          <Grid className={classNames(styles['reviews-container'])}>
-            <Grid container direction="column" className={classNames(styles['reviews'])}>
-              <FleckHero
-                primaryText="Fleck Roofing & Construction Customer Testimonials"
-                imageUrl="/img/testimonials/testimonials-hero.webp"
-              />
-            </Grid>
+        <Grid className={classNames(styles['reviews-container'])}>
+          <Grid container direction="column" className={classNames(styles['reviews'])}>
+            <FleckHero
+              primaryText="Fleck Roofing & Construction Customer Testimonials"
+              imageUrl="/img/testimonials/testimonials-hero.webp"
+            />
           </Grid>
-          <FleckFooter />
         </Grid>
       </Layout>
     </ThemeProvider>

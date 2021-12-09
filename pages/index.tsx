@@ -24,18 +24,15 @@ const IndexPage = (props: IndexPageProps) => {
   return (
     <ThemeProvider theme={fleckTheme}>
       <Layout title="Fleck Roofing & Construction">
-        <Grid className="app height-full" itemScope itemType="http://schema.org/LocalBusiness">
-          <FleckHeader />
-          <Grid className={classNames(styles['home-container'])}>
-            <Grid container direction="column" className={classNames(styles['home'])}>
-              <FleckHero primaryText="We're the Guys That Keep You Dry" />
-              <FleckLearnMore />
-              <FleckCustomerSays />
-            </Grid>
+        <Grid className={classNames(styles['home-container'])}>
+          <Grid container direction="column" className={classNames(styles['home'])}>
+            <FleckHero primaryText="We're the Guys That Keep You Dry" />
+            <FleckLearnMore />
+            <FleckCustomerSays />
           </Grid>
-          <FleckFooter />
-          {console.log(testJson)}
         </Grid>
+        <FleckFooter />
+        {console.log(testJson)}
       </Layout>
     </ThemeProvider>
   )

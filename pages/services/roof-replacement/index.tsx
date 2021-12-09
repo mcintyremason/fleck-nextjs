@@ -13,21 +13,17 @@ const RoofReplacementPage = () => {
   return (
     <ThemeProvider theme={fleckTheme}>
       <Layout title="Fleck Roofing & Construction">
-        <Grid className="app height-full" itemScope itemType="http://schema.org/LocalBusiness">
-          <FleckHeader />
-          <Grid className={classNames(styles['roof-replacement-container'])}>
-            <Grid container direction="column" className={classNames(styles['roof-replacement'])}>
-              <FleckHero
-                primaryText="Roof Replacement Services"
-                imageUrl="/img/services/roof-replacement-hero.webp"
-              />
+        <Grid className={classNames(styles['roof-replacement-container'])}>
+          <Grid container direction="column" className={classNames(styles['roof-replacement'])}>
+            <FleckHero
+              primaryText="Roof Replacement Services"
+              imageUrl="/img/services/roof-replacement-hero.webp"
+            />
 
-              {/*
+            {/*
               <FleckLearnMore />
               <FleckCustomerSays /> */}
-            </Grid>
           </Grid>
-          <FleckFooter />
         </Grid>
       </Layout>
     </ThemeProvider>

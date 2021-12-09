@@ -8,13 +8,7 @@ import FleckFooter from '../../components/FleckFooter'
 const RequestQuotePage = () => {
   return (
     <ThemeProvider theme={fleckTheme}>
-      <Layout title="Fleck Roofing & Construction">
-        <Grid className="app height-full" itemScope itemType="http://schema.org/LocalBusiness">
-          <FleckHeader />
-          {/* <Content /> */}
-          <FleckFooter />
-        </Grid>
-      </Layout>
+      <Layout title="Fleck Roofing & Construction">{/* <Content /> */}</Layout>
     </ThemeProvider>
   )
 }
