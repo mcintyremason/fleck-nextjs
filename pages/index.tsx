@@ -41,10 +41,4 @@ const IndexPage = (props: IndexPageProps) => {
   )
 }
 
-IndexPage.getInitialProps = async (_: NextPageContext) => {
-  const res = await fetch('https://jsonplaceholder.typicode.com/todos/1')
-  const json = await res.json()
-  return { testJson: json }
-}
-
 export default IndexPage

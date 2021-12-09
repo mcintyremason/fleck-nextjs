@@ -88,11 +88,11 @@ const fleckTheme = responsiveFontSizes(
           fontWeight: 700,
         },
         h5: {
-          fontSize: '18px',
+          fontSize: '16px',
           fontWeight: 700,
         },
         h6: {
-          fontSize: '16px',
+          fontSize: '14px',
           fontWeight: 700,
         },
         body2: {

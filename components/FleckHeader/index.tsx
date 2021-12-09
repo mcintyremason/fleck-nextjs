@@ -109,7 +109,6 @@ const FleckHeader: React.FC<HeaderProps> = (_: HeaderProps) => {
   }
 
   const expandLinkHandler = (link: ListMenuLink) => {
-    console.log('expandLinkHandler')
     const updatedListMenuLinks = menuLinks.map((_link) => {
       if (link === _link) {
         console.log(link)
@@ -122,7 +121,7 @@ const FleckHeader: React.FC<HeaderProps> = (_: HeaderProps) => {
   }
 
   return (
-    <AppBar position="fixed" className={styles['app-bar']}>
+    <AppBar className={styles['app-bar']}>
       <Grid container direction="column" justifyContent="center">
         <Grid container className={styles['header']}>
           <Grid
