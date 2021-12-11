@@ -2,7 +2,7 @@ import styles from './index.module.css'
 
 import { Grid, Link, Typography } from '@material-ui/core'
 import React from 'react'
-import Hero from '../abstractions/Hero'
+import Hero from 'components/abstractions/Hero'
 import classNames from 'classnames'
 
 type FleckHero = {

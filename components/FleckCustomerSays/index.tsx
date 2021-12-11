@@ -5,7 +5,7 @@ import React from 'react'
 import { Grid, Typography, Link, Divider } from '@material-ui/core'
 import { Rating } from '@material-ui/lab'
 import ChatOutlinedIcon from '@material-ui/icons/ChatOutlined'
-import FleckButton from '../FleckButton'
+import FleckButton from 'components/FleckButton'
 
 type FleckCustomerSaysProps = {}
 

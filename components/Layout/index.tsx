@@ -1,13 +1,12 @@
 import styles from './index.module.css'
-import classNames from 'classnames'
 
 import React, { ReactNode } from 'react'
 import Head from 'next/head'
 import { Fab, Grid, Link } from '@material-ui/core'
 import PhoneInTalkIcon from '@material-ui/icons/PhoneInTalk'
 
-import FleckHeader from '../FleckHeader'
-import FleckFooter from '../FleckFooter'
+import FleckHeader from 'components/FleckHeader'
+import FleckFooter from 'components/FleckFooter'
 
 type Props = {
   children?: ReactNode

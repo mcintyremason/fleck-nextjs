@@ -4,11 +4,9 @@ import classNames from 'classnames'
 import React from 'react'
 import { Grid, ThemeProvider } from '@material-ui/core'
 
-import fleckTheme from '../../themes/fleckTheme'
-import Layout from '../../components/Layout'
-import FleckHeader from '../../components/FleckHeader'
-import FleckFooter from '../../components/FleckFooter'
-import FleckHero from '../../components/FleckHero'
+import fleckTheme from 'themes/fleckTheme'
+import Layout from 'components/Layout'
+import FleckHero from 'components/FleckHero'
 
 const TestimonialsPage = () => {
   return (

@@ -4,13 +4,12 @@ import classNames from 'classnames'
 import React from 'react'
 import { Grid, ThemeProvider } from '@material-ui/core'
 
-import Layout from '../components/Layout'
-import FleckFooter from '../components/FleckFooter'
-import FleckHero from '../components/FleckHero'
-import FleckLearnMore from '../components/FleckLearnMore'
-import FleckCustomerSays from '../components/FleckCustomerSays'
+import Layout from 'components/Layout'
+import FleckHero from 'components/FleckHero'
+import FleckLearnMore from 'components/FleckLearnMore'
+import FleckCustomerSays from 'components/FleckCustomerSays'
 
-import fleckTheme from '../themes/fleckTheme'
+import fleckTheme from 'themes/fleckTheme'
 
 type IndexPageProps = {
   testJson: any

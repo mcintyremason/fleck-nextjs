@@ -5,13 +5,11 @@ import React from 'react'
 import { Grid, Link, ThemeProvider, Typography } from '@material-ui/core'
 import ChatOutlinedIcon from '@material-ui/icons/ChatOutlined'
 
-import fleckTheme from '../../../themes/fleckTheme'
-import Layout from '../../../components/Layout'
-import FleckHeader from '../../../components/FleckHeader'
-import FleckFooter from '../../../components/FleckFooter'
-import FleckHero from '../../../components/FleckHero'
-import FleckCTA from '../../../components/FleckCTA'
-import TeamIcon from '../../../components/icons/TeamIcon'
+import fleckTheme from 'themes/fleckTheme'
+import Layout from 'components/Layout'
+import FleckHero from 'components/FleckHero'
+import FleckCTA from 'components/FleckCTA'
+import TeamIcon from 'components/icons/TeamIcon'
 
 const SidingSoffitFasciaPage = () => {
   return (
