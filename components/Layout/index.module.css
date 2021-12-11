@@ -1,0 +1,10 @@
+.layout-container {
+  position: relative;
+}
+
+.layout-container .call-fab-container {
+  position: fixed;
+  bottom: 2%;
+  left: 79%;
+  color: var(--text-secondary);
+}

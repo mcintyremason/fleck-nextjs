@@ -35,8 +35,8 @@
     --xs: 0px;
     --sm: 425px;
     --md: 768px;
-    --lg: 1280;
-    --xl: 1920; 
+    --lg: 1280px;
+    --xl: 1920px; 
   */
 }
 
@@ -123,19 +123,6 @@ h6,
 p {
   margin: 0;
 }
-h3 {
-  font-size: 1.25em;
-}
-h4 {
-  font-size: 1em;
-}
-h5 {
-  font-size: 0.9em;
-}
-h6 {
-  font-size: 0.8em;
-}
-li,
 p {
   font-size: 0.9em;
   line-height: 1.4em;

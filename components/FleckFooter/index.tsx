@@ -1,7 +1,7 @@
 import styles from './index.module.css'
 
 import React from 'react'
-import Footer from '../abstractions/Footer'
+import Footer from 'components/abstractions/Footer'
 import { Breakpoint } from '@material-ui/core/styles/createBreakpoints'
 import { Grid, GridSize, Link, Typography } from '@material-ui/core'
 import FacebookIcon from '@material-ui/icons/Facebook'

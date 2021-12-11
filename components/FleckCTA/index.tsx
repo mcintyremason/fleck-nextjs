@@ -5,7 +5,7 @@ import React, { ReactNode } from 'react'
 import { Grid, GridSize } from '@material-ui/core'
 import { Breakpoint } from '@material-ui/core/styles/createBreakpoints'
 
-import CTA, { Color } from '../abstractions/CTA'
+import CTA, { Color } from 'components/abstractions/CTA'
 
 type FleckCTAProps = {
   color: Color

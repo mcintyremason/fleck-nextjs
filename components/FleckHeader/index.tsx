@@ -11,14 +11,14 @@ import InfoOutlinedIcon from '@material-ui/icons/InfoOutlined'
 import GradeRoundedIcon from '@material-ui/icons/GradeRounded'
 
 import { ExpandLess, ExpandMore } from '@material-ui/icons'
-import HamburgerNav from '../abstractions/HamburgerNav'
-import MenuDrawer from '../abstractions/MenuDrawer'
-import SidingIcon from '../icons/SidingIcon'
-import ContactUsIcon from '../icons/ContactUsIcon'
-import RequestQuoteIcon from '../icons/RequestQuoteIcon'
-import EngineeringOutlinedIcon from '../icons/EngineeringOutlinedIcon'
-import HandymanOutlinedIcon from '../icons/HandymanOutlinedIcon'
-import ListMenu, { ListMenuLink, subLinksActive } from '../abstractions/ListMenu'
+import HamburgerNav from 'components/abstractions/HamburgerNav'
+import MenuDrawer from 'components/abstractions/MenuDrawer'
+import SidingIcon from 'components/icons/SidingIcon'
+import ContactUsIcon from 'components/icons/ContactUsIcon'
+import RequestQuoteIcon from 'components/icons/RequestQuoteIcon'
+import EngineeringOutlinedIcon from 'components/icons/EngineeringOutlinedIcon'
+import HandymanOutlinedIcon from 'components/icons/HandymanOutlinedIcon'
+import ListMenu, { ListMenuLink, subLinksActive } from 'components/abstractions/ListMenu'
 
 type HeaderProps = {}
 
@@ -79,7 +79,7 @@ const initialMenuLinks: Array<ListMenuLink> = [
 ]
 
 const FleckHeader: React.FC<HeaderProps> = (_: HeaderProps) => {
-  const divRef = React.useRef()
+  const divRef = React.useRef(null)
   const router = useRouter()
   const [hambugerActive, setHambugerActive] = useState(false)
   const [anchorEl, setAnchorEl] = useState(divRef)
@@ -109,7 +109,6 @@ const FleckHeader: React.FC<HeaderProps> = (_: HeaderProps) => {
   }
 
   const expandLinkHandler = (link: ListMenuLink) => {
-    console.log('expandLinkHandler')
     const updatedListMenuLinks = menuLinks.map((_link) => {
       if (link === _link) {
         console.log(link)
@@ -122,7 +121,7 @@ const FleckHeader: React.FC<HeaderProps> = (_: HeaderProps) => {
   }
 
   return (
-    <AppBar position="fixed" className={styles['app-bar']}>
+    <AppBar className={styles['app-bar']}>
       <Grid container direction="column" justifyContent="center">
         <Grid container className={styles['header']}>
           <Grid
@@ -208,7 +207,7 @@ const FleckHeader: React.FC<HeaderProps> = (_: HeaderProps) => {
                       <Popper
                         className={styles['menu-popper']}
                         open={link.isExpanded ? link.isExpanded : false}
-                        anchorEl={anchorEl}
+                        anchorEl={anchorEl as any}
                         placement="bottom-end"
                       >
                         <Paper>

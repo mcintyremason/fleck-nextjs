@@ -8,7 +8,7 @@
 }
 
 .about-content {
-  padding: 55px 0;
+  padding: 55px 0 0;
 }
 
 .about-text {
@@ -16,7 +16,7 @@
 }
 
 .about-text-heading {
-  padding: 30px 0 0;
+  padding: 45px 0 0;
 }
 
 .about-container .banner-contaner {
@@ -32,8 +32,17 @@
 
 .about-services {
   list-style: none;
-  padding: 0 0 45px;
+  padding: 15px 0 45px;
   margin: 0;
+}
+
+.about-address-hours-container {
+  background-color: var(--secondary-color);
+  padding: 15px 20px;
+}
+
+.about-address-hours-container .about-address-hours {
+  padding: 0 5px 0;
 }
 
 /* 
@@ -63,7 +72,12 @@
     font-size: 2.5rem;
   }
 
-  .about h2 {
-    font-size: 2.5rem;
+  .about-text-container .title {
+    padding: 0 0 20px;
+  }
+
+  .about-container .about-map {
+    width: 100%;
+    padding: 20px 0;
   }
 }

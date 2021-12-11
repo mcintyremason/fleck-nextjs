@@ -2,8 +2,8 @@ import styles from './index.module.css'
 
 import React from 'react'
 import { Grid, SwipeableDrawer } from '@material-ui/core'
-import HamburgerNav from '../HamburgerNav'
-import ListMenu, { ListMenuLink } from '../ListMenu'
+import HamburgerNav from 'components/abstractions/HamburgerNav'
+import ListMenu, { ListMenuLink } from 'components/abstractions/ListMenu'
 
 type MenuDrawerProps = {
   links: Array<ListMenuLink>

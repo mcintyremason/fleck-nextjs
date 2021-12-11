@@ -2,36 +2,39 @@ import styles from './index.module.css'
 import classNames from 'classnames'
 
 import React from 'react'
-import { Grid, Link, ThemeProvider, Typography } from '@material-ui/core'
+import { Grid, ThemeProvider, Typography } from '@material-ui/core'
 
-import fleckTheme from '../../themes/fleckTheme'
-import Layout from '../../components/Layout'
-import FleckHeader from '../../components/FleckHeader'
-import FleckFooter from '../../components/FleckFooter'
-import FleckHero from '../../components/FleckHero'
+import fleckTheme from 'themes/fleckTheme'
+import Layout from 'components/Layout'
+import FleckFooter from 'components/FleckFooter'
+import FleckHero from 'components/FleckHero'
 
 const AboutPage = () => {
   return (
     <ThemeProvider theme={fleckTheme}>
       <Layout title="Fleck Roofing & Construction">
-        <Grid className="app height-full" itemScope itemType="http://schema.org/LocalBusiness">
-          <FleckHeader />
-          <Grid className={classNames(styles['about-container'])}>
-            <Grid container direction="column" className={classNames(styles['about'])}>
-              <FleckHero
-                primaryText="About Fleck Roofing & Construction"
-                imageUrl="/img/about/about-hero.png"
-              />
-              <Grid container justifyContent="center">
-                <Grid container justifyContent="center" className={styles['about-content']}>
-                  <Grid item xs={12} className={styles['about-text-container']}>
-                    <Grid container className={styles['about-text-group']}>
-                      <Grid item xs={12}>
-                        <Typography variant="h2" color="primary" align="center">
-                          Advanced Protection for Your Business
-                        </Typography>
-                      </Grid>
-                      <Grid item xs={12} md={6}>
+        <Grid className={classNames(styles['about-container'])}>
+          <Grid container direction="column" className={classNames(styles['about'])}>
+            <FleckHero
+              primaryText="About Fleck Roofing & Construction"
+              imageUrl="/img/about/about-hero.png"
+            />
+            <Grid container justifyContent="center">
+              <Grid container justifyContent="center" className={styles['about-content']}>
+                <Grid item xs={12}>
+                  <Grid container className={styles['about-text-group']}>
+                    <Grid item xs={12}>
+                      <Typography
+                        variant="h2"
+                        color="primary"
+                        align="center"
+                        className={styles['title']}
+                      >
+                        Advanced Protection for Your Business
+                      </Typography>
+                    </Grid>
+                    <Grid container justifyContent="center">
+                      <Grid item xs={12} md={9} lg={6}>
                         <Grid
                           container
                           direction="column"
@@ -55,65 +58,66 @@ const AboutPage = () => {
                           </Typography>
                         </Grid>
                       </Grid>
-                      <Grid item xs={12} md={6}>
+                    </Grid>
+                    <Grid item xs={12}>
+                      <Grid container justifyContent="center">
                         <Grid container justifyContent="center">
-                          <Grid container justifyContent="center">
-                            <Typography
-                              variant="h3"
-                              align="center"
-                              className={styles['about-text-heading']}
-                            >
-                              Our Trusted Specialties
-                            </Typography>
-                          </Grid>
-                          <Grid container justifyContent="center">
-                            <ul className={styles['about-services']}>
-                              <li>
-                                <Typography>Slate roofing repair</Typography>
-                              </li>
-                              <li>
-                                <Typography>Metal roofing repair</Typography>
-                              </li>
-                              <li>
-                                <Typography>Leak detection and repair</Typography>
-                              </li>
-                              <li>
-                                <Typography>Storm and wind damage repair</Typography>
-                              </li>
-                              <li>
-                                <Typography>Roof drain system fixes</Typography>
-                              </li>
-                              <li>
-                                <Typography>Gutter installation and repair</Typography>
-                              </li>
-                            </ul>
-                          </Grid>
-                        </Grid>
-                      </Grid>
-                      <Grid container className={styles['banner-contaner']}>
-                        <Typography variant="h2" align="center">
-                          In Business Since 1988 | Warranties Available | Free Quotes
-                        </Typography>
-                      </Grid>
-                      <Grid container>
-                        <Grid item xs={12} md={6}>
-                          <iframe
-                            className={styles['about-map']}
-                            frameBorder="0"
-                            src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBXUzkyFX7TcltENw5Z0Cv5zmvRfdKInRc&q=2100+Edgewood+Avenue%2C%2CEaston%2CPA%2C18045%2C"
-                            allowFullScreen
-                          ></iframe>
-                        </Grid>
-                        <Grid item xs={12} md={6}>
-                          <Typography>Fleck Roofing & Construction</Typography>
-                          <Typography>2100 Edgewood Avenue</Typography>
-                          <Typography>Easton, PA 18015</Typography>
-                          <Typography>
-                            <Link href="https://maps.google.com/maps?daddr=2100%20Edgewood%20Avenue,%20Easton,%20PA%2018045&hl=en">
-                              Get Directions
-                            </Link>
+                          <Typography
+                            variant="h2"
+                            color="primary"
+                            align="center"
+                            className={(styles['title'], styles['about-text-heading'])}
+                          >
+                            Our Trusted Specialties
                           </Typography>
                         </Grid>
+                        <Grid container justifyContent="center">
+                          <Grid
+                            container
+                            justifyContent="center"
+                            className={styles['about-services']}
+                          >
+                            <Grid container justifyContent="center" item xs={9}>
+                              <Grid container justifyContent="center" item xs={3}>
+                                <Typography>Slate roofing repair</Typography>
+                              </Grid>
+                              <Grid container justifyContent="center" item xs={3}>
+                                <Typography>Metal roofing repair</Typography>
+                              </Grid>
+                            </Grid>
+                            <Grid container justifyContent="center" item xs={9}>
+                              <Grid container justifyContent="center" item xs={3}>
+                                <Typography>Leak detection and repair</Typography>
+                              </Grid>
+                              <Grid container justifyContent="center" item xs={3}>
+                                <Typography>Storm and wind damage repair</Typography>
+                              </Grid>
+                            </Grid>
+                            <Grid container justifyContent="center" item xs={9}>
+                              <Grid container justifyContent="center" item xs={3}>
+                                <Typography>Roof drain system fixes</Typography>
+                              </Grid>
+                              <Grid container justifyContent="center" item xs={3}>
+                                <Typography>Gutter installation and repair</Typography>
+                              </Grid>
+                            </Grid>
+                          </Grid>
+                        </Grid>
+                      </Grid>
+                    </Grid>
+                    <Grid container justifyContent="center" className={styles['banner-contaner']}>
+                      <Typography variant="h2" align="center">
+                        In Business Since 1988 | Warranties Available | Free Quotes
+                      </Typography>
+                    </Grid>
+                    <Grid container justifyContent="center">
+                      <Grid item xs={12} md={8}>
+                        <iframe
+                          className={styles['about-map']}
+                          frameBorder="0"
+                          src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBXUzkyFX7TcltENw5Z0Cv5zmvRfdKInRc&q=2100+Edgewood+Avenue%2C%2CEaston%2CPA%2C18045%2C"
+                          allowFullScreen
+                        ></iframe>
                       </Grid>
                     </Grid>
                   </Grid>
@@ -121,8 +125,8 @@ const AboutPage = () => {
               </Grid>
             </Grid>
           </Grid>
-          <FleckFooter />
         </Grid>
+        <FleckFooter />
       </Layout>
     </ThemeProvider>
   )

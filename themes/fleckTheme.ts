@@ -61,7 +61,7 @@ const fleckTheme = responsiveFontSizes(
           color: '#ffffff',
         },
         h1: {
-          fontSize: '54px',
+          fontSize: '46px',
           fontWeight: 600,
           fontFamily:
             'Raleway, San Frediano, BloggerSans, Helvetica Neue, Helvetica, Arial, sans-serif',
@@ -70,7 +70,7 @@ const fleckTheme = responsiveFontSizes(
           letterSpacing: 'normal',
         },
         h2: {
-          fontSize: '24px',
+          fontSize: '28px',
           fontWeight: 700,
           lineHeight: '36px',
           fontFamily:
@@ -80,11 +80,11 @@ const fleckTheme = responsiveFontSizes(
           letterSpacing: 'normal',
         },
         h3: {
-          fontSize: '22px',
+          fontSize: '24px',
           fontWeight: 700,
         },
         h4: {
-          fontSize: '18px',
+          fontSize: '22px',
           fontWeight: 700,
         },
         h5: {

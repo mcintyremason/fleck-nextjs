@@ -1,5 +1,12 @@
+import styles from './index.module.css'
+
 import React, { ReactNode } from 'react'
 import Head from 'next/head'
+import { Fab, Grid, Link } from '@material-ui/core'
+import PhoneInTalkIcon from '@material-ui/icons/PhoneInTalk'
+
+import FleckHeader from 'components/FleckHeader'
+import FleckFooter from 'components/FleckFooter'
 
 type Props = {
   children?: ReactNode
@@ -8,7 +15,7 @@ type Props = {
 }
 
 const Layout = ({ children, title = 'Fleck Roofing & Construction' }: Props) => (
-  <div>
+  <Grid className={styles['layout-container']}>
     <Head>
       <title>{title}</title>
       <meta charSet="utf-8" />
@@ -32,8 +39,19 @@ const Layout = ({ children, title = 'Fleck Roofing & Construction' }: Props) => 
         href="/css/fonts/font-awesome-4.7.0/css/font-awesome.min.css"
       />
     </Head>
-    {children}
-  </div>
+    <Grid className="app height-full" itemScope itemType="http://schema.org/LocalBusiness">
+      <FleckHeader />
+      {children}
+      <FleckFooter />
+      <Grid>
+        <Link color="secondary" href="tel:5702348247">
+          <Fab color="primary" className={styles['call-fab-container']} aria-label="call-us">
+            <PhoneInTalkIcon />
+          </Fab>
+        </Link>
+      </Grid>
+    </Grid>
+  </Grid>
 )
 
 export default Layout
