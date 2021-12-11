@@ -1,11 +1,10 @@
-import styles from './index.module.css'
+import styles from './cta.module.css'
 import classNames from 'classnames'
 
 import React, { ReactNode } from 'react'
 import { Card, Grid, GridSize } from '@material-ui/core'
 import { Breakpoint } from '@material-ui/core/styles/createBreakpoints'
-
-export type Color = 'primary' | 'secondary' | 'text-primary' | 'text-secondary' | 'no-color'
+import { Color } from 'models/color'
 
 type CTAProps = {
   color: Color

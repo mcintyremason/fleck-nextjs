@@ -1,3 +1,3 @@
-import { ContactCard } from 'components/abstractions/ContentCard/contactCard'
+import { ContentCard } from 'components/abstractions/ContentCard/contactCard'
 
-export default ContactCard
+export default ContentCard
