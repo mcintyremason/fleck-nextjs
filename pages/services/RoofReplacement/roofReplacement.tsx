@@ -1,4 +1,4 @@
-import styles from './index.module.css'
+import styles from './roofReplacement.module.css'
 import classNames from 'classnames'
 
 import React from 'react'
@@ -7,7 +7,7 @@ import fleckTheme from 'themes/fleckTheme'
 import Layout from 'components/Layout'
 import FleckHero from 'components/FleckHero'
 
-const RoofReplacementPage = () => {
+export const RoofReplacementPage = () => {
   return (
     <ThemeProvider theme={fleckTheme}>
       <Layout title="Fleck Roofing & Construction">
@@ -27,5 +27,3 @@ const RoofReplacementPage = () => {
     </ThemeProvider>
   )
 }
-
-export default RoofReplacementPage
