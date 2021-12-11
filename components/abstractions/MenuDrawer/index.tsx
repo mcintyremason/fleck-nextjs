@@ -1,6 +1,5 @@
 import styles from './index.module.css'
 
-import React from 'react'
 import { Grid, SwipeableDrawer } from '@material-ui/core'
 import HamburgerNav from 'components/abstractions/HamburgerNav'
 import ListMenu, { ListMenuLink } from 'components/abstractions/ListMenu'

@@ -3,7 +3,6 @@
 </svg> */
 
 import { SvgIcon, SvgIconProps } from '@material-ui/core'
-import React from 'react'
 
 type RoofWithIntegrityIconProps = {} & SvgIconProps
 

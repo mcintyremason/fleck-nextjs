@@ -1,6 +1,5 @@
 import styles from './index.module.css'
 
-import React from 'react'
 import { Button, Grid, GridSize, PropTypes } from '@material-ui/core'
 import { Breakpoint } from '@material-ui/core/styles/createBreakpoints'
 

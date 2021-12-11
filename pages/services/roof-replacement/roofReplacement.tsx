@@ -1,13 +1,12 @@
 import styles from './roofReplacement.module.css'
 import classNames from 'classnames'
 
-import React from 'react'
 import { Grid, ThemeProvider } from '@material-ui/core'
 import fleckTheme from 'themes/fleckTheme'
 import Layout from 'components/Layout'
 import FleckHero from 'components/FleckHero'
 
-export const RoofReplacementPage = () => {
+const RoofReplacementPage = () => {
   return (
     <ThemeProvider theme={fleckTheme}>
       <Layout title="Fleck Roofing & Construction">
@@ -27,3 +26,5 @@ export const RoofReplacementPage = () => {
     </ThemeProvider>
   )
 }
+
+export default RoofReplacementPage

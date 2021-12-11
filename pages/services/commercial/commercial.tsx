@@ -1,7 +1,6 @@
 import styles from './commercial.module.css'
 import classNames from 'classnames'
 
-import React from 'react'
 import { Grid, Link, ThemeProvider, Typography } from '@material-ui/core'
 import ChatOutlinedIcon from '@material-ui/icons/ChatOutlined'
 import GroupAddOutlinedIcon from '@material-ui/icons/GroupAddOutlined'
@@ -11,7 +10,7 @@ import Layout from 'components/Layout'
 import FleckHero from 'components/FleckHero'
 import FleckCTA from 'components/FleckCTA'
 
-export const CommercialRoofingPage = () => {
+const CommercialRoofingPage = () => {
   return (
     <ThemeProvider theme={fleckTheme}>
       <Layout title="Fleck Roofing & Construction">
@@ -158,3 +157,5 @@ export const CommercialRoofingPage = () => {
     </ThemeProvider>
   )
 }
+
+export default CommercialRoofingPage

@@ -1,6 +1,5 @@
 import styles from './index.module.css'
 
-import React from 'react'
 import { Rating } from '@material-ui/lab'
 import { Grid } from '@material-ui/core'
 

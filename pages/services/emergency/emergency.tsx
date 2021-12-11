@@ -1,7 +1,6 @@
 import styles from './emergency.module.css'
 import classNames from 'classnames'
 
-import React from 'react'
 import { Grid, Link, ThemeProvider, Typography } from '@material-ui/core'
 import ChatOutlinedIcon from '@material-ui/icons/ChatOutlined'
 
@@ -11,7 +10,7 @@ import FleckHero from 'components/FleckHero'
 import FleckCTA from 'components/FleckCTA'
 import AvailabilityIcon from 'components/icons/AvailabilityIcon'
 
-export const EmergencyRoofingPage = () => {
+const EmergencyRoofingPage = () => {
   return (
     <ThemeProvider theme={fleckTheme}>
       <Layout title="Fleck Roofing & Construction">
@@ -140,3 +139,5 @@ export const EmergencyRoofingPage = () => {
     </ThemeProvider>
   )
 }
+
+export default EmergencyRoofingPage

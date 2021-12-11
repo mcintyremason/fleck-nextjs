@@ -1,5 +1,5 @@
 import { Grid } from '@material-ui/core'
-import React from 'react'
+
 import classNames from 'classnames'
 import styles from './index.module.css'
 

@@ -1,7 +1,6 @@
 import styles from './index.module.css'
 import classNames from 'classnames'
 
-import React from 'react'
 import { Grid, Typography, Link, Divider } from '@material-ui/core'
 import { Rating } from '@material-ui/lab'
 import ChatOutlinedIcon from '@material-ui/icons/ChatOutlined'

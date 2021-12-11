@@ -1,7 +1,6 @@
 import styles from './residential.module.css'
 import classNames from 'classnames'
 
-import React from 'react'
 import { Grid, Link, ThemeProvider, Typography } from '@material-ui/core'
 import ChatOutlinedIcon from '@material-ui/icons/ChatOutlined'
 
@@ -11,7 +10,7 @@ import FleckHero from 'components/FleckHero'
 import FleckCTA from 'components/FleckCTA'
 import RoofWithIntegrityIcon from 'components/icons/RoofWithIntegrityIcon'
 
-export const ResidentialRoofingPage = () => {
+const ResidentialRoofingPage = () => {
   return (
     <ThemeProvider theme={fleckTheme}>
       <Layout title="Fleck Roofing & Construction">
@@ -231,3 +230,5 @@ export const ResidentialRoofingPage = () => {
     </ThemeProvider>
   )
 }
+
+export default ResidentialRoofingPage

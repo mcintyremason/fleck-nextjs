@@ -1,13 +1,12 @@
-import styles from './index.module.css'
+import styles from './contact.module.css'
 import classNames from 'classnames'
 
-import React from 'react'
 import { Grid, ThemeProvider } from '@material-ui/core'
 import fleckTheme from 'themes/fleckTheme'
 import Layout from 'components/Layout'
 import Hero from 'components/abstractions/Hero'
 
-export const ContactPage = () => {
+const ContactPage = () => {
   return (
     <ThemeProvider theme={fleckTheme}>
       <Layout title="Fleck Roofing & Construction">
@@ -26,3 +25,5 @@ export const ContactPage = () => {
     </ThemeProvider>
   )
 }
+
+export default ContactPage
