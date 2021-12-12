@@ -1,30 +1,3 @@
-import { Grid, GridSize } from '@material-ui/core'
-import React, { ReactNode } from 'react'
-import styles from './index.module.css'
-import classNames from 'classnames'
-import { Breakpoint } from '@material-ui/core/styles/createBreakpoints'
-
-type FooterProps = {
-  children?: ReactNode
-  isAbsolute?: boolean
-} & Partial<Record<Breakpoint, boolean | GridSize>>
-
-const Footer: React.FC<FooterProps> = (props: FooterProps) => {
-  const { children, isAbsolute, xs, md, lg, xl } = props
-
-  return (
-    <Grid
-      container
-      item
-      xs={xs}
-      md={md}
-      lg={lg}
-      xl={xl}
-      className={classNames(styles['footer'], isAbsolute ? styles['absolute'] : '')}
-    >
-      {children}
-    </Grid>
-  )
-}
+import { Footer } from 'components/abstractions/Footer/footer'
 
 export default Footer

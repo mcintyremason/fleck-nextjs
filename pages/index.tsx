@@ -1,7 +1,6 @@
 import styles from './index.module.css'
 import classNames from 'classnames'
 
-import React from 'react'
 import { Grid, ThemeProvider } from '@material-ui/core'
 
 import Layout from 'components/Layout'
