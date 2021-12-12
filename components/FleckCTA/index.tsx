@@ -1,3 +1,3 @@
-import { FleckCTA } from 'components/FleckCTA/fleckCta'
+import { FleckCTA } from 'components/FleckCTA/fleckCTA'
 
 export default FleckCTA
