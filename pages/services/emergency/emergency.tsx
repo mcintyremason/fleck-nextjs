@@ -8,7 +8,7 @@ import fleckTheme from 'themes/fleckTheme'
 import Layout from 'components/Layout'
 import FleckHero from 'components/FleckHero'
 import FleckCTA from 'components/FleckCTA'
-import AvailabilityIcon from 'components/icons/AvailabilityIcon'
+import AvailabilityIcon from 'icons/AvailabilityIcon'
 
 const EmergencyRoofingPage = () => {
   return (

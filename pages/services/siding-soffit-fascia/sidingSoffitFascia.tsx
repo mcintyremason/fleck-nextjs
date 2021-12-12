@@ -8,7 +8,7 @@ import fleckTheme from 'themes/fleckTheme'
 import Layout from 'components/Layout'
 import FleckHero from 'components/FleckHero'
 import FleckCTA from 'components/FleckCTA'
-import TeamIcon from 'components/icons/TeamIcon'
+import TeamIcon from 'icons/TeamIcon'
 
 const SidingSoffitFasciaPage = () => {
   return (

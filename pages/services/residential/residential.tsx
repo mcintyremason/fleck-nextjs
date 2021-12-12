@@ -8,7 +8,7 @@ import fleckTheme from 'themes/fleckTheme'
 import Layout from 'components/Layout'
 import FleckHero from 'components/FleckHero'
 import FleckCTA from 'components/FleckCTA'
-import RoofWithIntegrityIcon from 'components/icons/RoofWithIntegrityIcon'
+import RoofWithIntegrityIcon from 'icons/RoofWithIntegrityIcon'
 
 const ResidentialRoofingPage = () => {
   return (
