@@ -1,9 +1,7 @@
-import styles from './fleckHero.module.css'
-
 import { Grid, Link, Typography } from '@material-ui/core'
-
-import Hero from 'components/abstractions/Hero'
 import classNames from 'classnames'
+import Hero from 'components/abstractions/Hero'
+import styles from './fleckHero.module.css'
 
 type FleckHero = {
   primaryText: string
@@ -115,6 +113,7 @@ export const FleckHero: React.FC<FleckHero> = (props: FleckHero) => {
         gutters
         overlay
         imageUrl={imageUrl ? imageUrl : '/img/components/hero-image.jpeg'}
+        justify="center"
       >
         <Grid container direction="column" className={styles['fleck-hero-secondary-container']}>
           <Typography color="textSecondary" align="center" className={styles['text-shadow']}>
